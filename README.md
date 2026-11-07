@@ -1,14 +1,16 @@
 # 🎨 每日审美推送 · Daily Aesthetic Curation
 
-> 每天给手机送一组精选图 + 一段 AI 审美笔记，留两分钟看张好图。
+> 每天给手机送一组精选图 + 一段观察笔记，留两分钟看张好图。
 
-每天早上 8 点（北京时间），系统自动从三个免费高质量图源中抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），调用 LLM 生成一段 50-80 字的中文审美讲解，然后通过**邮件 + 微信**双通道推送到你手机上。
+每天（定时开启后为北京时间 8 点）系统从三个免费高质量图源抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），配一段中文观察笔记，通过**邮件 + 微信**双通道推送到手机。
+
+**讲解当前不接 LLM**：未配置 `LLM_API_KEY` 时 `ai_commentary.py` 走兜底文案，也就是一段通用提示、不针对具体作品。已选定「规则化讲解」方案（按当日审美维度 + 作品元数据离线拼装，零依赖）但**尚未实施**；LLM 调用代码保留为可选分支，以后想接回来不用重做。
 
 图片一律使用图源官方直链：Unsplash 按 API Guidelines 只热链、不转存，Met / NASA 为公共领域作品。仓库 `daily/` 目录只用于历史回溯，不参与图片投递，因此邮件送达不依赖 commit 或 CDN 缓存。
 
 整套系统基于 **GitHub Actions** 免费运行，**零服务器成本**。仓库需设为**公开**。
 
-> 当前 `schedule` 已注释停用，避免 Secrets 未配置时每天空跑留下无效归档。填好 Secrets 后按下方「修改每日推送时间」一节取消注释即可恢复每天 8:00 自动推送；手动触发（Actions → Run workflow）不受影响。
+> 当前 `schedule` 已注释停用：等 workflow 文件就位、dry-run 验证通过后再恢复每天 8:00 自动推送。手动触发（Actions → Run workflow）不受影响。
 
 ---
 
@@ -16,7 +18,7 @@
 
 - 🖼️ **多图源组合**：Met Museum（古典艺术 CC0）+ Unsplash（全球摄影）+ NASA APOD（每日天文图）
 - 🎲 **风格多样性**：每天 3-5 张卡片，横跨油画、摄影、天文、设计等不同维度
-- 🤖 **AI 审美讲解**：调用 DeepSeek / GPT-4o-mini 等 LLM，生成有质感的中文审美笔记（50-80 字）
+- 📝 **观察笔记**：当前为离线兜底文案（不接 LLM）；已选定规则化讲解方案待实施，LLM 分支保留可选
 - 📧 **精美邮件**：响应式 HTML 邮件模板，移动端友好
 - 💬 **微信双通道**：支持 Server酱（5 条/天）和企业微信自建应用（无限）
 - 📚 **历史归档**：Met / NASA 图片与全部讲解自动提交到 GitHub 仓库；Unsplash 只留官方链接
@@ -35,10 +37,10 @@
            │
    ┌───────┴────────┐
    ▼                ▼
-【抓图】          【AI 讲解】
-Met Museum       DeepSeek / GPT
-Unsplash          输入元数据 → 50-80 字讲解
-NASA APOD
+【抓图】          【观察笔记】
+Met Museum       当前：离线兜底文案
+Unsplash         计划：维度 + 元数据离线拼装
+NASA APOD        （LLM 为可选分支，默认不接）
    │
    ▼
 【邮件】     【微信】
@@ -63,35 +65,35 @@ QQ/Gmail    Markdown + 图片
 
 | 服务             | 用途       | 注册地址                                                       | 免费额度         |
 | -------------- | -------- | ---------------------------------------------------------- | ------------ |
-| **DeepSeek**   | AI 审美讲解  | [platform.deepseek.com](https://platform.deepseek.com)     | 按平台实际计费为准 |
 | **Unsplash**   | 摄影图源     | [unsplash.com/developers](https://unsplash.com/developers) | demo 50 次/小时；生产 1000 次/小时 |
-| **NASA**       | 天文图源     | [api.nasa.gov](https://api.nasa.gov)                       | DEMO_KEY 30 次/小时；自有 key 1000 次/小时 |
+| **NASA**       | 天文图源     | [science.nasa.gov](https://science.nasa.gov/)              | 旧端点 DEMO_KEY 30 次/小时；新端点免 key（待切换） |
 | **Met Museum** | 古典艺术     | 无需 key（CC0）                                                | 80 次/秒       |
-| **QQ 邮箱**      | SMTP 推送  | 已有 QQ 即可                                                   | 无限制          |
+| **QQ 邮箱**      | SMTP 推送  | 已有 QQ 即可                                                   | —              |
 | **Server酱**    | 微信推送     | [sct.ftqq.com](https://sct.ftqq.com)                       | 5 条/天        |
-| **企业微信**       | 微信推送（推荐） | [work.weixin.qq.com](https://work.weixin.qq.com)           | 无限制          |
+| **企业微信**       | 微信推送     | [work.weixin.qq.com](https://work.weixin.qq.com)           | 无限制          |
+| **LLM（可选）**  | 讲解生成   | 任意 OpenAI 兼容服务                                          | **当前默认不接** |
 
-> 💡 **推荐组合**：DeepSeek + Unsplash + NASA + QQ邮箱 + 企业微信。
+> 💡 **当前推荐组合**：Unsplash + NASA + QQ邮箱 + Server酱（或企业微信），**不需要任何 LLM 服务**。
 > Unsplash 图片按 [API Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) 只热链官方 URL，不下载转存；请勿把图片搬到自己的 CDN。
+> NASA 旧端点 `api.nasa.gov/planetary/apod` 计划切换到免 key 的 `science.nasa.gov/wp-json/wp/v2/apod-basic`，切换前 `NASA_API_KEY` 可以不填。
 
 ### 3. 配置 GitHub Secrets
 
 进入仓库 `Settings` → `Secrets and variables` → `Actions` → `New repository secret`，添加以下项：
 
-#### 必须配置
+#### 必须配置（当前不接 LLM，无需任何 AI 服务密钥）
 
 ```
-LLM_API_KEY              # DeepSeek 或 OpenAI 的 API key
 UNSPLASH_ACCESS_KEY      # Unsplash Access Key
-NASA_API_KEY             # 建议配自有 key，否则回落 DEMO_KEY（30 次/小时，易限流）
-EMAIL_USERNAME           # 你的 QQ 邮箱，如 12345@qq.com
-EMAIL_PASSWORD           # QQ邮箱授权码（不是登录密码）
-EMAIL_TO                 # 接收邮件的邮箱（可以多个，逗号分隔）
-REPO_BASE_URL            # https://raw.githubusercontent.com/你的用户名/你的仓库/main
-                         # 只用于推导历史归档页与项目源码链接，不用于图片投递
+EMAIL_USERNAME           # 发件 QQ 邮箱，如 12345@qq.com
+EMAIL_PASSWORD           # QQ 邮箱授权码（不是登录密码）
+EMAIL_TO                 # 收件邮箱，可以多个；自己发给自己可填同一个
+REPO_BASE_URL            # https://raw.githubusercontent.com/jmzya66/daily-aesthetic-curation/main
 ```
+`REPO_BASE_URL` 只用于推导历史归档页与项目源码链接，不用于图片投递。
+`EMAIL_USERNAME` 是发件账号、`EMAIL_TO` 是收件地址，两者不是同一个字段，但个人自用可填同一个邮箱。
 
-可选：`LLM_BASE_URL` / `LLM_MODEL`、`EMAIL_SMTP_HOST`（默认 smtp.qq.com）、`EMAIL_SMTP_PORT`（默认 465）、`WECHAT_CHANNEL`（不配则按凭据自动推断）、`TOTAL_CARDS`（默认 4）。
+可选：`NASA_API_KEY`（旧端点用，可不填）、`LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL`（仅在启用 LLM 分支时需要）、`EMAIL_SMTP_HOST`（默认 smtp.qq.com）、`EMAIL_SMTP_PORT`（默认 465）、`WECHAT_CHANNEL`（不配则按凭据自动推断）、`TOTAL_CARDS`（默认 4）。
 
 #### 微信通道二选一
 
@@ -117,6 +119,8 @@ GitHub Actions 不需要 `config.yaml`（它被 `.gitignore` 排除），所有�
 
 ### 5. 触发首次运行
 
+前置条件：`.github/workflows/daily.yml` 必须已在仓库里，Actions 才会出现 `Daily Aesthetic Curation`。网页批量上传时以点开头的目录容易被跳过，若左侧没有这个工作流，用 `Add file → Create new file`、文件名填 `.github/workflows/daily.yml` 手动补上。
+
 进入仓库的 `Actions` 标签 → 选择 `Daily Aesthetic Curation` → `Run workflow` → 选 `dry_run=true` 先试一次。
 
 成功后改成 `dry_run=false` 真正推送。
@@ -128,12 +132,12 @@ GitHub Actions 不需要 `config.yaml`（它被 `.gitignore` 排除），所有�
 ```
 daily-aesthetic-curation/
 ├── .github/workflows/
-│   └── daily.yml             # GitHub Actions 定时任务
+│   └── daily.yml             # GitHub Actions 工作流（schedule 当前停用）
 ├── src/
 │   ├── __init__.py
 │   ├── main.py               # 主流程入口
 │   ├── models.py             # 共享数据结构
-│   ├── ai_commentary.py      # LLM 讲解生成
+│   ├── ai_commentary.py      # 讲解生成（当前兜底文案，LLM 分支可选）
 │   ├── fetchers/
 │   │   ├── met_museum.py     # 古典艺术
 │   │   ├── unsplash.py       # 摄影
@@ -149,7 +153,7 @@ daily-aesthetic-curation/
 └── README.md
 ```
 
-运行时会在根目录生成 `daily/YYYY-MM-DD/` 目录，里面是当天下载的图片和 `index.json`。
+运行时会在根目录生成 `daily/YYYY-MM-DD/` 目录，里面是 Met / NASA 的归档图片和 `index.json`；Unsplash 只存官方链接、不落盘。
 
 ---
 
@@ -157,7 +161,7 @@ daily-aesthetic-curation/
 
 ### 修改每日推送时间
 
-编辑 `.github/workflows/daily.yml` 的 cron 表达式（UTC 时间）：
+编辑 `.github/workflows/daily.yml` 的 cron 表达式（UTC 时间）。注意 `schedule` 当前是注释状态，恢复定时时把注释去掉：
 
 ```yaml
 schedule:
@@ -177,11 +181,9 @@ schedule:
   total_cards: 4   # 改成 3-7 都可以
 ```
 
-### 自定义讲解 prompt
+### 自定义讲解 prompt（仅 LLM 模式）
 
-编辑 `src/ai_commentary.py` 的 `SYSTEM_PROMPT` 和 `USER_PROMPT_TEMPLATE`。
-
-比如想强调"色彩"维度，就改 prompt。
+编辑 `src/ai_commentary.py` 的 `SYSTEM_PROMPT` 和 `USER_PROMPT_TEMPLATE`，比如想强调"色彩"维度就改 prompt。**当前默认不接 LLM**，这两个常量不生效；离线规则化讲解方案实施后会改为维护语料池。
 
 ### 修改每日主题文案
 
@@ -200,7 +202,7 @@ schedule:
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/your_username/daily-aesthetic-curation.git
+git clone https://github.com/jmzya66/daily-aesthetic-curation.git
 cd daily-aesthetic-curation
 
 # 2. 创建虚拟环境
@@ -251,7 +253,7 @@ python src/main.py
 - 手机上必须下载企业微信 App（即使你不打算用）
 - 在企业微信「设置」→「新消息通知」关闭「仅在企业微信中接收消息」才能在微信里收到
 
-### Q: 想换其他 LLM？
+### Q: 想换其他 LLM？（仅启用 LLM 分支时适用，当前默认不接）
 
 修改 `config.yaml`：
 
@@ -302,8 +304,8 @@ MIT
 
 工具：
 
-- [DeepSeek](https://deepseek.com) / [OpenAI](https://openai.com)
 - [GitHub Actions](https://github.com/features/actions)
 - [Jinja2](https://jinja.palletsprojects.com)
+- LLM（DeepSeek / OpenAI 等）为可选分支，当前未启用
 
-灵感：来自对"日常审美训练"的执念。
+灵感：来自「每天留两分钟给一张好图」的想法。
