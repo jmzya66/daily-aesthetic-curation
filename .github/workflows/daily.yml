@@ -1,0 +1,116 @@
+name: Daily Aesthetic Curation
+
+on:
+  # 定时任务暂时停用：Secrets 未配置前每天空跑会在仓库留下无效归档。
+  # 填好 Secrets 后，取消下面两行的注释即可恢复（北京时间 8:00）。
+  # schedule:
+  #   - cron: "0 0 * * *"
+
+  # 手动触发仍可用：Actions → Run workflow（建好仓库后先跑 dry_run=true 验证）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "只生成文件，不发送邮件/微信"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+# 允许 commit 新的 daily/ 目录内容
+permissions:
+  contents: write
+
+# 防止并发执行
+concurrency:
+  group: daily-aesthetic
+  cancel-in-progress: false
+
+jobs:
+  curation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          # 必须 fetch 完整历史（虽然本项目不太需要）
+          fetch-depth: 0
+
+      - name: 🐍 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 📦 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🎨 运行每日审美推送
+        env:
+          # LLM
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          # Unsplash
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          # NASA
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
+          # 邮件
+          EMAIL_SMTP_HOST: ${{ secrets.EMAIL_SMTP_HOST }}
+          EMAIL_SMTP_PORT: ${{ secrets.EMAIL_SMTP_PORT }}
+          EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          # 微信 (Server酱)
+          WECHAT_SENDKEY: ${{ secrets.WECHAT_SENDKEY }}
+          # 微信 (企业微信)
+          WECOM_CORPID: ${{ secrets.WECOM_CORPID }}
+          WECOM_AGENTID: ${{ secrets.WECOM_AGENTID }}
+          WECOM_CORPSECRET: ${{ secrets.WECOM_CORPSECRET }}
+          # 可选：显式指定微信通道，不配则按已提供的凭据自动推断
+          WECHAT_CHANNEL: ${{ secrets.WECHAT_CHANNEL }}
+          # 可选：每日张数，默认 4
+          TOTAL_CARDS: ${{ secrets.TOTAL_CARDS }}
+          # 仓库配置（用于历史归档页 / 项目源码链接，不用于图片投递）
+          REPO_BASE_URL: ${{ secrets.REPO_BASE_URL }}
+          # 调试
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "🧪 DRY-RUN 模式"
+            python src/main.py --dry-run
+          else
+            python src/main.py
+          fi
+
+      - name: 📤 提交 daily/ 目录更新
+        run: |
+          git config user.name "aesthetic-bot"
+          git config user.email "bot@users.noreply.github.com"
+
+          # 推送图片已改用图源官方直链，此步骤只负责历史归档，
+          # 顺序不再影响邮件/微信里的图片能否显示。
+          # daily/ 已从 .gitignore 移除，不再需要 -f；失败不要吞掉。
+          git add daily/
+
+          # 检查是否有变更
+          if git diff --cached --quiet; then
+            echo "无变更，跳过 commit"
+            exit 0
+          fi
+
+          git commit -m "🎨 每日审美日课 · $(date -u '+%Y-%m-%d')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ✅ 完成
+        if: success()
+        run: |
+          echo "✅ 推送成功，邮件 + 微信应在几分钟内送达"
+          echo "📚 历史日课可在仓库 daily/ 目录浏览"
