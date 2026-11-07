@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日审美日课</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f6f3ee;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue',Helvetica,'Microsoft YaHei',sans-serif;color:#2c2a26;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f6f3ee;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background-color:#fffdf9;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+
+          <!-- 顶部 Header -->
+          <tr>
+            <td style="padding:36px 40px 20px 40px;border-bottom:1px solid #efe9df;">
+              <div style="font-size:12px;letter-spacing:0.2em;color:#a89986;text-transform:uppercase;">{{ date }}</div>
+              <h1 style="margin:8px 0 6px 0;font-size:26px;font-weight:600;color:#1f1d1a;letter-spacing:-0.5px;">今日审美日课</h1>
+              <p style="margin:0;font-size:14px;color:#7a716a;line-height:1.6;">{{ theme }}</p>
+            </td>
+          </tr>
+
+          <!-- 卡片列表 -->
+          {% for card in cards %}
+          <tr>
+            <td style="padding:32px 40px;border-bottom:1px solid #efe9df;">
+              <!-- 风格标签 -->
+              <div style="display:inline-block;font-size:11px;color:#8a7e6e;letter-spacing:0.15em;padding:4px 10px;background-color:#f3ede2;border-radius:3px;text-transform:uppercase;">
+                {{ card.style }}
+              </div>
+
+              <!-- 图片 -->
+              <div style="margin-top:16px;border-radius:8px;overflow:hidden;background-color:#f0ebe2;">
+                <img src="{{ card.image_url }}" alt="{{ card.title }}" width="520" style="display:block;width:100%;height:auto;border:0;outline:none;text-decoration:none;">
+              </div>
+
+              <!-- 标题 + 作者 -->
+              <h2 style="margin:20px 0 6px 0;font-size:19px;font-weight:600;color:#1f1d1a;line-height:1.4;">
+                {{ card.title }}
+              </h2>
+              <div style="font-size:13px;color:#9c9388;margin-bottom:14px;">
+                {{ card.artist }}{% if card.artist and card.date %} · {% endif %}{{ card.date }}
+              </div>
+
+              <!-- 讲解 -->
+              <p style="margin:0;font-size:14.5px;line-height:1.85;color:#3a3530;">
+                {{ card.commentary }}
+              </p>
+
+              <!-- 来源 -->
+              <div style="margin-top:16px;font-size:11.5px;color:#b1a99c;">
+                来源 · {{ card.source_label }}
+              </div>
+
+              {% if card.attribution %}
+              <!-- Unsplash API Guidelines：署名 + 带 utm 的回链 -->
+              <div style="margin-top:6px;font-size:11.5px;color:#b1a99c;line-height:1.6;">
+                照片来自 <a href="{{ card.attribution.photo_url }}" style="color:#a89986;">Unsplash</a>，摄影师 <a href="{{ card.attribution.profile_url }}" style="color:#a89986;">{{ card.attribution.photographer }}</a>
+              </div>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+
+          <!-- 底部 Footer -->
+          <tr>
+            <td style="padding:24px 40px 32px 40px;background-color:#fbf8f1;">
+              <p style="margin:0;font-size:12.5px;color:#a89e91;line-height:1.7;">
+                这是你今天的一组图，由 <strong>每日审美推送</strong> 自动生成。<br>
+                每天留两分钟给一张图，看得多了，自然会有自己的偏好。
+              </p>
+              <div style="margin-top:14px;font-size:11px;color:#c5bbac;">
+                <a href="{{ archive_url }}" style="color:#a89986;text-decoration:none;margin-right:16px;">查看历史日课</a>
+                <a href="{{ project_url }}" style="color:#a89986;text-decoration:none;">项目源码</a>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- 极小署名 -->
+        <div style="margin-top:20px;font-size:11px;color:#bdb4a5;letter-spacing:0.1em;">
+          AESTHETIC DAILY · 美 在 每 一 天
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
