@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-07",
+  "theme": "今日看细节：找一处容易被忽略的角落，那里藏着作者的签名。",
+  "generated_at": "2026-11-07T16:41:28",
+  "pushed": false,
+  "items": [
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-10-10",
+        "title": "NASA Science",
+        "artist": "NASA",
+        "date": "2026-10-10",
+        "style": "天文",
+        "description": "De Gerlache-Kocher massif looms on the visible horizon in this close-up of the edge of the Moon. The mountainous formation rises about 4 kilometers above its surroundings and is located very close to the lunar south pole. Boasting permanently shadowed crater floors that likely contain deposits of wa",
+        "image_url": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
+        "image_url_large": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
+        "local_path": "daily/2026-11-07/nasa_2026-10-10_a68b59ac.jpg",
+        "extra": {
+          "apod_date": "2026-10-10",
+          "explanation_full": "De Gerlache-Kocher massif looms on the visible horizon in this close-up of the edge of the Moon. The mountainous formation rises about 4 kilometers above its surroundings and is located very close to the lunar south pole. Boasting permanently shadowed crater floors that likely contain deposits of water ice and peaks that receive almost continuous sunlight for solar power generation, the south polar region is consider a prime location for the first human settlement on the Moon. In fact, De Gerlache-Kocher massif itself has been considered as a potential landing site for future crewed Artemis missions to the Moon. The remarkable telescopic image of the massif at the lunar limb was captured on October 31. Then, a favorable libration angle or lunar wobble enhanced this oblique view across the Moon's south pole.Tomorrow's picture: meteoric\t\t\t\t\t\t",
+          "service_version": "v1"
+        }
+      },
+      "commentary": "今日精选：天文作品《NASA Science》——NASA。试着眯起眼看整体轮廓，再聚焦一处细节——这是入门审美的两个开关。",
+      "cid": "img_nasa:2026-10-10"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "NQSWvyVRIJk",
+        "title": "green trees covering with fog during daytime",
+        "artist": "Vadim Sherbakov",
+        "date": "2015-10-28",
+        "style": "摄影",
+        "description": "green trees covering with fog during daytime",
+        "image_url": "https://images.unsplash.com/photo-1446034295857-c39f8844fad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MDY5NjM5fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1446034295857-c39f8844fad4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MDY5NjM5fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#262626",
+          "location": "Moscow, Russia",
+          "portfolio_url": "https://unsplash.com/@madebyvadim",
+          "photo_page_url": "https://unsplash.com/photos/green-trees-covering-with-fog-during-daytime-NQSWvyVRIJk?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@madebyvadim?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/NQSWvyVRIJk/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MDY5NjM5fA",
+          "tags": [],
+          "width": 5472,
+          "height": 3648
+        }
+      },
+      "commentary": "今日精选：摄影作品《green trees covering with fog during daytime》——Vadim Sherbakov。试着眯起眼看整体轮廓，再聚焦一处细节——这是入门审美的两个开关。",
+      "cid": "img_unsplash:NQSWvyVRIJk"
+    }
+  ]
+}
