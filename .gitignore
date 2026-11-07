@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# 配置和密钥
+.env
+config.yaml
+*.secret
+
+# 运行时数据
+# 注意：daily/ 是历史归档，必须提交到公开仓库，不能忽略
+output/
+logs/
+*.log
+
+# 测试产物
+.coverage
+.pytest_cache/
+htmlcov/

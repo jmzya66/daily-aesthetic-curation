@@ -1,0 +1,100 @@
+# ==========================================
+# 每日审美推送 · 配置文件示例
+# ==========================================
+# 本地开发：复制本文件为 config.yaml 并填写真实值
+# GitHub Actions：不需要 config.yaml（它被 .gitignore 排除），全部通过 Secrets 注入
+# 环境变量白名单见 src/main.py 的 env_map；未列入的变量读不到
+# 不要把任何真实密钥写进本文件并提交
+# ==========================================
+
+# --- LLM (审美讲解生成) ---
+# 推荐：DeepSeek (便宜、中文好), 也可填 OpenAI/Azure OpenAI/其他兼容服务
+llm:
+  api_key: "sk-xxxxxxxxxxxxxxxxxxxxxx"
+  base_url: "https://api.deepseek.com/v1"
+  model: "deepseek-chat"
+  # 可选：temperature, max_tokens
+
+# --- Unsplash (摄影图源) ---
+# 注册 https://unsplash.com/developers 获取 Access Key
+# 额度：demo 模式 50 次/小时，通过审核的生产模式 1000 次/小时
+# 合规：通过 API 取得的图片只热链官方 photo.urls，本项目不下载、不转存到仓库或 CDN
+unsplash:
+  access_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  # 搜索关键词列表，每次随机选一个
+  queries:
+    - "nature"
+    - "architecture"
+    - "minimal"
+    - "portrait"
+    - "abstract"
+    - "texture"
+  orientation: "landscape"  # landscape | portrait | squarish
+  per_page: 30
+
+# --- Met Museum (古典艺术图源) ---
+# 无需 API key，CC0 协议
+met_museum:
+  enabled: true
+  # 部门 ID 列表：1=American, 6=Asian, 11=European Paintings, 21=Modern
+  # 留空则随机从所有部门抽
+  department_ids: []
+  has_images: true          # 只要有图的
+  is_public_domain: true    # 只要公共领域作品
+
+# --- NASA APOD (天文图源) ---
+nasa_apod:
+  enabled: true
+  api_key: "DEMO_KEY"       # 建议注册 https://api.nasa.gov/ 换成自己的 key
+                            # DEMO_KEY 限 30 次/小时，自有 key 限 1000 次/小时
+                            # CI 用环境变量 NASA_API_KEY 覆盖
+
+# --- 每日推送配置 ---
+schedule:
+  # 每天要推送几张（从各图源组合）
+  total_cards: 4
+  # 推送时间（北京时间，GitHub Actions cron 用 UTC）
+  # 北京时间 8:00 = UTC 0:00
+  # 注意：workflow 里的 schedule 目前处于注释停用状态，此值暂不生效
+  cron_utc: "0 0 * * *"
+
+# --- 邮件推送 (SMTP) ---
+email:
+  enabled: true
+  smtp_host: "smtp.qq.com"        # QQ 邮箱示例
+  smtp_port: 465
+  smtp_ssl: true
+  username: "your_qq@qq.com"
+  password: "your_authorization_code"  # QQ 邮箱是授权码，不是密码
+  from_name: "审美日课"
+  to_addrs:
+    - "your_email@example.com"
+
+# --- 微信推送 ---
+# 两种通道可选：
+#   - serverchan: Server酱 (https://sct.ftqq.com)，免费每天 5 条
+#   - wecom:       企业微信自建应用，无次数限制，推荐
+wechat:
+  channel: "wecom"   # serverchan | wecom
+  # CI 不提供 config.yaml 时，channel 会按已配置的凭据自动推断：
+  #   配齐 WECOM_* → wecom；只配 WECHAT_SENDKEY → serverchan
+  # 也可用环境变量 WECHAT_CHANNEL 显式覆盖
+  # Server酱 配置
+  serverchan_send_key: ""
+  # 企业微信配置 (https://work.weixin.qq.com/)
+  wecom:
+    corpid: ""
+    agentid: ""
+    corpsecret: ""
+
+# --- 仓库配置 ---
+# 仓库必须是【公开】的：历史归档页与项目源码链接指向 GitHub 页面。
+# base_url 只用于推导这两个链接，推送图片不再走 jsDelivr / raw URL。
+# 归档图片（Met / NASA）仍会提交到 daily/，Unsplash 只存 URL 不落盘。
+repo:
+  base_url: "https://raw.githubusercontent.com/your_username/your_repo/main"
+  output_dir: "daily"
+
+# --- 调试 ---
+debug:
+  dry_run: false   # true 时不发送邮件/微信，只生成文件
