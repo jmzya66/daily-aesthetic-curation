@@ -7,13 +7,14 @@
 # 不要把任何真实密钥写进本文件并提交
 # ==========================================
 
-# --- LLM (审美讲解生成) ---
-# 推荐：DeepSeek (便宜、中文好), 也可填 OpenAI/Azure OpenAI/其他兼容服务
+# --- LLM（可选，当前默认不接） ---
+# 项目已选定离线「规则化讲解」方案，LLM 分支保留但默认不启用。
+# 不配 api_key 时 ai_commentary.py 走兜底文案；想临时启用再填下面三项。
+# CI 里可用环境变量 LLM_API_KEY / LLM_BASE_URL / LLM_MODEL 覆盖。
 llm:
-  api_key: "sk-xxxxxxxxxxxxxxxxxxxxxx"
+  api_key: ""
   base_url: "https://api.deepseek.com/v1"
   model: "deepseek-chat"
-  # 可选：temperature, max_tokens
 
 # --- Unsplash (摄影图源) ---
 # 注册 https://unsplash.com/developers 获取 Access Key
