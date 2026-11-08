@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-08",
+  "theme": "今日看历史：了解一下作品的创作年代与同时代发生了什么。",
+  "generated_at": "2026-11-08T02:08:40",
+  "pushed": false,
+  "items": [
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "NjT4O7WYmwk",
+        "title": "selective focus photo of pink petaled flowers",
+        "artist": "Kien Do",
+        "date": "2015-01-25",
+        "style": "摄影",
+        "description": "selective focus photo of pink petaled flowers",
+        "image_url": "https://images.unsplash.com/photo-1422205512921-12dac7b3b603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1422205512921-12dac7b3b603?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#a6a6a6",
+          "location": null,
+          "portfolio_url": "https://unsplash.com/@kiendo",
+          "photo_page_url": "https://unsplash.com/photos/selective-focus-photo-of-pink-petaled-flowers-NjT4O7WYmwk?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@kiendo?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/NjT4O7WYmwk/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA",
+          "tags": [],
+          "width": 4789,
+          "height": 3172
+        }
+      },
+      "commentary": "摄影《selective focus photo of pink petaled flowers》，关键词 nature、#a6a6a6。今日看历史：对比今天的同类题材，哪些做法留下了，哪些悄悄消失了。",
+      "cid": "img_unsplash:NjT4O7WYmwk"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "FO7bKvgETgQ",
+        "title": "stack rock on seashore",
+        "artist": "Jeremy Thomas",
+        "date": "2016-03-20",
+        "style": "摄影",
+        "description": "stack rock on seashore",
+        "image_url": "https://images.unsplash.com/photo-1458501534264-7d326fa0ca04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1458501534264-7d326fa0ca04?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#a6c0d9",
+          "location": "Boulder Colorado",
+          "portfolio_url": "https://unsplash.com/@jeremythomasphoto",
+          "photo_page_url": "https://unsplash.com/photos/stack-rock-on-seashore-FO7bKvgETgQ?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@jeremythomasphoto?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/FO7bKvgETgQ/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA",
+          "tags": [],
+          "width": 5184,
+          "height": 3456
+        }
+      },
+      "commentary": "摄影《stack rock on seashore》，关键词 nature、#a6c0d9。今日看历史：记住创作年代，想想那一年别处正在发生什么。",
+      "cid": "img_unsplash:FO7bKvgETgQ"
+    }
+  ]
+}
