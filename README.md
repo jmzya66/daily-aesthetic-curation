@@ -179,7 +179,12 @@ schedule:
 ```yaml
 schedule:
   total_cards: 4   # 改成 3-7 都可以
+  min_cards: 3     # 少于这个数就不推送，避免发出残缺内容
 ```
+
+`min_cards` 是防静默降级的闸门：某个图源挂掉时，正式运行会写完归档后**跳过推送并让 Actions 失败**（你能收到失败通知），dry-run 只打印告警方便排查。也可用环境变量 `MIN_CARDS` 覆盖。
+
+图源现状：Met Museum 的 `/search` 端点已返回 410，项目改用 `/objects` 全量 ID 池抽样 + 并发请求详情；NASA 用免 key 的 `science.nasa.gov` feed，且只取 `hdurl`（feed 的 `url` 字段是 HTML 页面，不是图片）。
 
 ### 调整观察笔记
 
@@ -237,6 +242,7 @@ python src/main.py
 - Secrets 没配齐：检查 `Settings` → `Secrets`
 - API key 无效：到对应平台重置 key
 - SMTP 认证失败：QQ 邮箱要用**授权码**不是密码
+- 张数不足导致失败退出：日志里会有 `⚠️` 与图源缺席提示，对照 `[met]` / `[nasa]` / `[unsplash]` 的告警定位；常见原因是 Met 的 `/objects` 抽样没命中、或 NASA 图片下载被拒
 
 ### Q: 邮件被识别为垃圾邮件？
 

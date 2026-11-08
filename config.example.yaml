@@ -54,9 +54,11 @@ nasa_apod:
 schedule:
   # 每天要推送几张（从各图源组合）
   total_cards: 4
+  # 少于这个张数就不推送，避免某天图源挂了却发出残缺邮件
+  # 正式模式会写归档后以失败退出（Actions 会有通知）；dry-run 只告警
+  min_cards: 3
   # 推送时间（北京时间，GitHub Actions cron 用 UTC）
-  # 北京时间 8:00 = UTC 0:00
-  # 注意：workflow 里的 schedule 目前处于注释停用状态，此值暂不生效
+  # 北京时间 8:00 = UTC 0:00，与 .github/workflows/daily.yml 保持一致
   cron_utc: "0 0 * * *"
 
 # --- 邮件推送 (SMTP) ---

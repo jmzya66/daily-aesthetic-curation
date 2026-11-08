@@ -48,8 +48,9 @@ def fetch(
         data = resp.json()
         if isinstance(data, dict):
             data = [data]
+        print(f"[nasa] feed 返回 {len(data)} 条")
     except Exception as exc:
-        print(f"[nasa] feed 获取失败: {exc}")
+        print(f"[nasa] ⚠️ feed 获取失败（{API_URL}）: {exc}")
         return []
 
     cutoff = (datetime.now(timezone(timedelta(hours=8)))
@@ -66,7 +67,7 @@ def fetch(
         candidates.append(item)
 
     if not candidates:
-        print("[nasa] 日期窗口内没有可用图片")
+        print(f"[nasa] ⚠️ {len(data)} 条里没有落在 {cutoff} 之后的可用图片（该图源本次缺席）")
         return []
 
     picks = random.sample(candidates, min(max_pick, len(candidates)))
@@ -82,7 +83,9 @@ def fetch(
                 date=pick.get("date", ""),
                 style="天文",
                 description=explanation[:300],
-                image_url=pick.get("url", ""),
+                # 实测：feed 的 url 常返回 text/html 页面，hdurl 才是真图片。
+                # 展示与归档都用 hdurl，否则 download_image 会因 Content-Type 拒绝。
+                image_url=pick.get("hdurl") or pick.get("url", ""),
                 image_url_large=pick.get("hdurl") or pick.get("url", ""),
                 extra={
                     "apod_date": pick.get("date", ""),
@@ -97,14 +100,16 @@ def fetch(
 
 
 def download(artwork: Artwork, dest_dir: Path) -> Artwork:
-    """下载 APOD 标准图归档（hdurl 常达数十 MB，不用它）"""
+    """下载 APOD 图片归档（必须用 hdurl；url 是 HTML 页面）"""
     if not artwork.image_url:
         return artwork
 
     safe = sanitize_filename(artwork.title or "apod")
     filename = f"{artwork.source}_{artwork.source_id}_{short_hash(artwork.title)}.jpg"
-    local = download_image(artwork.image_url, dest_dir, filename)
+    local = download_image(artwork.image_url_large or artwork.image_url, dest_dir, filename)
 
     if local:
         artwork.local_path = str(local.relative_to(dest_dir.parent.parent))
+    else:
+        print(f"[nasa] ⚠️ 图片下载失败，无本地归档: {artwork.image_url_large or artwork.image_url}")
     return artwork

@@ -72,6 +72,7 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
         "wechat.wecom.agentid": "WECOM_AGENTID",
         "wechat.wecom.corpsecret": "WECOM_CORPSECRET",
         "schedule.total_cards": "TOTAL_CARDS",
+        "schedule.min_cards": "MIN_CARDS",
         "repo.base_url": "REPO_BASE_URL",
         "debug.dry_run": "DRY_RUN",
     }
@@ -98,7 +99,8 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
         debug_cfg["dry_run"] = debug_cfg["dry_run"].lower() in ("1", "true", "yes")
 
     # 数值型环境变量转 int，避免字符串参与算术或比较
-    for section, key in (("schedule", "total_cards"), ("email", "smtp_port")):
+    for section, key in (("schedule", "total_cards"), ("schedule", "min_cards"),
+                         ("email", "smtp_port")):
         sec = cfg.get(section)
         if isinstance(sec, dict) and isinstance(sec.get(key), str):
             try:
@@ -169,7 +171,10 @@ def pick_artworks(cfg: dict[str, Any], total_cards: int) -> list[Artwork]:
                 )
             else:
                 continue
-            print(f"[pick] {name} 抽到 {len(picked)} 张")
+            if not picked:
+                print(f"[pick] ⚠️ {name} 返回 0 张，该图源本次缺席")
+            else:
+                print(f"[pick] {name} 抽到 {len(picked)} 张")
             artworks.extend(picked)
         except Exception as exc:
             print(f"[pick] {name} 抓取失败: {exc}")
@@ -283,6 +288,15 @@ def run(config_path: str = "config.yaml") -> int:
     # 4. 先落归档：推送失败也不会丢当天记录
     _write_archive(archive_path, date_str, theme, items, pushed=False)
     print(f"[main] 归档已写入 {archive_path}")
+
+    # 4.5 张数下限：低于阈值时不发残缺内容。dry-run 只告警，便于排查图源。
+    min_cards = cfg.get("schedule", {}).get("min_cards", 3)
+    if len(items) < min_cards:
+        print(f"[main] ⚠️ 今日仅 {len(items)} 张可用作品（阈值 {min_cards}），图源可能有缺失")
+        if not dry_run:
+            print("[main] 为避免推送残缺内容，跳过邮件/微信并以失败退出")
+            _update_index(output_dir, date_str, theme, len(items))
+            return 1
 
     # 5. 推送（图片一律走图源官方直链，不依赖仓库 commit / CDN）
     if dry_run:
