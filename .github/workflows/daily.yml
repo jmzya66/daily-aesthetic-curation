@@ -28,18 +28,19 @@ concurrency:
 
 jobs:
   curation:
-    runs-on: ubuntu-latest
+    # 固定镜像，避开 ubuntu-latest 迁移 Ubuntu 26 的滚动期（2026-10-19 ~ 11-19）
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
 
     steps:
       - name: 📥 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # 必须 fetch 完整历史（虽然本项目不太需要）
           fetch-depth: 0
 
       - name: 🐍 设置 Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: "pip"
@@ -73,8 +74,9 @@ jobs:
           WECOM_CORPSECRET: ${{ secrets.WECOM_CORPSECRET }}
           # 可选：显式指定微信通道，不配则按已提供的凭据自动推断
           WECHAT_CHANNEL: ${{ secrets.WECHAT_CHANNEL }}
-          # 可选：每日张数，默认 4
+          # 可选：每日张数与下限，默认 4 / 3
           TOTAL_CARDS: ${{ secrets.TOTAL_CARDS }}
+          MIN_CARDS: ${{ secrets.MIN_CARDS }}
           # 仓库配置（用于历史归档页 / 项目源码链接，不用于图片投递）
           REPO_BASE_URL: ${{ secrets.REPO_BASE_URL }}
           # 调试
