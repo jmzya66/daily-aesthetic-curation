@@ -1,12 +1,11 @@
 name: Daily Aesthetic Curation
 
 on:
-  # 定时任务暂时停用：Secrets 未配置前每天空跑会在仓库留下无效归档。
-  # 填好 Secrets 后，取消下面两行的注释即可恢复（北京时间 8:00）。
-  # schedule:
-  #   - cron: "0 0 * * *"
+  # 每天 UTC 0:00（北京时间 8:00）自动推送
+  schedule:
+    - cron: "0 0 * * *"
 
-  # 手动触发仍可用：Actions → Run workflow（建好仓库后先跑 dry_run=true 验证）
+  # 手动触发：Actions → Run workflow（改代码后先跑 dry_run=true 验证）
   workflow_dispatch:
     inputs:
       dry_run:
@@ -58,7 +57,7 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           # Unsplash
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-          # NASA
+          # NASA：新端点免 key，此项仅保留兼容（可不配）
           NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
           # 邮件
           EMAIL_SMTP_HOST: ${{ secrets.EMAIL_SMTP_HOST }}
