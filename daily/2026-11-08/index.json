@@ -1,66 +1,114 @@
 {
   "date": "2026-11-08",
   "theme": "今日看历史：了解一下作品的创作年代与同时代发生了什么。",
-  "generated_at": "2026-11-08T02:08:40",
+  "generated_at": "2026-11-08T02:36:49",
   "pushed": false,
   "items": [
     {
       "artwork": {
         "source": "unsplash",
-        "source_id": "NjT4O7WYmwk",
-        "title": "selective focus photo of pink petaled flowers",
-        "artist": "Kien Do",
-        "date": "2015-01-25",
+        "source_id": "NQSWvyVRIJk",
+        "title": "green trees covering with fog during daytime",
+        "artist": "Vadim Sherbakov",
+        "date": "2015-10-28",
         "style": "摄影",
-        "description": "selective focus photo of pink petaled flowers",
-        "image_url": "https://images.unsplash.com/photo-1422205512921-12dac7b3b603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1422205512921-12dac7b3b603?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=85",
+        "description": "green trees covering with fog during daytime",
+        "image_url": "https://images.unsplash.com/photo-1446034295857-c39f8844fad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTA1NDA4fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1446034295857-c39f8844fad4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTA1NDA4fA&ixlib=rb-4.1.0&q=85",
         "local_path": "",
         "extra": {
           "delivery": "hotlink",
           "query": "nature",
-          "color": "#a6a6a6",
-          "location": null,
-          "portfolio_url": "https://unsplash.com/@kiendo",
-          "photo_page_url": "https://unsplash.com/photos/selective-focus-photo-of-pink-petaled-flowers-NjT4O7WYmwk?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@kiendo?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/NjT4O7WYmwk/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA",
+          "color": "#262626",
+          "location": "Moscow, Russia",
+          "portfolio_url": "https://unsplash.com/@madebyvadim",
+          "photo_page_url": "https://unsplash.com/photos/green-trees-covering-with-fog-during-daytime-NQSWvyVRIJk?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@madebyvadim?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/NQSWvyVRIJk/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTA1NDA4fA",
           "tags": [],
-          "width": 4789,
-          "height": 3172
+          "width": 5472,
+          "height": 3648
         }
       },
-      "commentary": "摄影《selective focus photo of pink petaled flowers》，关键词 nature、#a6a6a6。今日看历史：对比今天的同类题材，哪些做法留下了，哪些悄悄消失了。",
-      "cid": "img_unsplash:NjT4O7WYmwk"
+      "commentary": "摄影《green trees covering with fog during daytime》，关键词 nature、#262626。今日看历史：看材料与尺寸：它原本是挂在墙上，还是拿在手里翻的？",
+      "cid": "img_unsplash:NQSWvyVRIJk"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "49397",
+        "title": "Spouted water container (He",
+        "artist": "Unknown",
+        "date": "11th century BCE",
+        "style": "古典艺术",
+        "description": "Bronze",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP151393.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/as/original/DP151393.jpg",
+        "local_path": "daily/2026-11-08/met_Spouted_water_container_He_9cce16b5.jpg",
+        "extra": {
+          "department": "Asian Art",
+          "culture": "China",
+          "period": "Shang (ca. 1600–1046 BCE) to  Western Zhou (1046–771 BCE) dynasty",
+          "medium": "Bronze",
+          "dimensions": "H. 12 1/2 in. (31.8 cm); W. 8 1/2 in. (21.6 cm); D. 12 1/2 in. (31.8 cm)",
+          "creditLine": "Rogers Fund, 1943",
+          "tags": []
+        }
+      },
+      "commentary": "《Spouted water container (He》：Bronze、China、Shang (ca. 1600–1046 BCE) 。今日看历史：猜猜最初是谁订的、给谁看的，用途会影响画面怎么组织。",
+      "cid": "img_met:49397"
     },
     {
       "artwork": {
         "source": "unsplash",
-        "source_id": "FO7bKvgETgQ",
-        "title": "stack rock on seashore",
-        "artist": "Jeremy Thomas",
-        "date": "2016-03-20",
+        "source_id": "_LuLiJc1cdo",
+        "title": "body of water surrounding with trees",
+        "artist": "Kalen Emsley",
+        "date": "2016-06-06",
         "style": "摄影",
-        "description": "stack rock on seashore",
-        "image_url": "https://images.unsplash.com/photo-1458501534264-7d326fa0ca04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1458501534264-7d326fa0ca04?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA&ixlib=rb-4.1.0&q=85",
+        "description": "body of water surrounding with trees",
+        "image_url": "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTA1NDA4fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTA1NDA4fA&ixlib=rb-4.1.0&q=85",
         "local_path": "",
         "extra": {
           "delivery": "hotlink",
           "query": "nature",
-          "color": "#a6c0d9",
-          "location": "Boulder Colorado",
-          "portfolio_url": "https://unsplash.com/@jeremythomasphoto",
-          "photo_page_url": "https://unsplash.com/photos/stack-rock-on-seashore-FO7bKvgETgQ?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@jeremythomasphoto?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/FO7bKvgETgQ/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTAzNzE3fA",
+          "color": "#f3f3f3",
+          "location": "Please follow on Instagram! Based in Vancouver, BC",
+          "portfolio_url": "https://unsplash.com/@kalenemsley",
+          "photo_page_url": "https://unsplash.com/photos/body-of-water-surrounding-with-trees-_LuLiJc1cdo?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@kalenemsley?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/_LuLiJc1cdo/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTA1NDA4fA",
           "tags": [],
-          "width": 5184,
-          "height": 3456
+          "width": 4192,
+          "height": 2795
         }
       },
-      "commentary": "摄影《stack rock on seashore》，关键词 nature、#a6c0d9。今日看历史：记住创作年代，想想那一年别处正在发生什么。",
-      "cid": "img_unsplash:FO7bKvgETgQ"
+      "commentary": "摄影《body of water surrounding with trees》，关键词 nature、#f3f3f3。今日看历史：猜猜最初是谁订的、给谁看的，用途会影响画面怎么组织。",
+      "cid": "img_unsplash:_LuLiJc1cdo"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-06",
+        "title": "A Farewell to Swift",
+        "artist": "<a href=\"https://www.nasa.gov/\">NASA</a>/<a href=\"https://science.nasa.gov/mission/swift/\">Swift</a> and <a href=\"https://www.andreaplanet.com/andreamosaic/\">AndreaMosaic</a>",
+        "date": "2026-11-06",
+        "style": "天文",
+        "description": "Explanation: It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory . After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia . The featured image is a mosaic created in 2018 using some of the fir",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg?w=5252&h=3744&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg?w=5252&h=3744&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-08/nasa_2026-11-06_c64b7a2a.jpg",
+        "extra": {
+          "apod_date": "2026-11-06",
+          "explanation_full": "Explanation: It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory . After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia . The featured image is a mosaic created in 2018 using some of the first million images captured by the satellite's Ultraviolet/Optical Telescope . Swift had a combination of instruments, including an X-ray telescope and a gamma-ray telescope , that worked together to enable humanity to study, in unprecedented detail, the fastest and most energetic explosions in the universe. The most recent solar maximum accelerated the decay of the satellite's orbit. An innovative mission to rescue Swift by boosting its orbit was not successful . Swift burned on reentry like a shooting star, but the impressive data acquired by the telescope over its mission will continue to bring light to the mysteries of the cosmos for years to come. May it keep inspiring new missions to boldly go into space, explore new data and seek out new science. Tomorrow's picture: Moon Massif",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
+          "credit": "<a href=\"https://www.nasa.gov/\">NASA</a>/<a href=\"https://science.nasa.gov/mission/swift/\">Swift</a> and <a href=\"https://www.andreaplanet.com/andreamosaic/\">AndreaMosaic</a>",
+          "alt": "A mosaic image of the Neil Gehrels Swift Observatory, created from one million images of astronomical objects captured by the satellite’s Ultraviolet/Optical Telescope."
+        }
+      },
+      "commentary": "2026-11-06 的每日天文图《A Farewell to Swift》。今日看历史：看材料与尺寸：它原本是挂在墙上，还是拿在手里翻的？",
+      "cid": "img_nasa:2026-11-06"
     }
   ]
 }
