@@ -2,15 +2,15 @@
 
 > 每天给手机送一组精选图 + 一段观察笔记，留两分钟看张好图。
 
-每天（定时开启后为北京时间 8 点）系统从三个免费高质量图源抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），配一段中文观察笔记，通过**邮件 + 微信**双通道推送到手机。
+每天早上 8 点（北京时间）系统从三个免费高质量图源抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），配一段中文观察笔记，通过**邮件 + 微信**双通道推送到手机。
 
-**讲解当前不接 LLM**：未配置 `LLM_API_KEY` 时 `ai_commentary.py` 走兜底文案，也就是一段通用提示、不针对具体作品。已选定「规则化讲解」方案（按当日审美维度 + 作品元数据离线拼装，零依赖）但**尚未实施**；LLM 调用代码保留为可选分支，以后想接回来不用重做。
+**讲解默认不接 LLM**：`ai_commentary.py` 用「当日审美维度 + 作品元数据」离线拼装观察笔记（一句可验证的事实 + 一个可操作的观察动作），零依赖、每张不同。7 个维度共 28 条引导句在 `OBSERVATION_LINES` 里维护。只有显式配置 `LLM_API_KEY` 才改走原来的 OpenAI 兼容接口。
 
 图片一律使用图源官方直链：Unsplash 按 API Guidelines 只热链、不转存，Met / NASA 为公共领域作品。仓库 `daily/` 目录只用于历史回溯，不参与图片投递，因此邮件送达不依赖 commit 或 CDN 缓存。
 
 整套系统基于 **GitHub Actions** 免费运行，**零服务器成本**。仓库需设为**公开**。
 
-> 当前 `schedule` 已注释停用：等 workflow 文件就位、dry-run 验证通过后再恢复每天 8:00 自动推送。手动触发（Actions → Run workflow）不受影响。
+> 定时任务已恢复：每天 UTC 0:00（北京时间 8:00）自动推送。手动触发（Actions → Run workflow）仍可用于验证或补跑。归档日期按北京时间计算。
 
 ---
 
@@ -18,7 +18,7 @@
 
 - 🖼️ **多图源组合**：Met Museum（古典艺术 CC0）+ Unsplash（全球摄影）+ NASA APOD（每日天文图）
 - 🎲 **风格多样性**：每天 3-5 张卡片，横跨油画、摄影、天文、设计等不同维度
-- 📝 **观察笔记**：当前为离线兜底文案（不接 LLM）；已选定规则化讲解方案待实施，LLM 分支保留可选
+- 📝 **离线观察笔记**：按当日审美维度 + 作品元数据拼装，每张不同；不接 LLM、零依赖，LLM 分支可选
 - 📧 **精美邮件**：响应式 HTML 邮件模板，移动端友好
 - 💬 **微信双通道**：支持 Server酱（5 条/天）和企业微信自建应用（无限）
 - 📚 **历史归档**：Met / NASA 图片与全部讲解自动提交到 GitHub 仓库；Unsplash 只留官方链接
@@ -38,8 +38,8 @@
    ┌───────┴────────┐
    ▼                ▼
 【抓图】          【观察笔记】
-Met Museum       当前：离线兜底文案
-Unsplash         计划：维度 + 元数据离线拼装
+Met Museum       事实句 + 当日维度引导句
+Unsplash         7 维度 × 4 条语料池
 NASA APOD        （LLM 为可选分支，默认不接）
    │
    ▼
@@ -66,16 +66,16 @@ QQ/Gmail    Markdown + 图片
 | 服务             | 用途       | 注册地址                                                       | 免费额度         |
 | -------------- | -------- | ---------------------------------------------------------- | ------------ |
 | **Unsplash**   | 摄影图源     | [unsplash.com/developers](https://unsplash.com/developers) | demo 50 次/小时；生产 1000 次/小时 |
-| **NASA**       | 天文图源     | [science.nasa.gov](https://science.nasa.gov/)              | 旧端点 DEMO_KEY 30 次/小时；新端点免 key（待切换） |
+| **NASA**       | 天文图源     | [science.nasa.gov](https://science.nasa.gov/)              | 公开 feed 免 key，一次取最近约 25 条 |
 | **Met Museum** | 古典艺术     | 无需 key（CC0）                                                | 80 次/秒       |
 | **QQ 邮箱**      | SMTP 推送  | 已有 QQ 即可                                                   | —              |
 | **Server酱**    | 微信推送     | [sct.ftqq.com](https://sct.ftqq.com)                       | 5 条/天        |
 | **企业微信**       | 微信推送     | [work.weixin.qq.com](https://work.weixin.qq.com)           | 无限制          |
 | **LLM（可选）**  | 讲解生成   | 任意 OpenAI 兼容服务                                          | **当前默认不接** |
 
-> 💡 **当前推荐组合**：Unsplash + NASA + QQ邮箱 + Server酱（或企业微信），**不需要任何 LLM 服务**。
+> 💡 **推荐组合**：Unsplash + NASA + QQ邮箱 + Server酱（或企业微信），**不需要任何 LLM 服务，也不需要 NASA API key**。
 > Unsplash 图片按 [API Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) 只热链官方 URL，不下载转存；请勿把图片搬到自己的 CDN。
-> NASA 旧端点 `api.nasa.gov/planetary/apod` 计划切换到免 key 的 `science.nasa.gov/wp-json/wp/v2/apod-basic`，切换前 `NASA_API_KEY` 可以不填。
+> NASA 已切到免 key 的公开 feed `science.nasa.gov/wp-json/wp/v2/apod-basic`；旧端点 `api.nasa.gov/planetary/apod` 计划 2026-12 下线。
 
 ### 3. 配置 GitHub Secrets
 
@@ -93,7 +93,7 @@ REPO_BASE_URL            # https://raw.githubusercontent.com/jmzya66/daily-aesth
 `REPO_BASE_URL` 只用于推导历史归档页与项目源码链接，不用于图片投递。
 `EMAIL_USERNAME` 是发件账号、`EMAIL_TO` 是收件地址，两者不是同一个字段，但个人自用可填同一个邮箱。
 
-可选：`NASA_API_KEY`（旧端点用，可不填）、`LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL`（仅在启用 LLM 分支时需要）、`EMAIL_SMTP_HOST`（默认 smtp.qq.com）、`EMAIL_SMTP_PORT`（默认 465）、`WECHAT_CHANNEL`（不配则按凭据自动推断）、`TOTAL_CARDS`（默认 4）。
+可选：`LLM_API_KEY` / `LLM_BASE_URL` / `LLM_MODEL`（仅在启用 LLM 分支时需要；NASA 已免 key）、`EMAIL_SMTP_HOST`（默认 smtp.qq.com）、`EMAIL_SMTP_PORT`（默认 465）、`WECHAT_CHANNEL`（不配则按凭据自动推断）、`TOTAL_CARDS`（默认 4）。
 
 #### 微信通道二选一
 
@@ -132,12 +132,12 @@ GitHub Actions 不需要 `config.yaml`（它被 `.gitignore` 排除），所有�
 ```
 daily-aesthetic-curation/
 ├── .github/workflows/
-│   └── daily.yml             # GitHub Actions 工作流（schedule 当前停用）
+│   └── daily.yml             # GitHub Actions 工作流（每天 8:00）
 ├── src/
 │   ├── __init__.py
 │   ├── main.py               # 主流程入口
 │   ├── models.py             # 共享数据结构
-│   ├── ai_commentary.py      # 讲解生成（当前兜底文案，LLM 分支可选）
+│   ├── ai_commentary.py      # 离线观察笔记（7 维度语料池），LLM 分支可选
 │   ├── fetchers/
 │   │   ├── met_museum.py     # 古典艺术
 │   │   ├── unsplash.py       # 摄影
@@ -161,7 +161,7 @@ daily-aesthetic-curation/
 
 ### 修改每日推送时间
 
-编辑 `.github/workflows/daily.yml` 的 cron 表达式（UTC 时间）。注意 `schedule` 当前是注释状态，恢复定时时把注释去掉：
+编辑 `.github/workflows/daily.yml` 的 cron 表达式（UTC 时间）：
 
 ```yaml
 schedule:
@@ -181,9 +181,11 @@ schedule:
   total_cards: 4   # 改成 3-7 都可以
 ```
 
-### 自定义讲解 prompt（仅 LLM 模式）
+### 调整观察笔记
 
-编辑 `src/ai_commentary.py` 的 `SYSTEM_PROMPT` 和 `USER_PROMPT_TEMPLATE`，比如想强调"色彩"维度就改 prompt。**当前默认不接 LLM**，这两个常量不生效；离线规则化讲解方案实施后会改为维护语料池。
+离线讲解的语料在 `src/ai_commentary.py` 的 `OBSERVATION_LINES`：按构图 / 色彩 / 光影 / 质感 / 情绪 / 细节 / 历史 7 个维度各存 4 条可操作的观察动作，改这里就能换每日提示。`_fact_sentence()` 负责从各图源元数据拼事实句。
+
+`SYSTEM_PROMPT` / `USER_PROMPT_TEMPLATE` 只在启用 LLM 分支（配置 `LLM_API_KEY`）时生效。
 
 ### 修改每日主题文案
 

@@ -5,7 +5,7 @@ import os
 import re
 import hashlib
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -45,8 +45,12 @@ def short_hash(text: str, length: int = 8) -> str:
 
 
 def today_str() -> str:
-    """返回 YYYY-MM-DD 格式的今天"""
-    return datetime.now().strftime("%Y-%m-%d")
+    """返回北京时间（UTC+8，无夏令时）下的 YYYY-MM-DD
+
+    Actions 跑在 UTC，直接 datetime.now() 会让手动或延迟运行的归档日期
+    比北京日期早一天。固定 UTC+8 可避免额外引入 tzdata 依赖。
+    """
+    return datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
 
 
 def download_image(

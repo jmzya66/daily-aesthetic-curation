@@ -164,7 +164,7 @@ def pick_artworks(cfg: dict[str, Any], total_cards: int) -> list[Artwork]:
                 )
             elif name == "nasa":
                 picked = nasa_apod.fetch(
-                    api_key=src_cfg.get("api_key", "DEMO_KEY"),
+                    lookback_days=src_cfg.get("lookback_days", 30),
                     max_pick=n,
                 )
             else:
@@ -273,6 +273,7 @@ def run(config_path: str = "config.yaml") -> int:
         api_key=llm_cfg.get("api_key", ""),
         base_url=llm_cfg.get("base_url", "https://api.deepseek.com/v1"),
         model=llm_cfg.get("model", "deepseek-chat"),
+        theme=theme,
     )
     items = []
     for aw, comm in zip(ready_artworks, commentaries):

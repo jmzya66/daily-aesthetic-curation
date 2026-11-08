@@ -44,11 +44,11 @@ met_museum:
   is_public_domain: true    # 只要公共领域作品
 
 # --- NASA APOD (天文图源) ---
+# 已切到 science.nasa.gov 的公开 feed：免 API key、一次返回最近约 25 条，
+# 不再逐日串行请求。旧端点 api.nasa.gov/planetary/apod 计划 2026-12 下线。
 nasa_apod:
   enabled: true
-  api_key: "DEMO_KEY"       # 建议注册 https://api.nasa.gov/ 换成自己的 key
-                            # DEMO_KEY 限 30 次/小时，自有 key 限 1000 次/小时
-                            # CI 用环境变量 NASA_API_KEY 覆盖
+  lookback_days: 30         # 只从最近 N 天的日期窗口里挑图
 
 # --- 每日推送配置 ---
 schedule:
