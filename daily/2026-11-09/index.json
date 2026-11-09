@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-09",
+  "theme": "今日看构图：注意画面元素的『视觉重量』与『留白节奏』。",
+  "generated_at": "2026-11-09T04:52:13",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-10-24",
+        "title": "Rosetta's Selfie",
+        "artist": "<a href=\"http://rosetta.esa.int/\">ESA/Rosetta/Philae/CIV</a>A",
+        "date": "2026-10-24",
+        "style": "天文",
+        "description": "Explanation: This Rosetta spacecraft selfie was snapped on October 7th, 2014. At the time the comet-chasing spacecraft was about 472 million kilometers from planet Earth, but only 16 kilometers from the surface of comet 67P/Churyumov-Gerasimenko . Looming beyond the spacecraft near the top of the fr",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/october/ESA_Rosetta_Philae_CIVA_141007.png?w=1024&h=1024&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/october/ESA_Rosetta_Philae_CIVA_141007.png?w=1024&h=1024&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-09/nasa_2026-10-24_db80d65c.jpg",
+        "extra": {
+          "apod_date": "2026-10-24",
+          "explanation_full": "Explanation: This Rosetta spacecraft selfie was snapped on October 7th, 2014. At the time the comet-chasing spacecraft was about 472 million kilometers from planet Earth, but only 16 kilometers from the surface of comet 67P/Churyumov-Gerasimenko . Looming beyond the spacecraft near the top of the frame, dust and gas stream away from the comet's curious double-lobed nucleus . Bright sunlight glints off one of Rosetta's 14 meter long solar arrays. In fact, two exposures, one short and one long, were combined to record the dramatic high contrast scene using the CIVA camera system on Rosetta's still-attached Philae lander . Its chosen primary landing site was on the visible hemisphere of the smaller lobe of the nucleus. This was the last image from Philae's camera before the lander separated from Rosetta on November 12. Shortly after separation Philae took another image looking back toward the orbiter and began its descent to the nucleus of the comet. Tomorrow's picture: dark matters",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-october-24-rosettas-selfie/",
+          "credit": "<a href=\"http://rosetta.esa.int/\">ESA/Rosetta/Philae/CIV</a>A",
+          "alt": "Image of a Rosetta spacecraft solar array in foreground and the nucleus of comet 67P in background."
+        }
+      },
+      "commentary": "2026-10-24 的每日天文图《Rosetta's Selfie》。今日看构图：找一条藏起来的对角线，很多安排都压在这条线上。",
+      "cid": "img_nasa:2026-10-24"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "72229",
+        "title": "Piece",
+        "artist": "Unknown",
+        "date": "19th century",
+        "style": "古典艺术",
+        "description": "Silk / Compound weave",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP14704.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/as/original/DP14704.jpg",
+        "local_path": "daily/2026-11-09/met_Piece_031f0484.jpg",
+        "extra": {
+          "department": "Asian Art",
+          "culture": "Japan",
+          "period": "",
+          "medium": "Silk / Compound weave",
+          "dimensions": "6 1/4 × 5 7/8 in. (15.9 × 14.9 cm)",
+          "creditLine": "Gift of Kihei Hattori, in memory of his father, Kihei Hattori, 1920",
+          "tags": []
+        }
+      },
+      "commentary": "《Piece》：Silk / Compound weave、Japan、19th century。今日看构图：先别看主体，找画面里最重的那一块，看它把视线推向哪里。",
+      "cid": "img_met:72229"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "3Ijt7UkSBYE",
+        "title": "photo of gray concrete building",
+        "artist": "Ashim D’Silva",
+        "date": "2016-04-14",
+        "style": "摄影",
+        "description": "photo of gray concrete building",
+        "image_url": "https://images.unsplash.com/photo-1460647927807-8e664765c97c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTk5OTI3fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1460647927807-8e664765c97c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTk5OTI3fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#8ca6c0",
+          "location": "Toronto, Canada",
+          "portfolio_url": "https://unsplash.com/@randomlies",
+          "photo_page_url": "https://unsplash.com/photos/photo-of-gray-concrete-building-3Ijt7UkSBYE?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@randomlies?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/3Ijt7UkSBYE/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTk5OTI3fA",
+          "tags": [],
+          "width": 3072,
+          "height": 2048
+        }
+      },
+      "commentary": "摄影《photo of gray concrete building》，关键词 architecture、#8ca6c0。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡。",
+      "cid": "img_unsplash:3Ijt7UkSBYE"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "vUwJ8uu_C1M",
+        "title": "low angle photo of mirror glass building",
+        "artist": "Redd Francisco",
+        "date": "2016-04-26",
+        "style": "摄影",
+        "description": "low angle photo of mirror glass building",
+        "image_url": "https://images.unsplash.com/photo-1461695008884-244cb4543d74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTk5OTI3fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1461695008884-244cb4543d74?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTk5OTI3fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#f3f3f3",
+          "location": "Edmonton, Alberta",
+          "portfolio_url": "https://unsplash.com/@reddfrancisco",
+          "photo_page_url": "https://unsplash.com/photos/low-angle-photo-of-mirror-glass-building-vUwJ8uu_C1M?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@reddfrancisco?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/vUwJ8uu_C1M/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MTk5OTI3fA",
+          "tags": [],
+          "width": 5921,
+          "height": 3332
+        }
+      },
+      "commentary": "摄影《low angle photo of mirror glass building》，关键词 architecture、#f3f3f3。今日看构图：眯起眼只看大轮廓，数数留白占了多大、又留给了谁。",
+      "cid": "img_unsplash:vUwJ8uu_C1M"
+    }
+  ]
+}
