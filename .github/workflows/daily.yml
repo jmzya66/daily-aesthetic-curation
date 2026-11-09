@@ -3,7 +3,7 @@ name: Daily Aesthetic Curation
 on:
   # 每天 UTC 0:00（北京时间 8:00）自动推送
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "17 0 * * *"
 
   # 手动触发：Actions → Run workflow（改代码后先跑 dry_run=true 验证）
   workflow_dispatch:
