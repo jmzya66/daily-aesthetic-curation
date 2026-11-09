@@ -1,7 +1,8 @@
 name: Daily Aesthetic Curation
 
 on:
-  # 每天 UTC 0:00（北京时间 8:00）自动推送
+  # 每天 UTC 0:17（北京时间 8:17）自动推送
+  # 避开 UTC 整点高峰：0:00 是全网 daily 任务最拥挤的时刻，2026-11-09 曾排队到 12:51 才触发
   schedule:
     - cron: "17 0 * * *"
 
