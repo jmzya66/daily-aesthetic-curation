@@ -1,130 +1,121 @@
 {
   "date": "2026-11-09",
   "theme": "今日看构图：注意画面元素的『视觉重量』与『留白节奏』。",
-  "generated_at": "2026-11-09T11:07:15",
-  "pushed": true,
+  "generated_at": "2026-11-09T11:45:04",
+  "pushed": false,
   "items": [
     {
       "artwork": {
-        "source": "met",
-        "source_id": "657385",
-        "title": "Harriett Vernon, from the Actresses series (N245) issued by Kinney Brothers to promote Sweet Caporal Cigarettes",
-        "artist": "Kinney Brothers Tobacco Company",
-        "date": "1890",
-        "style": "古典艺术",
-        "description": "Albumen photograph",
-        "image_url": "https://images.metmuseum.org/CRDImages/dp/original/DP859771.jpg",
-        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/original/DP859771.jpg",
-        "local_path": "daily/2026-11-09/met_Harriett_Vernon_from_the_Actresses_series_N245_issued_by_Kinney_Brothers_to_prom_3a8331e6.jpg",
+        "source": "unsplash",
+        "source_id": "l_h4zrtTnwE",
+        "title": "low angle view photography of ceiling",
+        "artist": "Chris Reyem",
+        "date": "2017-12-08",
+        "style": "摄影",
+        "description": "low angle view photography of ceiling",
+        "image_url": "https://images.unsplash.com/photo-1512766411668-e305741fcb8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjI0NzAzfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1512766411668-e305741fcb8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjI0NzAzfA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
         "extra": {
-          "department": "Drawings and Prints",
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#262626",
+          "location": "Potsdam",
+          "portfolio_url": "https://unsplash.com/@chris_reyem",
+          "photo_page_url": "https://unsplash.com/photos/low-angle-view-photography-of-ceiling-l_h4zrtTnwE?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@chris_reyem?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/l_h4zrtTnwE/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjI0NzAzfA",
+          "tags": [],
+          "width": 5184,
+          "height": 3456
+        }
+      },
+      "commentary": "摄影《low angle view photography of ceiling》，关键词 architecture、#262626。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡。",
+      "cid": "img_unsplash:l_h4zrtTnwE"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "291833",
+        "title": "[Man with Chin Curtain Beard]",
+        "artist": "Unknown",
+        "date": "1840s",
+        "style": "古典艺术",
+        "description": "Daguerreotype",
+        "image_url": "https://images.metmuseum.org/CRDImages/ph/original/DP700219.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/ph/original/DP700219.jpg",
+        "local_path": "daily/2026-11-09/met__Man_with_Chin_Curtain_Beard__df5721d6.jpg",
+        "extra": {
+          "department": "Photographs",
           "culture": "",
           "period": "",
-          "medium": "Albumen photograph",
-          "dimensions": "Sheet: 2 1/2 × 1 7/16 in. (6.4 × 3.7 cm)",
-          "creditLine": "The Jefferson R. Burdick Collection, Gift of Jefferson R. Burdick",
+          "medium": "Daguerreotype",
+          "dimensions": "Image: 6.6 x 5.3 cm (2 5/8 x 2 1/16 in.)\r\nPlate: 8.3 x 7 cm (3 1/4 x 2 3/4 in.)\r\nCase: 1.7 x 9.2 x 8.1 cm (11/16 x 3 5/8 x 3 3/16 in.)",
+          "creditLine": "Bequest of Herbert Mitchell, 2008",
           "tags": [
+            {
+              "term": "Men",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+            },
             {
               "term": "Portraits",
               "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
               "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
-            },
-            {
-              "term": "Women",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
-            },
-            {
-              "term": "Actresses",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300025658",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q21169216"
             }
           ]
         }
       },
-      "commentary": "《Harriett Vernon, from the Actresses series (N245) issued by Kinney Brothers to promote Sweet Caporal Cigarett",
-      "cid": "img_met:657385"
-    },
-    {
-      "artwork": {
-        "source": "unsplash",
-        "source_id": "Lr9edXqJeVk",
-        "title": "abstract golden building",
-        "artist": "Valentin Gautier",
-        "date": "2016-11-02",
-        "style": "摄影",
-        "description": "abstract golden building",
-        "image_url": "https://images.unsplash.com/photo-1478100006428-308e7720aa2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjIyNDI4fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1478100006428-308e7720aa2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjIyNDI4fA&ixlib=rb-4.1.0&q=85",
-        "local_path": "",
-        "extra": {
-          "delivery": "hotlink",
-          "query": "architecture",
-          "color": "#f3f3f3",
-          "location": "Paris",
-          "portfolio_url": "https://unsplash.com/@valentingautier",
-          "photo_page_url": "https://unsplash.com/photos/abstract-golden-building-Lr9edXqJeVk?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@valentingautier?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/Lr9edXqJeVk/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjIyNDI4fA",
-          "tags": [],
-          "width": 4242,
-          "height": 2457
-        }
-      },
-      "commentary": "摄影《abstract golden building》，关键词 architecture、#f3f3f3。今日看构图：眯起眼只看大轮廓，数数留白占了多大、又留给了谁。",
-      "cid": "img_unsplash:Lr9edXqJeVk"
+      "commentary": "《[Man with Chin Curtain Beard]》：Daguerreotype、1840s。今日看构图：找一条藏起来的对角线，很多安排都压在这条线上。",
+      "cid": "img_met:291833"
     },
     {
       "artwork": {
         "source": "nasa",
-        "source_id": "2026-10-29",
-        "title": "The Horns of Venus",
-        "artist": "<a href=\"http://www.astrophoto.fr/\">Thierry Legault</a>",
-        "date": "2026-10-29",
+        "source_id": "2026-11-02",
+        "title": "A Long Cloud on Mars",
+        "artist": "ESA , DLR , FU Berlin ; Processing & License : J. Cowart",
+        "date": "2026-11-02",
         "style": "天文",
-        "description": "Explanation: That's no moon. But you could be forgiven for thinking it was a crescent Moon in the sky. It is a lesser known fact that Venus also has phases . (What about other planets? ) The featured image shows Venus seen almost directly between the Sun and the Earth. This happens once every year a",
-        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/october/venus_20261024a.jpg?w=744&h=744&fit=clip&crop=faces%2Cfocalpoint",
-        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/october/venus_20261024a.jpg?w=744&h=744&fit=clip&crop=faces%2Cfocalpoint",
-        "local_path": "daily/2026-11-09/nasa_2026-10-29_f284bf15.jpg",
+        "description": "Explanation: What’s causing this unusually long cloud on Mars ? Known as the Arsia Mons Elongated Cloud (AMEC) and first recorded by NASA’s Viking Orbiter 2 in 1977, the strange cloud has been imaged in greater detail more recently by ESA ’s robotic Mars Express spacecraft. The featured image is fro",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/MonsCloud_MarsExpress_1920.jpg?w=1920&h=1200&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/MonsCloud_MarsExpress_1920.jpg?w=1920&h=1200&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-09/nasa_2026-11-02_a4ae108c.jpg",
         "extra": {
-          "apod_date": "2026-10-29",
-          "explanation_full": "Explanation: That's no moon. But you could be forgiven for thinking it was a crescent Moon in the sky. It is a lesser known fact that Venus also has phases . (What about other planets? ) The featured image shows Venus seen almost directly between the Sun and the Earth. This happens once every year and a half , and it is like the alignment that happens every month during a new Moon. But the new Moon is dark, while Venus' backlit atmosphere refracts and scatters the sunlight, creating a glowing crescent arc that extends beyond 180 degrees: the tips of this arc are called the \"horns\". The crescent can be seen with a small telescope or binoculars during twilight, but those with exceptionally acute eyesight may be able to see it with the unaided eye. Ancient Babylonian astronomers may have been the first to study Venus' brightness changes, which are related to its phases . Many other cultures have similar astronomical records, including the oldest surviving Maya book . Tomorrow's picture: a cosmic haunting",
-          "permalink": "https://science.nasa.gov/image-article/apod-29-october-2026-the-horns-of-venus/",
-          "credit": "<a href=\"http://www.astrophoto.fr/\">Thierry Legault</a>",
-          "alt": "See Explanation.  Clicking on the picture will download the highest resolution version available."
+          "apod_date": "2026-11-02",
+          "explanation_full": "Explanation: What’s causing this unusually long cloud on Mars ? Known as the Arsia Mons Elongated Cloud (AMEC) and first recorded by NASA’s Viking Orbiter 2 in 1977, the strange cloud has been imaged in greater detail more recently by ESA ’s robotic Mars Express spacecraft. The featured image is from 2018. The cloud forms only during spring and summer seasons and then only during morning hours. Made of water-ice, the most familiar process that causes cloud crystals to form around bits of dust would fail due to the thinness and lack of dust high in the Martian atmosphere . Leading speculation holds that dust is not involved. After the cloud forms near the volcano Arsia Mons , wind blows the cloud downstream — creating a tail that can extend over 1500 kilometers. Efforts to better understand AMEC s will continue, an understanding that may bolster a more complete view of cloud formation on Earth . Tomorrow's picture: eyeing a cat",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-2-a-long-cloud-on-mars/",
+          "credit": "ESA , DLR , FU Berlin ; Processing & License : J. Cowart",
+          "alt": "Mars is seen from orbit with an orange landscape and two prominent volcanoes on the right. Extending  horizontally from the nearer volcano is a very long white cloud."
         }
       },
-      "commentary": "2026-10-29 的每日天文图《The Horns of Venus》。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡。",
-      "cid": "img_nasa:2026-10-29"
+      "commentary": "2026-11-02 的每日天文图《A Long Cloud on Mars》。今日看构图：先别看主体，找画面里最重的那一块，看它把视线推向哪里。",
+      "cid": "img_nasa:2026-11-02"
     },
     {
       "artwork": {
-        "source": "unsplash",
-        "source_id": "lFv0V3_2H6s",
-        "title": "architectural photography of building with people in it during nighttime",
-        "artist": "Mike Kononov",
-        "date": "2016-12-05",
-        "style": "摄影",
-        "description": "architectural photography of building with people in it during nighttime",
-        "image_url": "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjIyNDI4fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjIyNDI4fA&ixlib=rb-4.1.0&q=85",
-        "local_path": "",
+        "source": "met",
+        "source_id": "625675",
+        "title": "Overseer Shabti of Nauny",
+        "artist": "Unknown",
+        "date": "ca. 1051–1002 BCE",
+        "style": "古典艺术",
+        "description": "Faience",
+        "image_url": "https://images.metmuseum.org/CRDImages/eg/original/30.3.26.6_EGDP021243.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/eg/original/30.3.26.6_EGDP021243.jpg",
+        "local_path": "daily/2026-11-09/met_Overseer_Shabti_of_Nauny_9ffaaaee.jpg",
         "extra": {
-          "delivery": "hotlink",
-          "query": "architecture",
-          "color": "#0c2626",
-          "location": "Tbilisi",
-          "portfolio_url": "https://unsplash.com/@mikofilm",
-          "photo_page_url": "https://unsplash.com/photos/architectural-photography-of-building-with-people-in-it-during-nighttime-lFv0V3_2H6s?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@mikofilm?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/lFv0V3_2H6s/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0MjIyNDI4fA",
-          "tags": [],
-          "width": 4782,
-          "height": 2690
+          "department": "Egyptian Art",
+          "culture": "",
+          "period": "Third Intermediate Period",
+          "medium": "Faience",
+          "dimensions": "H 9.7 × W 3.4 × D 2.5 cm (3 13/16 × 1 5/16 × 1 in.)",
+          "creditLine": "Rogers Fund, 1930",
+          "tags": []
         }
       },
-      "commentary": "摄影《architectural photography of building with people in it during nighttime》，关键词 architecture、#0c2626。今日看构图：眯起",
-      "cid": "img_unsplash:lFv0V3_2H6s"
+      "commentary": "《Overseer Shabti of Nauny》：Faience、Third Intermediate Period、ca. 1051–1002 BCE。今日看构图：眯起眼只看大轮廓，数数留白占了多大、又留给了谁。",
+      "cid": "img_met:625675"
     }
   ]
 }
