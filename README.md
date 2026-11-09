@@ -40,7 +40,7 @@
 【抓图】          【观察笔记】
 Met Museum       事实句 + 当日维度引导句
 Unsplash         7 维度 × 4 条语料池
-NASA APOD        （LLM 为可选分支，默认不接）
+ APOD        （LLM 为可选分支，默认不接）
    │
    ▼
 【邮件】     【微信】
@@ -281,7 +281,7 @@ llm:
 
 ### Q: 图片在邮件里加载很慢？
 
-邮件直接使用图源官方地址（Unsplash `images.unsplash.com`、Met `images.metmuseum.org`、NASA `apod.nasa.gov`），不再经过 jsDelivr。国内访问 Met / NASA 可能偏慢，这是「合规优先」的代价；若明显影响体验，可考虑把这两个公共领域图源改为压缩后自建托管（Unsplash 仍不能转存）。
+邮件直接使用图源官方地址（Unsplash `images.unsplash.com`、Met `images.metmuseum.org`、NASA `assets.science.nasa.gov`），不再经过 jsDelivr。国内访问 Met / NASA 可能偏慢，这是「合规优先」的代价；若明显影响体验，可考虑把这两个公共领域图源改为压缩后自建托管（Unsplash 仍不能转存）。
 
 ### Q: 想看历史日课？
 
