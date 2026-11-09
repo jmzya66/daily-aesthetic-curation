@@ -168,7 +168,7 @@ def send_email(
                 server.starttls(context=ssl.create_default_context())
                 server.login(username, password)
                 server.send_message(msg)
-        print(f"[email] 发送成功 -> {to_addrs}")
+        print(f"[email] 发送成功 -> {len(to_addrs)} 个收件人（地址不写入公开日志）")
         return True
     except Exception as exc:
         print(f"[email] 发送失败: {exc}")

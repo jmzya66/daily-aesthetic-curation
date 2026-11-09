@@ -79,7 +79,8 @@ def fetch(
                 source="nasa",
                 source_id=pick.get("date") or str(pick.get("post_id", "")),
                 title=pick.get("title") or "Untitled",
-                artist=pick.get("copyright") or pick.get("credit") or "NASA",
+                # feed 的 copyright / credit 常含 <a href>，不清洗会在邮件与微信里显示成字面标签
+                artist=_clean_html(pick.get("copyright") or pick.get("credit") or "") or "NASA",
                 date=pick.get("date", ""),
                 style="天文",
                 description=explanation[:300],
@@ -91,7 +92,7 @@ def fetch(
                     "apod_date": pick.get("date", ""),
                     "explanation_full": explanation,
                     "permalink": pick.get("permalink", ""),
-                    "credit": pick.get("credit", ""),
+                    "credit": _clean_html(pick.get("credit", "")),
                     "alt": pick.get("alt", ""),
                 },
             )

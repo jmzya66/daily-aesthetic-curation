@@ -46,6 +46,8 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
     CI 上通常没有 config.yaml（被 .gitignore 排除），所以所有必填项都必须有
     env 映射或代码内默认值，不能出现裸字典索引。
     """
+    # 本地开发时读 .env；默认不覆盖已存在的环境变量，因此 CI 的 Secrets 优先。
+    load_dotenv()
     path = Path(path)
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
@@ -202,9 +204,10 @@ def _repo_urls(base_url: str) -> tuple[str, str]:
 
 
 def _write_archive(
-    path: Path, date_str: str, theme: str, items: list[dict], pushed: bool
+    path: Path, date_str: str, theme: str, items: list[dict], pushed: bool,
+    push_results: dict[str, bool] | None = None,
 ) -> None:
-    """原子写归档；pushed 用于当日幂等保护"""
+    """原子写归档；pushed 用于当日幂等保护，push_results 记录各通道真实结果"""
     archive = {
         "date": date_str,
         "theme": theme,
@@ -212,6 +215,8 @@ def _write_archive(
         "pushed": pushed,
         "items": items,
     }
+    if push_results is not None:
+        archive["push_results"] = push_results
     tmp = path.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding="utf-8")
     tmp.replace(path)
@@ -303,6 +308,7 @@ def run(config_path: str = "config.yaml") -> int:
         print("\n[main] DRY-RUN：跳过邮件与微信推送")
     else:
         archive_url, project_url = _repo_urls(cfg.get("repo", {}).get("base_url", ""))
+        push_results: dict[str, bool] = {}
 
         if cfg.get("email", {}).get("enabled", True):
             print("\n[main] 推送邮件")
@@ -314,6 +320,7 @@ def run(config_path: str = "config.yaml") -> int:
                 archive_url=archive_url,
                 project_url=project_url,
             )
+            push_results["email"] = bool(ok)
             print(f"[main] 邮件结果: {'OK' if ok else 'FAIL'}")
 
         if cfg.get("wechat", {}).get("channel"):
@@ -332,9 +339,19 @@ def run(config_path: str = "config.yaml") -> int:
                 content=plain_text,
                 markdown_for_wecom=md_content,
             )
+            push_results["wechat"] = bool(ok)
             print(f"[main] 微信结果: {'OK' if ok else 'FAIL'}")
 
-        _write_archive(archive_path, date_str, theme, items, pushed=True)
+        # 让失败在 Actions Annotations 里可见，但不改退出码：
+        # job 失败会跳过后面的 git commit，当天归档就丢了。
+        failed = [name for name, ok in push_results.items() if not ok]
+        for name in failed:
+            print(f"::error::{name} 通道推送失败，详见上方日志；当天归档已保留")
+        if failed:
+            print(f"[main] ⚠️ 本次有推送失败：{', '.join(failed)}（详见 Annotations）")
+
+        _write_archive(archive_path, date_str, theme, items,
+                       pushed=True, push_results=push_results)
 
     # 6. 更新 INDEX.md（最近 7 天）
     _update_index(output_dir, date_str, theme, len(items))

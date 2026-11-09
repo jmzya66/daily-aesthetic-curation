@@ -2,15 +2,15 @@
 
 > 每天给手机送一组精选图 + 一段观察笔记，留两分钟看张好图。
 
-每天早上 8 点（北京时间）系统从三个免费高质量图源抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），配一段中文观察笔记，通过**邮件 + 微信**双通道推送到手机。
+每天早上 8:17（北京时间）系统从三个免费高质量图源抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），配一段中文观察笔记，通过**邮件 + 微信**双通道推送到手机。
 
-**讲解默认不接 LLM**：`ai_commentary.py` 用「当日审美维度 + 作品元数据」离线拼装观察笔记（一句可验证的事实 + 一个可操作的观察动作），零依赖、每张不同。7 个维度共 28 条引导句在 `OBSERVATION_LINES` 里维护。只有显式配置 `LLM_API_KEY` 才改走原来的 OpenAI 兼容接口。
+**讲解默认不接 LLM**：`ai_commentary.py` 用「当日审美维度 + 作品元数据」离线拼装观察笔记（一句可验证的事实 + 一个可操作的观察动作），零依赖、每张不同。7 个维度共 28 条引导句在 `OBSERVATION_LINES` 里维护；同一天的卡片按轮转分配不同句子（每维度 4 条，超过 4 张才循环）。只有显式配置 `LLM_API_KEY` 才改走原来的 OpenAI 兼容接口。
 
 图片一律使用图源官方直链：Unsplash 按 API Guidelines 只热链、不转存，Met / NASA 为公共领域作品。仓库 `daily/` 目录只用于历史回溯，不参与图片投递，因此邮件送达不依赖 commit 或 CDN 缓存。
 
 整套系统基于 **GitHub Actions** 免费运行，**零服务器成本**。仓库需设为**公开**。
 
-> 定时任务已恢复：每天 UTC 0:00（北京时间 8:00）自动推送。手动触发（Actions → Run workflow）仍可用于验证或补跑。归档日期按北京时间计算。
+> 定时任务已恢复：每天 UTC 0:17（北京时间 8:17）自动推送，避开 UTC 整点高峰。GitHub 对定时任务没有准点 SLA，仍可能延迟。手动触发（Actions → Run workflow）可用于验证或补跑。归档日期按北京时间计算。
 
 ---
 
@@ -31,7 +31,7 @@
 
 ```
 ┌─────────────────────┐
-│  GitHub Actions     │  每天 UTC 0:00 (北京时间 8:00)
+│  GitHub Actions     │  每天 UTC 0:17 (北京时间 8:17)
 │  (调度中心)          │
 └──────────┬──────────┘
            │
@@ -132,7 +132,7 @@ GitHub Actions 不需要 `config.yaml`（它被 `.gitignore` 排除），所有�
 ```
 daily-aesthetic-curation/
 ├── .github/workflows/
-│   └── daily.yml             # GitHub Actions 工作流（每天 8:00）
+│   └── daily.yml             # GitHub Actions 工作流（每天 8:17）
 ├── src/
 │   ├── __init__.py
 │   ├── main.py               # 主流程入口
@@ -165,12 +165,14 @@ daily-aesthetic-curation/
 
 ```yaml
 schedule:
-  - cron: "0 0 * * *"   # 北京时间 8:00
+  - cron: "17 0 * * *"   # 北京时间 8:17（当前值）
   # - cron: "30 22 * * *"  # 北京时间 6:30
   # - cron: "0 1 * * *"   # 北京时间 9:00
 ```
 
 工具：[crontab.guru](https://crontab.guru)
+
+> 建议避开 `:00` / `:30` 整点：UTC 0:00 是全网 daily 任务最拥挤的时刻，2026-11-09 曾排队到北京 12:51 才触发。改分钟只降低延迟概率，GitHub 不保证准点。
 
 ### 调整每日卡片数量
 
@@ -188,7 +190,7 @@ schedule:
 
 ### 调整观察笔记
 
-离线讲解的语料在 `src/ai_commentary.py` 的 `OBSERVATION_LINES`：按构图 / 色彩 / 光影 / 质感 / 情绪 / 细节 / 历史 7 个维度各存 4 条可操作的观察动作，改这里就能换每日提示。`_fact_sentence()` 负责从各图源元数据拼事实句。
+离线讲解的语料在 `src/ai_commentary.py` 的 `OBSERVATION_LINES`：按构图 / 色彩 / 光影 / 质感 / 情绪 / 细节 / 历史 7 个维度各存 4 条可操作的观察动作，改这里就能换每日提示。`generate_batch()` 会让同一批卡片轮转拿到不同句子，起点由当日主题决定。`_fact_sentence()` 负责从各图源元数据拼事实句。
 
 `SYSTEM_PROMPT` / `USER_PROMPT_TEMPLATE` 只在启用 LLM 分支（配置 `LLM_API_KEY`）时生效。
 
@@ -243,6 +245,7 @@ python src/main.py
 - API key 无效：到对应平台重置 key
 - SMTP 认证失败：QQ 邮箱要用**授权码**不是密码
 - 张数不足导致失败退出：日志里会有 `⚠️` 与图源缺席提示，对照 `[met]` / `[nasa]` / `[unsplash]` 的告警定位；常见原因是 Met 的 `/objects` 抽样没命中、或 NASA 图片下载被拒
+- 某个推送通道失败：Actions 的 Annotations 会出现红色 `::error::` 提示，归档 `index.json` 的 `push_results` 记录每个通道的真实结果。job 仍判成功以保证当天归档被 commit，**别只看绿色就以为都送达了**
 
 ### Q: 邮件被识别为垃圾邮件？
 

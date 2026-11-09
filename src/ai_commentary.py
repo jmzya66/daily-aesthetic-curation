@@ -1,7 +1,8 @@
 """观察笔记生成器（默认离线，LLM 为可选分支）
 
 当前默认不接 LLM：按「当日审美维度 + 作品元数据」离线拼装 50-80 字中文观察笔记，
-零依赖、可复现、每张不同。显式配置 api_key 时才改走原来的 OpenAI 兼容接口。
+零依赖、可复现、每张不同。同一批次的卡片按轮转分配不同引导句，避免当天几张撞同一句。
+显式配置 api_key 时才改走原来的 OpenAI 兼容接口。
 """
 from __future__ import annotations
 
@@ -35,7 +36,7 @@ OBSERVATION_LINES: dict[str, list[str]] = {
         "比一比最亮与最暗的差距，反差越大，情绪通常越紧。",
     ],
     "质感": [
-        "靠近看笔触的方向，它比形状更容易暴露作画时的手势。",
+        "放大看局部的笔触、颗粒或像素，那里比整体更容易看出制作方式。",
         "找一处边缘：是利落切断，还是慢慢化开，手感完全不同。",
         "想象伸手摸上去是什么温度、什么粗糙度，再看画面支不支持。",
         "留意颗粒与纹理，它们是让平面显得可信的小证据。",
@@ -49,13 +50,13 @@ OBSERVATION_LINES: dict[str, list[str]] = {
     "细节": [
         "从四个角落各看十秒，作者常把最放松的笔放在那里。",
         "找一处重复出现的小形状，它多半不是巧合。",
-        "找签名、日期或题跋，位置本身也是构图的一部分。",
+        "找署名、水印或日期这类小字，它们放在哪儿也是构图的一部分。",
         "挑一个你觉得「没必要画」的东西，想想它为什么还在。",
     ],
     "历史": [
         "记住创作年代，想想那一年别处正在发生什么。",
-        "看材料与尺寸：它原本是挂在墙上，还是拿在手里翻的？",
-        "猜猜最初是谁订的、给谁看的，用途会影响画面怎么组织。",
+        "看清它用什么媒介做成、以什么尺寸示人，这两点会限定作者能做的事。",
+        "想想它最初为谁而做、在哪里被看见，用途常比风格更能解释画面。",
         "对比今天的同类题材，哪些做法留下了，哪些悄悄消失了。",
     ],
 }
@@ -75,11 +76,20 @@ def _dimension(theme: str) -> str:
     return DIMENSION_KEYS[0]
 
 
-def _pick_line(dim: str, artwork: dict[str, Any]) -> str:
-    """按 source:source_id 稳定取一条，保证同一作品每次一致、不同作品尽量分散"""
+def _pick_line(
+    dim: str, artwork: dict[str, Any], variant: int | None = None, start: int = 0
+) -> str:
+    """取一条观察引导句。
+
+    单张调用（variant=None）按 source:source_id 稳定取一条，保证同一作品复现一致；
+    批量调用传 variant 时按 (start + variant) 轮转，保证同一天几张卡片不撞句子。
+    """
     pool = OBSERVATION_LINES.get(dim) or OBSERVATION_LINES["构图"]
-    seed = f"{artwork.get('source', '')}:{artwork.get('source_id', '')}"
-    idx = int(hashlib.sha1(seed.encode("utf-8")).hexdigest()[:8], 16) % len(pool)
+    if variant is None:
+        seed = f"{artwork.get('source', '')}:{artwork.get('source_id', '')}"
+        idx = int(hashlib.sha1(seed.encode("utf-8")).hexdigest()[:8], 16) % len(pool)
+    else:
+        idx = (start + variant) % len(pool)
     return pool[idx]
 
 
@@ -105,10 +115,13 @@ def _fact_sentence(artwork: dict[str, Any]) -> str:
     return f"{artwork.get('style', '')}作品《{title}》。"
 
 
-def build_offline_commentary(artwork: dict[str, Any], theme: str = "") -> str:
+def build_offline_commentary(
+    artwork: dict[str, Any], theme: str = "", variant: int | None = None, start: int = 0
+) -> str:
     """离线观察笔记 = 事实句 + 当日维度的可操作观察动作"""
     dim = _dimension(theme)
-    text = f"{_fact_sentence(artwork)}今日看{dim}：{_pick_line(dim, artwork)}"
+    line = _pick_line(dim, artwork, variant, start)
+    text = f"{_fact_sentence(artwork)}今日看{dim}：{line}"
     return text[:110]
 
 
@@ -213,10 +226,18 @@ def generate_batch(
     """批量生成讲解，按输入顺序返回。
 
     默认走离线规则化讲解；只有显式配置 api_key 才调用 LLM。
+    离线时同一批次按轮转分配不同引导句，起点由当日主题决定：同一天可复现、
+    不同天会变化；池子用尽后（当前每维度 4 条，超过 4 张卡片）才循环。
     """
     if api_key:
         return [generate_commentary(a, api_key, base_url, model) for a in artworks]
-    return [build_offline_commentary(a, theme) for a in artworks]
+    dim = _dimension(theme)
+    pool = OBSERVATION_LINES.get(dim) or OBSERVATION_LINES["构图"]
+    start = int(hashlib.sha1((theme or dim).encode("utf-8")).hexdigest()[:8], 16) % len(pool)
+    return [
+        build_offline_commentary(a, theme, variant=i, start=start)
+        for i, a in enumerate(artworks)
+    ]
 
 
 def _fallback(artwork_dict: dict[str, Any]) -> str:
