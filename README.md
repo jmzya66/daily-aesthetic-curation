@@ -40,7 +40,7 @@
 【抓图】          【观察笔记】
 Met Museum       事实句 + 当日维度引导句
 Unsplash         7 维度 × 4 条语料池
- APOD        （LLM 为可选分支，默认不接）
+NASA APOD        （LLM 为可选分支，默认不接）
    │
    ▼
 【邮件】     【微信】
@@ -75,7 +75,7 @@ QQ/Gmail    Markdown + 图片
 
 > 💡 **推荐组合**：Unsplash + NASA + QQ邮箱 + Server酱（或企业微信），**不需要任何 LLM 服务，也不需要 NASA API key**。
 > Unsplash 图片按 [API Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) 只热链官方 URL，不下载转存；请勿把图片搬到自己的 CDN。
-> NASA 已切到免 key 的公开 feed `science.nasa.gov/wp-json/wp/v2/apod-basic`；旧端点 `api.nasa.gov/planetary/apod` 计划 2026-12 下线。
+> NASA 已切到免 key 的公开 feed `science.nasa.gov/wp-json/wp/v2/-basic`；旧端点 `api.nasa.gov/planetary/` 计划 2026-12 下线。
 
 ### 3. 配置 GitHub Secrets
 
@@ -123,7 +123,7 @@ GitHub Actions 不需要 `config.yaml`（它被 `.gitignore` 排除），所有�
 
 进入仓库的 `Actions` 标签 → 选择 `Daily Aesthetic Curation` → `Run workflow` → 选 `dry_run=true` 先试一次。
 
-成功后改成 `dry_run=false` 真正推送。
+成功后想真正推送，把 `dry_run` 改为 `false`。注意：若当天定时任务已跑过（归档 `daily/YYYY-MM-DD/index.json` 的 `pushed` 为 `true`），正式运行会被当日幂等直接跳过；需先在仓库里把该字段改为 `false` 再手动跑，或等第二天自动运行。
 
 ---
 
