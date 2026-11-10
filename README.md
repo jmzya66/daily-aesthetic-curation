@@ -75,7 +75,8 @@ QQ/Gmail    Markdown + 图片
 
 > 💡 **推荐组合**：Unsplash + NASA + QQ邮箱 + Server酱（或企业微信），**不需要任何 LLM 服务，也不需要 NASA API key**。
 > Unsplash 图片按 [API Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) 只热链官方 URL，不下载转存；请勿把图片搬到自己的 CDN。
-> NASA 已切到免 key 的公开 feed `science.nasa.gov/wp-json/wp/v2/-basic`；旧端点 `api.nasa.gov/planetary/` 计划 2026-12 下线。
+> NASA 已切到免 key 的公开 feed `science.nasa.gov/wp-json/wp/v2/apod-basic`；旧端点 `api.nasa.gov/planetary/apod` 计划 2026-12 下线。
+
 
 ### 3. 配置 GitHub Secrets
 
