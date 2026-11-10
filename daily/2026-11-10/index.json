@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-10",
+  "theme": "今日看色彩：留意色温冷暖的对比，以及你第一眼被什么颜色吸引。",
+  "generated_at": "2026-11-10T07:28:09",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-06",
+        "title": "A Farewell to Swift",
+        "artist": "NASA / Swift and AndreaMosaic",
+        "date": "2026-11-06",
+        "style": "天文",
+        "description": "Explanation: It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory . After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia . The featured image is a mosaic created in 2018 using some of the fir",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg?w=5252&h=3744&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Swift_Millionth_Image_Mosaic.jpg?w=5252&h=3744&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-10/nasa_2026-11-06_c64b7a2a.jpg",
+        "extra": {
+          "apod_date": "2026-11-06",
+          "explanation_full": "Explanation: It is time to say goodbye to NASA 's Neil Gehrels Swift Observatory . After nearly 22 years of service, the satellite re-entered Earth's atmosphere on November 4 at 7:39 EST over the North Sumatra region of Indonesia . The featured image is a mosaic created in 2018 using some of the first million images captured by the satellite's Ultraviolet/Optical Telescope . Swift had a combination of instruments, including an X-ray telescope and a gamma-ray telescope , that worked together to enable humanity to study, in unprecedented detail, the fastest and most energetic explosions in the universe. The most recent solar maximum accelerated the decay of the satellite's orbit. An innovative mission to rescue Swift by boosting its orbit was not successful . Swift burned on reentry like a shooting star, but the impressive data acquired by the telescope over its mission will continue to bring light to the mysteries of the cosmos for years to come. May it keep inspiring new missions to boldly go into space, explore new data and seek out new science. Tomorrow's picture: Moon Massif",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/",
+          "credit": "NASA / Swift and AndreaMosaic",
+          "alt": "A mosaic image of the Neil Gehrels Swift Observatory, created from one million images of astronomical objects captured by the satellite’s Ultraviolet/Optical Telescope."
+        }
+      },
+      "commentary": "2026-11-06 的每日天文图《A Farewell to Swift》。今日看色彩：分一分冷暖：暖色往往往前跑，冷色通常往后退。",
+      "cid": "img_nasa:2026-11-06"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "0LAJfSNa-xQ",
+        "title": "worms eye view of building during daytime",
+        "artist": "Verne Ho",
+        "date": "2015-06-29",
+        "style": "摄影",
+        "description": "worms eye view of building during daytime",
+        "image_url": "https://images.unsplash.com/photo-1435575653489-b0873ec954e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mjk1NjgxfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1435575653489-b0873ec954e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mjk1NjgxfA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#0c2626",
+          "location": "San Francisco",
+          "portfolio_url": "https://unsplash.com/@verneho",
+          "photo_page_url": "https://unsplash.com/photos/worms-eye-view-of-building-during-daytime-0LAJfSNa-xQ?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@verneho?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/0LAJfSNa-xQ/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mjk1NjgxfA",
+          "tags": [],
+          "width": 4725,
+          "height": 3150
+        }
+      },
+      "commentary": "摄影《worms eye view of building during daytime》，关键词 architecture、#0c2626。今日看色彩：找画面里最不起眼的那块灰，它常是让颜色不吵架的关键。",
+      "cid": "img_unsplash:0LAJfSNa-xQ"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "16492",
+        "title": "Man and Woman Dancing with People Watching (from Sketchbook)",
+        "artist": "Thomas Sully",
+        "date": "1810–20",
+        "style": "古典艺术",
+        "description": "Ink, wash, on paper",
+        "image_url": "https://images.metmuseum.org/CRDImages/ad/original/266517.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/ad/original/266517.jpg",
+        "local_path": "daily/2026-11-10/met_Man_and_Woman_Dancing_with_People_Watching_from_Sketchbook__9158b6ec.jpg",
+        "extra": {
+          "department": "The American Wing",
+          "culture": "American",
+          "period": "",
+          "medium": "Ink, wash, on paper",
+          "dimensions": "9 x 11 1/2 in. (22.9 x 29.2 cm)",
+          "creditLine": "Rogers Fund, 1953",
+          "tags": [
+            {
+              "term": "Men",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+            },
+            {
+              "term": "Women",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+            },
+            {
+              "term": "Dancing",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300389779",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q43393537"
+            }
+          ]
+        }
+      },
+      "commentary": "《Man and Woman Dancing with People Watching (from Sketchbook)》：Ink, wash, on paper、American、1810–20。今日看色彩：数数全画",
+      "cid": "img_met:16492"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "1FxMET2U5dU",
+        "title": "low angle photo of curtain wall building",
+        "artist": "Héctor J. Rivas",
+        "date": "2016-05-06",
+        "style": "摄影",
+        "description": "low angle photo of curtain wall building",
+        "image_url": "https://images.unsplash.com/photo-1462556791646-c201b8241a94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mjk1NjgxfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1462556791646-c201b8241a94?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mjk1NjgxfA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#264073",
+          "location": "Barcelona",
+          "portfolio_url": "https://unsplash.com/@hjrc33",
+          "photo_page_url": "https://unsplash.com/photos/low-angle-photo-of-curtain-wall-building-1FxMET2U5dU?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@hjrc33?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/1FxMET2U5dU/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mjk1NjgxfA",
+          "tags": [],
+          "width": 2896,
+          "height": 1944
+        }
+      },
+      "commentary": "摄影《low angle photo of curtain wall building》，关键词 architecture、#264073。今日看色彩：先说出第一眼抓住你的颜色，再找它的补色躲在哪。",
+      "cid": "img_unsplash:1FxMET2U5dU"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
