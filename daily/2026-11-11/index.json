@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-11",
+  "theme": "今日看光影：想象光源方向，思考艺术家如何『用暗托亮』。",
+  "generated_at": "2026-11-11T06:40:46",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-05",
+        "title": "Enceladus in Silhouette",
+        "artist": "Cassini Imaging Team , SSI , JPL , ESA , NASA",
+        "date": "2026-11-05",
+        "style": "天文",
+        "description": "Explanation: One of our Solar System's most tantalizing worlds, Enceladus is backlit by the Sun in this Cassini spacecraft image from November 1, 2009. The dramatic illumination reveals the plumes that continuously spew into space from the south pole of Saturn's 500 kilometer diameter moon . Discove",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/PIA17144EnceladusPandora.png?w=982&h=575&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/PIA17144EnceladusPandora.png?w=982&h=575&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-11/nasa_2026-11-05_cb5b5639.jpg",
+        "extra": {
+          "apod_date": "2026-11-05",
+          "explanation_full": "Explanation: One of our Solar System's most tantalizing worlds, Enceladus is backlit by the Sun in this Cassini spacecraft image from November 1, 2009. The dramatic illumination reveals the plumes that continuously spew into space from the south pole of Saturn's 500 kilometer diameter moon . Discovered by Cassini in 2005, the icy plumes are likely connected to an ocean beneath the ice shell of Enceladus. They supply material directly to Saturn's outer, tenuous E ring and make the surface of Enceladus as reflective as snow. Across the scene, Saturn's icy rings scatter sunlight toward Cassini's cameras. Beyond the rings (lower right), the night side of 80 kilometer diameter moon Pandora is faintly lit by Saturnlight . Tomorrow's picture: pixels in space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-5-enceladus-in-silhouette/",
+          "credit": "Cassini Imaging Team , SSI , JPL , ESA , NASA",
+          "alt": "Saturn moon Enceladus in silhouette"
+        }
+      },
+      "commentary": "2026-11-05 的每日天文图《Enceladus in Silhouette》。今日看光影：比一比最亮与最暗的差距，反差越大，情绪通常越紧。",
+      "cid": "img_nasa:2026-11-05"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "432181",
+        "title": "The Courtesan Punished, from \"The Story of the Magician Virgil\"",
+        "artist": "Georg Pencz",
+        "date": "1536",
+        "style": "古典艺术",
+        "description": "Engraving; second state of three (Landau)",
+        "image_url": "https://images.metmuseum.org/CRDImages/dp/original/DP855494.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/original/DP855494.jpg",
+        "local_path": "daily/2026-11-11/met_The_Courtesan_Punished_from_The_Story_of_the_Magician_Virgil__9b5cb2d4.jpg",
+        "extra": {
+          "department": "Drawings and Prints",
+          "culture": "",
+          "period": "",
+          "medium": "Engraving; second state of three (Landau)",
+          "dimensions": "Sheet: 2 3/8 × 3 1/4 in. (6.1 × 8.3 cm)",
+          "creditLine": "Gift of Edwin De T. Bechtel, 1949",
+          "tags": [
+            {
+              "term": "Men",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+            },
+            {
+              "term": "Female Nudes",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
+            },
+            {
+              "term": "Punishment",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300137841",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q186361"
+            }
+          ]
+        }
+      },
+      "commentary": "《The Courtesan Punished, from \"The Story of the Magician Virgil\"》：Engraving; second state of、1536。今日看光影：先猜光源在画",
+      "cid": "img_met:432181"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "437433",
+        "title": "The Farm at Les Collettes, Cagnes",
+        "artist": "Auguste Renoir",
+        "date": "1908–14",
+        "style": "古典艺术",
+        "description": "Oil on canvas",
+        "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-22988-001.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/ep/original/DP-22988-001.jpg",
+        "local_path": "daily/2026-11-11/met_The_Farm_at_Les_Collettes_Cagnes_fa191891.jpg",
+        "extra": {
+          "department": "European Paintings",
+          "culture": "",
+          "period": "",
+          "medium": "Oil on canvas",
+          "dimensions": "21 1/2 x 25 3/4in. (54.6 x 65.4cm)",
+          "creditLine": "Bequest of Charlotte Gina Abrams, in memory of her husband, Lucien Abrams, 1961",
+          "tags": [
+            {
+              "term": "Farms",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300000206",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q131596"
+            },
+            {
+              "term": "Landscapes",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300132294",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q191163"
+            }
+          ]
+        }
+      },
+      "commentary": "《The Farm at Les Collettes, Cagnes》：Oil on canvas、1908–14。今日看光影：留意最暗的地方：暗不是没画，是用来把亮处托起来的。",
+      "cid": "img_met:437433"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "EwE4tBYh3ms",
+        "title": "photo of giraffe",
+        "artist": "Katie Treadway",
+        "date": "2017-05-07",
+        "style": "摄影",
+        "description": "photo of giraffe",
+        "image_url": "https://images.unsplash.com/photo-1494200483035-db7bc6aa5739?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mzc5MjM4fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1494200483035-db7bc6aa5739?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mzc5MjM4fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "minimal",
+          "color": "#d9f3f3",
+          "location": "Bentonville, Ar",
+          "portfolio_url": "https://unsplash.com/@katietreadway",
+          "photo_page_url": "https://unsplash.com/photos/photo-of-giraffe-EwE4tBYh3ms?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@katietreadway?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/EwE4tBYh3ms/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0Mzc5MjM4fA",
+          "tags": [],
+          "width": 3000,
+          "height": 2000
+        }
+      },
+      "commentary": "摄影《photo of giraffe》，关键词 minimal、#d9f3f3。今日看光影：找一处渐变最慢的过渡，那里藏着作者对材质的判断。",
+      "cid": "img_unsplash:EwE4tBYh3ms"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
