@@ -18,9 +18,10 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
 from dataclasses import asdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -75,6 +76,7 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
         "wechat.wecom.corpsecret": "WECOM_CORPSECRET",
         "schedule.total_cards": "TOTAL_CARDS",
         "schedule.min_cards": "MIN_CARDS",
+        "schedule.dedup_days": "DEDUP_DAYS",
         "repo.base_url": "REPO_BASE_URL",
         "debug.dry_run": "DRY_RUN",
     }
@@ -102,7 +104,7 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
 
     # 数值型环境变量转 int，避免字符串参与算术或比较
     for section, key in (("schedule", "total_cards"), ("schedule", "min_cards"),
-                         ("email", "smtp_port")):
+                         ("schedule", "dedup_days"), ("email", "smtp_port")):
         sec = cfg.get(section)
         if isinstance(sec, dict) and isinstance(sec.get(key), str):
             try:
@@ -127,9 +129,65 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
 
 # ============ 抓图调度 ============
 
-def pick_artworks(cfg: dict[str, Any], total_cards: int) -> list[Artwork]:
-    """从多个图源组合抽取 total_cards 张作品"""
+def _recent_source_ids(output_dir: Path, today: str, days: int) -> set[str]:
+    """收集最近 days 天归档里已推过的 (source, source_id)，用于跨天去重。
+
+    只看今天之前的目录；读不动的归档跳过，不影响主流程。
+    """
+    if days <= 0:
+        return set()
+    try:
+        cutoff = (datetime.strptime(today, "%Y-%m-%d") - timedelta(days=days)).strftime("%Y-%m-%d")
+    except Exception:
+        return set()
+    seen: set[str] = set()
+    if not output_dir.exists():
+        return seen
+    for child in output_dir.iterdir():
+        if not child.is_dir() or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", child.name):
+            continue
+        if not (cutoff <= child.name < today):
+            continue
+        arc = child / "index.json"
+        if not arc.exists():
+            continue
+        try:
+            for it in json.loads(arc.read_text(encoding="utf-8")).get("items", []):
+                aw = it.get("artwork") or {}
+                if aw.get("source") and aw.get("source_id"):
+                    seen.add(f"{aw['source']}:{aw['source_id']}")
+        except Exception as exc:
+            print(f"[dedup] 读取 {arc} 失败: {exc}")
+    return seen
+
+
+def _clean_orphan_images(images_dir: Path, items: list[dict]) -> int:
+    """删除当天目录里不被本次归档引用的 jpg（同日多次重跑会留下孤儿图）。"""
+    keep = {
+        Path(it["artwork"]["local_path"]).name
+        for it in items
+        if it.get("artwork", {}).get("local_path")
+    }
+    removed = 0
+    for f in images_dir.glob("*.jpg"):
+        if f.name in keep:
+            continue
+        try:
+            f.unlink()
+            removed += 1
+        except Exception as exc:
+            print(f"[clean] 删除孤儿图片失败 {f.name}: {exc}")
+    if removed:
+        print(f"[clean] 清理 {removed} 张不被本次归档引用的旧图")
+    return removed
+
+
+def pick_artworks(
+    cfg: dict[str, Any], total_cards: int, exclude_ids: set[str] | None = None
+) -> list[Artwork]:
+    """从多个图源组合抽取 total_cards 张作品；exclude_ids 用于跨天去重"""
     artworks: list[Artwork] = []
+    exclude_ids = exclude_ids or set()
 
     # 配额策略：每个图源至少一张，剩余随机分配
     sources = []
@@ -176,6 +234,11 @@ def pick_artworks(cfg: dict[str, Any], total_cards: int) -> list[Artwork]:
             if not picked:
                 print(f"[pick] ⚠️ {name} 返回 0 张，该图源本次缺席")
             else:
+                fresh = [a for a in picked if f"{a.source}:{a.source_id}" not in exclude_ids]
+                if fresh:
+                    picked = fresh
+                else:
+                    print(f"[pick] ⚠️ {name} 候选全在近期历史里，本次允许重复")
                 print(f"[pick] {name} 抽到 {len(picked)} 张")
             artworks.extend(picked)
         except Exception as exc:
@@ -246,8 +309,12 @@ def run(config_path: str = "config.yaml") -> int:
         except Exception as exc:
             print(f"[main] 读取历史归档失败，按未推送处理: {exc}")
 
-    # 1. 抓图
-    artworks = pick_artworks(cfg, cfg.get("schedule", {}).get("total_cards", 4))
+    # 1. 抓图（尽量避开最近 N 天已推过的作品）
+    dedup_days = int(cfg.get("schedule", {}).get("dedup_days", 7))
+    exclude_ids = _recent_source_ids(output_dir, date_str, dedup_days)
+    if exclude_ids:
+        print(f"[main] 最近 {dedup_days} 天已推过 {len(exclude_ids)} 张，本次尽量避开")
+    artworks = pick_artworks(cfg, cfg.get("schedule", {}).get("total_cards", 4), exclude_ids)
     if not artworks:
         print("[main] 没抓到任何作品，退出")
         return 1
@@ -293,6 +360,7 @@ def run(config_path: str = "config.yaml") -> int:
     # 4. 先落归档：推送失败也不会丢当天记录
     _write_archive(archive_path, date_str, theme, items, pushed=False)
     print(f"[main] 归档已写入 {archive_path}")
+    _clean_orphan_images(images_dir, items)
 
     # 4.5 张数下限：低于阈值时不发残缺内容。dry-run 只告警，便于排查图源。
     min_cards = cfg.get("schedule", {}).get("min_cards", 3)

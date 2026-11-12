@@ -6,7 +6,7 @@
 
 **讲解默认不接 LLM**：`ai_commentary.py` 用「当日审美维度 + 作品元数据」离线拼装观察笔记（一句可验证的事实 + 一个可操作的观察动作），零依赖、每张不同。7 个维度共 28 条引导句在 `OBSERVATION_LINES` 里维护；同一天的卡片按轮转分配不同句子（每维度 4 条，超过 4 张才循环）。只有显式配置 `LLM_API_KEY` 才改走原来的 OpenAI 兼容接口。
 
-图片一律使用图源官方直链：Unsplash 按 API Guidelines 只热链、不转存，Met / NASA 为公共领域作品。仓库 `daily/` 目录只用于历史回溯，不参与图片投递，因此邮件送达不依赖 commit 或 CDN 缓存。
+图片一律使用图源官方直链：Unsplash 按 API Guidelines 只热链、不转存，Met / NASA 为公共领域作品，且统一取**展示级小图**（NASA 直链 `w` 缩到 1080、Met 用 `web-large`），避免单张几十 MB 拖慢邮件并撑大仓库。仓库 `daily/` 目录只用于历史回溯，不参与图片投递，因此邮件送达不依赖 commit 或 CDN 缓存。
 
 整套系统基于 **GitHub Actions** 免费运行，**零服务器成本**。仓库需设为**公开**。
 
@@ -21,7 +21,7 @@
 - 📝 **离线观察笔记**：按当日审美维度 + 作品元数据拼装，每张不同；不接 LLM、零依赖，LLM 分支可选
 - 📧 **精美邮件**：响应式 HTML 邮件模板，移动端友好
 - 💬 **微信双通道**：支持 Server酱（5 条/天）和企业微信自建应用（无限）
-- 📚 **历史归档**：Met / NASA 图片与全部讲解自动提交到 GitHub 仓库；Unsplash 只留官方链接
+- 📚 **历史归档**：Met / NASA 的展示级副本与全部讲解自动提交到 GitHub 仓库（**不再是原图**）；Unsplash 按合规只留官方链接
 - 💰 **完全免费**：依赖 GitHub Actions（每月 2000 分钟免费额度）+ 各项 API 免费层
 - 🔧 **零服务器**：GitHub Actions 即调度器，不需要任何云服务器
 
@@ -76,7 +76,6 @@ QQ/Gmail    Markdown + 图片
 > 💡 **推荐组合**：Unsplash + NASA + QQ邮箱 + Server酱（或企业微信），**不需要任何 LLM 服务，也不需要 NASA API key**。
 > Unsplash 图片按 [API Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) 只热链官方 URL，不下载转存；请勿把图片搬到自己的 CDN。
 > NASA 已切到免 key 的公开 feed `science.nasa.gov/wp-json/wp/v2/apod-basic`；旧端点 `api.nasa.gov/planetary/apod` 计划 2026-12 下线。
-
 
 ### 3. 配置 GitHub Secrets
 
@@ -154,7 +153,7 @@ daily-aesthetic-curation/
 └── README.md
 ```
 
-运行时会在根目录生成 `daily/YYYY-MM-DD/` 目录，里面是 Met / NASA 的归档图片和 `index.json`；Unsplash 只存官方链接、不落盘。
+运行时会在根目录生成 `daily/YYYY-MM-DD/` 目录，里面是 Met / NASA 的展示级归档图片和 `index.json`；Unsplash 只存官方链接、不落盘。同日重跑会清理不被本次归档引用的旧图，避免堆孤儿文件。
 
 ---
 
@@ -186,6 +185,12 @@ schedule:
 ```
 
 `min_cards` 是防静默降级的闸门：某个图源挂掉时，正式运行会写完归档后**跳过推送并让 Actions 失败**（你能收到失败通知），dry-run 只打印告警方便排查。也可用环境变量 `MIN_CARDS` 覆盖。
+
+### 归档尺寸与去重（2026-11-12 起）
+
+- **展示级副本**：NASA 直链的 `w/h` 参数等比缩到 1080（实测同一张 27 MB → 1.6 MB），Met 用 `primaryImageSmall`（实测 229 KB → 31 KB）；`download_image()` 另有 15 MB 上限兜底。归档存的是可回看的展示级副本，不是原图。
+- **跨天去重**：默认避开最近 7 天已推过的作品，可用环境变量 `DEDUP_DAYS` 覆盖（设 `0` 关闭）。若某图源候选全在历史里，本次允许重复，**不会因此少发**。
+- **孤儿清理**：同一天多次运行只保留最后一次归档引用的图片。
 
 图源现状：Met Museum 的 `/search` 端点已返回 410，项目改用 `/objects` 全量 ID 池抽样 + 并发请求详情；NASA 用免 key 的 `science.nasa.gov` feed，且只取 `hdurl`（feed 的 `url` 字段是 HTML 页面，不是图片）。
 
@@ -286,7 +291,7 @@ llm:
 
 ### Q: 想看历史日课？
 
-每次运行都会把 Met / NASA 的图片和 `index.json` commit 到 `daily/YYYY-MM-DD/`，`daily/INDEX.md` 记录最近 7 天；邮件底部「查看历史日课」指向该索引页。Unsplash 只存官方 URL，若原图被作者删除，历史里这张会显示不出来。
+每次运行都会把 Met / NASA 的展示级图片和 `index.json` commit 到 `daily/YYYY-MM-DD/`，`daily/INDEX.md` 记录最近 7 天；邮件底部「查看历史日课」指向该索引页。Unsplash 只存官方 URL，若原图被作者删除，历史里这张会显示不出来。抓图时会尽量避开最近 7 天已推过的作品。
 
 ---
 

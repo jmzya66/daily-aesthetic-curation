@@ -72,8 +72,10 @@ def fetch(
                 date=str(obj.get("objectDate") or obj.get("objectBeginDate", "")),
                 style="古典艺术",
                 description=obj.get("medium") or "",
-                image_url=obj.get("primaryImage", ""),
-                image_url_large=obj.get("primaryImage", ""),
+                # 展示与归档统一用官方 web-large 小图：实测原图 229 KB / 小图 31 KB，
+                # 曾出现单张 7.5 MB 原图。仍是 Met 官方直链。
+                image_url=obj.get("primaryImageSmall") or obj.get("primaryImage", ""),
+                image_url_large=obj.get("primaryImageSmall") or obj.get("primaryImage", ""),
                 extra={
                     "department": obj.get("department", ""),
                     "culture": obj.get("culture", ""),

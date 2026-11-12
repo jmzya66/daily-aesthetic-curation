@@ -28,6 +28,37 @@ def _clean_html(text: str) -> str:
 
 
 
+def _downscale_url(url: str, max_width: int = 1080) -> str:
+    """把 NASA dynamicimage 直链的 w/h 参数等比缩到 max_width。
+
+    实测同一张图 w=4144 为 27 MB，w=1080 仅 1.6 MB。仍是官方直链，
+    只改尺寸参数；URL 没有合法 w/h 参数时原样返回，避免改坏链接。
+    """
+    if not url or "?" not in url:
+        return url
+    base, _, query = url.partition("?")
+    params: dict[str, str] = {}
+    order: list[str] = []
+    for part in query.split("&"):
+        if not part:
+            continue
+        k, sep, v = part.partition("=")
+        if k not in params:
+            order.append(k)
+        params[k] = v if sep else ""
+    try:
+        w, h = int(params["w"]), int(params["h"])
+    except (KeyError, TypeError, ValueError):
+        return url
+    if w <= max_width:
+        return url
+    params["w"] = str(max_width)
+    params["h"] = str(max(1, round(h * max_width / w)))
+    return base + "?" + "&".join(
+        f"{k}={params[k]}" if params[k] else k for k in order
+    )
+
+
 def fetch(
     lookback_days: int = 30,
     max_pick: int = 1,
@@ -74,6 +105,7 @@ def fetch(
     results: list[Artwork] = []
     for pick in picks:
         explanation = _clean_html(pick.get("explanation", ""))
+        img_url = _downscale_url(pick.get("hdurl") or pick.get("url", ""))
         results.append(
             Artwork(
                 source="nasa",
@@ -85,9 +117,9 @@ def fetch(
                 style="天文",
                 description=explanation[:300],
                 # 实测：feed 的 url 常返回 text/html 页面，hdurl 才是真图片。
-                # 展示与归档都用 hdurl，否则 download_image 会因 Content-Type 拒绝。
-                image_url=pick.get("hdurl") or pick.get("url", ""),
-                image_url_large=pick.get("hdurl") or pick.get("url", ""),
+                # 展示与归档都用缩放后的 hdurl（w<=1080），避免单张几十 MB。
+                image_url=img_url,
+                image_url_large=img_url,
                 extra={
                     "apod_date": pick.get("date", ""),
                     "explanation_full": explanation,

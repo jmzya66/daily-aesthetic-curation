@@ -59,8 +59,12 @@ def download_image(
     filename: str,
     timeout: int = 30,
     min_bytes: int = 1024,
+    max_bytes: int = 15 * 1024 * 1024,
 ) -> Path | None:
-    """下载远程图片到本地目录，返回本地路径，失败返回 None"""
+    """下载远程图片到本地目录，返回本地路径，失败返回 None。
+
+    max_bytes 是兜底闸门：避免个别超大原图撑爆仓库或拖慢 workflow。
+    """
     if not url:
         return None
 
@@ -81,9 +85,19 @@ def download_image(
             print(f"[download] 非图片内容，跳过: {url} ({content_type})")
             return None
 
+        written = 0
+        too_large = False
         with open(dest_path, "wb") as f:
             for chunk in resp.iter_content(chunk_size=8192):
                 f.write(chunk)
+                written += len(chunk)
+                if written > max_bytes:
+                    too_large = True
+                    break
+        if too_large:
+            dest_path.unlink(missing_ok=True)
+            print(f"[download] 超过 {max_bytes} 字节上限，跳过: {url}")
+            return None
 
         if dest_path.stat().st_size < min_bytes:
             print(f"[download] 文件过小，跳过: {dest_path}")
