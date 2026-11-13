@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-13",
+  "theme": "今日看情绪：闭上眼回想这张图，它让你感到什么？",
+  "generated_at": "2026-11-13T06:54:48",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-13",
+        "title": "NGC 206 and the Star Clouds of Andromeda",
+        "artist": "David Cruz",
+        "date": "2026-11-13",
+        "style": "天文",
+        "description": "Explanation: The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions. Also known as M31, the spiral galaxy is a mere 2.5 million light-years away. NGC 206 is found at the center of th",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg",
+        "local_path": "daily/2026-11-13/nasa_2026-11-13_b7eba3a2.jpg",
+        "extra": {
+          "apod_date": "2026-11-13",
+          "explanation_full": "Explanation: The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions. Also known as M31, the spiral galaxy is a mere 2.5 million light-years away. NGC 206 is found at the center of this sharp and detailed close-up of the southwestern extent of Andromeda's disk. The bright, blue stars of NGC 206 indicate its youth. In fact, its youngest massive stars are less than 10 million years old. Much larger than the open or galactic clusters of young stars in the disk of our Milky Way galaxy, NGC 206 spans about 4,000 light-years. That's comparable in size to the giant stellar nurseries NGC 604 in nearby spiral M33 and the Tarantula Nebula in the Large Magellanic Cloud. Tomorrow's picture: pixels in space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/",
+          "credit": "David Cruz",
+          "alt": "Close up of NGC 206 in the Andromeda galaxy."
+        }
+      },
+      "commentary": "2026-11-13 的每日天文图《NGC 206 and the Star Clouds of Andromeda》。今日看情绪：先别分析，记下第一秒的身体反应：是想靠近还是想退开。",
+      "cid": "img_nasa:2026-11-13"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-12",
+        "title": "Moon, Venus and Spica Meet",
+        "artist": "Włodzimierz Bubak",
+        "date": "2026-11-12",
+        "style": "天文",
+        "description": "Explanation: Not all those who wander are lost. A night sky example is that planets wander, and in fact the very word \"planet\" comes from \"wandering star\" in Greek. As planets shift relative to fixed stars , they may appear from our perspective to get closer to other astronomical objects. Such meeti",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/conjunction-bubak.jpg",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/conjunction-bubak.jpg",
+        "local_path": "daily/2026-11-13/nasa_2026-11-12_b9ab8c42.jpg",
+        "extra": {
+          "apod_date": "2026-11-12",
+          "explanation_full": "Explanation: Not all those who wander are lost. A night sky example is that planets wander, and in fact the very word \"planet\" comes from \"wandering star\" in Greek. As planets shift relative to fixed stars , they may appear from our perspective to get closer to other astronomical objects. Such meetings are called conjunctions . They don't happen by chance, but follow the precise laws of celestial mechanics . This peaceful image , captured in Poland , shows the crescent Moon above the Tatra Mountains , and bright Venus close by, a little lower in the horizon. The bright star to the left of Venus is Spica in the constellation of Virgo , the Maiden. Spica is one of the brightest stars in the sky, only about 250 light-years away. It was found in 1890 that Spica is a binary star: two massive blue stars orbiting each other every 4 days. But earlier this year it was reported that Spica, the current companion of wandering Venus, is actually a triple system . Tomorrow's picture: what's next?",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-12-moon-venus-and-spica-meet/",
+          "credit": "Włodzimierz Bubak",
+          "alt": "A crescent moon and bright Venus appear beyond a mountain in a rural area at dusk."
+        }
+      },
+      "commentary": "2026-11-12 的每日天文图《Moon, Venus and Spica Meet》。今日看情绪：给这张图一个情绪词，再找画面里替你作证的那个细节。",
+      "cid": "img_nasa:2026-11-12"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "azCTGObXR14",
+        "title": "multicolored frames",
+        "artist": "JJ Ying",
+        "date": "2018-09-18",
+        "style": "摄影",
+        "description": "multicolored frames",
+        "image_url": "https://images.unsplash.com/photo-1537237858032-3ad1b513cbcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0NTUyODc5fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1537237858032-3ad1b513cbcc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0NTUyODc5fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "abstract",
+          "color": "#0c268c",
+          "location": "Shanghai, China",
+          "portfolio_url": "https://unsplash.com/@jjying",
+          "photo_page_url": "https://unsplash.com/photos/multicolored-frames-azCTGObXR14?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@jjying?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/azCTGObXR14/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0NTUyODc5fA",
+          "tags": [],
+          "width": 5472,
+          "height": 3648
+        }
+      },
+      "commentary": "摄影《multicolored frames》，关键词 abstract、#0c268c。今日看情绪：看久一点，留意情绪会不会从最初那个慢慢漂移。",
+      "cid": "img_unsplash:azCTGObXR14"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "774052",
+        "title": "Terracotta fragment of a kylix (drinking cup)",
+        "artist": "Unknown",
+        "date": "6th/5th centuries BCE",
+        "style": "古典艺术",
+        "description": "Terracotta",
+        "image_url": "https://images.metmuseum.org/CRDImages/gr/web-large/DVB15827_1_ff.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/gr/web-large/DVB15827_1_ff.jpg",
+        "local_path": "daily/2026-11-13/met_Terracotta_fragment_of_a_kylix_drinking_cup__7ceeee8d.jpg",
+        "extra": {
+          "department": "Greek and Roman Art",
+          "culture": "Greek, Attic",
+          "period": "Archaic/Classical",
+          "medium": "Terracotta",
+          "dimensions": "",
+          "creditLine": "Gift of Dietrich von Bothmer, Distinguished Research Curator, Greek and Roman Art, 2011",
+          "tags": []
+        }
+      },
+      "commentary": "《Terracotta fragment of a kylix (drinking cup)》：Terracotta、Greek, Attic、Archaic/Classical。今日看情绪：如果配一段音乐，你会选什么速",
+      "cid": "img_met:774052"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
