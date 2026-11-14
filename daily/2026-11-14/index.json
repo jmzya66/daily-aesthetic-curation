@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-14",
+  "theme": "今日看细节：找一处容易被忽略的角落，那里藏着作者的签名。",
+  "generated_at": "2026-11-14T06:40:02",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "HzSLh5zV42s",
+        "title": "an aerial view of a snow covered mountain range",
+        "artist": "Tobias Keller",
+        "date": "2016-10-12",
+        "style": "摄影",
+        "description": "an aerial view of a snow covered mountain range",
+        "image_url": "https://images.unsplash.com/photo-1476249202953-93ec0d185ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0NjM4Mzk1fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1476249202953-93ec0d185ab7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0NjM4Mzk1fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "abstract",
+          "color": "#4073a6",
+          "location": "Zurich, Switzerland",
+          "portfolio_url": "https://unsplash.com/@tokeller",
+          "photo_page_url": "https://unsplash.com/photos/an-aerial-view-of-a-snow-covered-mountain-range-HzSLh5zV42s?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@tokeller?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/HzSLh5zV42s/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0NjM4Mzk1fA",
+          "tags": [],
+          "width": 5184,
+          "height": 3456
+        }
+      },
+      "commentary": "摄影《an aerial view of a snow covered mountain range》，关键词 abstract、#4073a6。今日看细节：挑一个你觉得「没必要画」的东西，想想它为什么还在。",
+      "cid": "img_unsplash:HzSLh5zV42s"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-10-31",
+        "title": "Night on a Spooky Planet",
+        "artist": "Stéphane Vetter ( Nuits sacrées )",
+        "date": "2026-10-31",
+        "style": "天文",
+        "description": "Explanation: What spooky planet is this? Planet Earth on a dark and stormy night, of course. The ghostly scene was photographed at Hverir , a geothermally active area found along northeastern Iceland's volcanic landscape . Triggered by solar activity , geomagnetic storms have unleashed energetic par",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/Hverir_Vetter_1300.jpg?w=1080&h=720&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/Hverir_Vetter_1300.jpg?w=1080&h=720&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-14/nasa_2026-10-31_dbc8d4cb.jpg",
+        "extra": {
+          "apod_date": "2026-10-31",
+          "explanation_full": "Explanation: What spooky planet is this? Planet Earth on a dark and stormy night, of course. The ghostly scene was photographed at Hverir , a geothermally active area found along northeastern Iceland's volcanic landscape . Triggered by solar activity , geomagnetic storms have unleashed energetic particles trapped in Earth's magnetic field. Penetrating the planet's upper atmosphere at high latitudes, the particles create auroral displays in the starry night sky. Ghostly towers of steam and gas are venting from local fumaroles to dance against the eerie, greenish northern lights. For now, auroral activity on planet Earth remains in a high state as the Sun is only in early phases of decline from the peak of its solar activity cycle . And soon, other ghostly apparitions may dance in your neighborhood. Happy Halloween ! Tomorrow's picture: many moons",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-october-31-night-on-a-spooky-planet/",
+          "credit": "Stéphane Vetter ( Nuits sacrées )",
+          "alt": "Steam is venting from volcanic fumaroles photographed against greenish aurorae."
+        }
+      },
+      "commentary": "2026-10-31 的每日天文图《Night on a Spooky Planet》。今日看细节：从四个角落各看十秒，作者常把最放松的笔放在那里。",
+      "cid": "img_nasa:2026-10-31"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "8417",
+        "title": "Teapot",
+        "artist": "Garret Forbes",
+        "date": "ca. 1810",
+        "style": "古典艺术",
+        "description": "Silver",
+        "image_url": "https://images.metmuseum.org/CRDImages/ad/web-large/97807.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/ad/web-large/97807.jpg",
+        "local_path": "daily/2026-11-14/met_Teapot_075804cc.jpg",
+        "extra": {
+          "department": "The American Wing",
+          "culture": "American",
+          "period": "",
+          "medium": "Silver",
+          "dimensions": "6 5/8 x 12 15/16 x 5 3/8 in. (16.8 x 32.9 x 13.7 cm); 20 oz. 19 dwt. (651.7 g)",
+          "creditLine": "Bequest of Alphonso T. Clearwater, 1933",
+          "tags": []
+        }
+      },
+      "commentary": "《Teapot》：Silver、American、ca. 1810。今日看细节：找一处重复出现的小形状，它多半不是巧合。",
+      "cid": "img_met:8417"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-10-23",
+        "title": "Andromeda in Southern Spring",
+        "artist": "Lucy Yunxi Hu",
+        "date": "2026-10-23",
+        "style": "天文",
+        "description": "Explanation: Looking toward the north from Mullion, New South Wales, Australia, the Andromeda Galaxy never gets more than a few degrees above the horizon. During the southern hemisphere spring, Andromeda is highest in the sky around midnight though. And in this telephoto scene from October 10/11, mu",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/october/APOD_Lucy.jpg?w=1080&h=721&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/october/APOD_Lucy.jpg?w=1080&h=721&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-14/nasa_2026-10-23_2534456e.jpg",
+        "extra": {
+          "apod_date": "2026-10-23",
+          "explanation_full": "Explanation: Looking toward the north from Mullion, New South Wales, Australia, the Andromeda Galaxy never gets more than a few degrees above the horizon. During the southern hemisphere spring, Andromeda is highest in the sky around midnight though. And in this telephoto scene from October 10/11, multiple exposures were used to reveal the spiral galaxy in tantalizing detail as it climbed above rolling Australian hills. Also known as M31 , the Andromeda Galaxy is one of the brightest objects in the Messier catalog , but is only visible to the unaided eye as a small, faint, fuzzy patch. Digitally tracked and stacked frames were combined with a foreground shot in the deep astro-image composite to reveal the galaxy's greater extent in planet Earth's night. In the springtime night skyscape,the closest large spiral galaxy spans nearly 6 full moons . Tomorrow's picture: pixels in space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-october-23-andromeda-in-southern-spring/",
+          "credit": "Lucy Yunxi Hu",
+          "alt": "The Andromeda galaxy above rolling hills."
+        }
+      },
+      "commentary": "2026-10-23 的每日天文图《Andromeda in Southern Spring》。今日看细节：找署名、水印或日期这类小字，它们放在哪儿也是构图的一部分。",
+      "cid": "img_nasa:2026-10-23"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
