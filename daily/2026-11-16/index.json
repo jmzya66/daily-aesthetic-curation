@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-16",
+  "theme": "今日看构图：注意画面元素的『视觉重量』与『留白节奏』。",
+  "generated_at": "2026-11-16T06:44:39",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "755887",
+        "title": "Terracotta fragment of a kylix (drinking cup)",
+        "artist": "Unknown",
+        "date": "late 6th century BCE",
+        "style": "古典艺术",
+        "description": "Terracotta",
+        "image_url": "https://images.metmuseum.org/CRDImages/gr/web-large/DVB13168_1_ff.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/gr/web-large/DVB13168_1_ff.jpg",
+        "local_path": "daily/2026-11-16/met_Terracotta_fragment_of_a_kylix_drinking_cup__c0b547a0.jpg",
+        "extra": {
+          "department": "Greek and Roman Art",
+          "culture": "Greek, Attic",
+          "period": "Archaic",
+          "medium": "Terracotta",
+          "dimensions": "",
+          "creditLine": "Gift of Dietrich von Bothmer, Distinguished Research Curator, Greek and Roman Art, 2011",
+          "tags": []
+        }
+      },
+      "commentary": "《Terracotta fragment of a kylix (drinking cup)》：Terracotta、Greek, Attic、Archaic。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡",
+      "cid": "img_met:755887"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-15",
+        "title": "Leonid Meteors Through Orion",
+        "artist": "Luo Hongyang",
+        "date": "2026-11-15",
+        "style": "天文",
+        "description": "Explanation: Where will the next meteor appear? Even during a meteor shower, it is practically impossible to know. Therefore, a good way to enjoy a meteor shower is to find a place where you can sit comfortably and monitor a great expanse of dark sky. And it may be satisfying to share this experienc",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Leonids2022_Hongyang_2880.jpg?w=1080&h=1350&fit=clip&crop=faces%2Cfocalpoint",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Leonids2022_Hongyang_2880.jpg?w=1080&h=1350&fit=clip&crop=faces%2Cfocalpoint",
+        "local_path": "daily/2026-11-16/nasa_2026-11-15_42670442.jpg",
+        "extra": {
+          "apod_date": "2026-11-15",
+          "explanation_full": "Explanation: Where will the next meteor appear? Even during a meteor shower, it is practically impossible to know. Therefore, a good way to enjoy a meteor shower is to find a place where you can sit comfortably and monitor a great expanse of dark sky. And it may be satisfying to share this experience with a friend. The meteor shower depicted was the 2022 Leonids and the view is from Hainan , China looking out over the South China Sea . Meteor streaks captured over a few hours were isolated and added to a foreground image recorded earlier. Leonid meteor streaks trace back to the constellation of Leo and were here seen streaking across the constellation of Orion. The bright red planet Mars appears near the top of the image. The Leonids peak in mid-November every year and so will peak again this week. Bonding over their love of astronomy, the two pictured meteor enthusiasts, shown celebrating their common birthday this month, were later married. Tomorrow's picture: open space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-15-leonid-meteors-through-orion/",
+          "credit": "Luo Hongyang",
+          "alt": "A composite showing many meteors trails streaking across a sky featuring the familiar constellation of Orion. In the foreground two people sit in adjoining chairs facing away from the camera, one holding a wand with a glowing star at the end. Please see the explanation for more detailed information."
+        }
+      },
+      "commentary": "2026-11-15 的每日天文图《Leonid Meteors Through Orion》。今日看构图：找一条藏起来的对角线，很多安排都压在这条线上。",
+      "cid": "img_nasa:2026-11-15"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "_oNISBwMTwo",
+        "title": "Three small birds perched together on a thin wire against a white background",
+        "artist": "Glen Carrie",
+        "date": "2018-01-14",
+        "style": "摄影",
+        "description": "Three small birds perched together on a thin wire against a white background",
+        "image_url": "https://images.unsplash.com/photo-1515923152115-758a6b16f35e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0ODExNDY5fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1515923152115-758a6b16f35e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0ODExNDY5fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "minimal",
+          "color": "#f3f3f3",
+          "location": "Johannesburg , South Africa",
+          "portfolio_url": "https://unsplash.com/@glencarrie",
+          "photo_page_url": "https://unsplash.com/photos/three-birds-on-a-wire-_oNISBwMTwo?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@glencarrie?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/_oNISBwMTwo/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0ODExNDY5fA",
+          "tags": [],
+          "width": 5472,
+          "height": 3648
+        }
+      },
+      "commentary": "摄影《Three small birds perched together on a thin wire against a white background》，关键词 minimal、#f3f3f3。今日看构图：先别看",
+      "cid": "img_unsplash:_oNISBwMTwo"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
