@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-17",
+  "theme": "今日看色彩：留意色温冷暖的对比，以及你第一眼被什么颜色吸引。",
+  "generated_at": "2026-11-17T08:04:16",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-10-29",
+        "title": "The Horns of Venus",
+        "artist": "Thierry Legault",
+        "date": "2026-10-29",
+        "style": "天文",
+        "description": "Explanation: That's no moon. But you could be forgiven for thinking it was a crescent Moon in the sky. It is a lesser known fact that Venus also has phases . (What about other planets? ) The featured image shows Venus seen almost directly between the Sun and the Earth. This happens once every year a",
+        "image_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/october/venus_20261024a.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+        "image_url_large": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/october/venus_20261024a.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+        "local_path": "daily/2026-11-17/nasa_2026-10-29_f284bf15.jpg",
+        "extra": {
+          "apod_date": "2026-10-29",
+          "explanation_full": "Explanation: That's no moon. But you could be forgiven for thinking it was a crescent Moon in the sky. It is a lesser known fact that Venus also has phases . (What about other planets? ) The featured image shows Venus seen almost directly between the Sun and the Earth. This happens once every year and a half , and it is like the alignment that happens every month during a new Moon. But the new Moon is dark, while Venus' backlit atmosphere refracts and scatters the sunlight, creating a glowing crescent arc that extends beyond 180 degrees: the tips of this arc are called the \"horns\". The crescent can be seen with a small telescope or binoculars during twilight, but those with exceptionally acute eyesight may be able to see it with the unaided eye. Ancient Babylonian astronomers may have been the first to study Venus' brightness changes, which are related to its phases . Many other cultures have similar astronomical records, including the oldest surviving Maya book . Tomorrow's picture: a cosmic haunting",
+          "permalink": "https://science.nasa.gov/image-article/apod-29-october-2026-the-horns-of-venus/",
+          "credit": "Thierry Legault",
+          "alt": "See Explanation.  Clicking on the picture will download the highest resolution version available."
+        }
+      },
+      "commentary": "2026-10-29 的每日天文图《The Horns of Venus》。今日看色彩：分一分冷暖：暖色往往往前跑，冷色通常往后退。",
+      "cid": "img_nasa:2026-10-29"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "403466",
+        "title": "Myron Smith Allen, Left Field, Kansas City Cowboys, from the Old Judge series (N172) for Old Judge Cigarettes",
+        "artist": "Goodwin & Company",
+        "date": "1888",
+        "style": "古典艺术",
+        "description": "Albumen photograph",
+        "image_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP845823.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/web-large/DP845823.jpg",
+        "local_path": "daily/2026-11-17/met_Myron_Smith_Allen_Left_Field_Kansas_City_Cowboys_from_the_Old_Judge_series_N172__da7389e8.jpg",
+        "extra": {
+          "department": "Drawings and Prints",
+          "culture": "",
+          "period": "",
+          "medium": "Albumen photograph",
+          "dimensions": "sheet: 2 11/16 x 1 3/8 in. (6.9 x 3.5 cm)",
+          "creditLine": "The Jefferson R. Burdick Collection, Gift of Jefferson R. Burdick",
+          "tags": [
+            {
+              "term": "Men",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+            },
+            {
+              "term": "Portraits",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+            },
+            {
+              "term": "Baseball",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300222760",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q5369"
+            },
+            {
+              "term": "Athletes",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300236025",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q2066131"
+            }
+          ]
+        }
+      },
+      "commentary": "《Myron Smith Allen, Left Field, Kansas City Cowboys, from the Old Judge series (N172) for Old Judge Cigarettes",
+      "cid": "img_met:403466"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "c9z9RlCh0Zo",
+        "title": "photo of beige and gray building during daytime",
+        "artist": "Frances Gunn",
+        "date": "2016-01-13",
+        "style": "摄影",
+        "description": "photo of beige and gray building during daytime",
+        "image_url": "https://images.unsplash.com/photo-1452717602770-b78d1b2115e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0OTAyNjQ5fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1452717602770-b78d1b2115e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0OTAyNjQ5fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#8cc0f3",
+          "location": "Chattanooga, TN",
+          "portfolio_url": "https://unsplash.com/@francesgunn",
+          "photo_page_url": "https://unsplash.com/photos/photo-of-beige-and-gray-building-during-daytime-c9z9RlCh0Zo?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@francesgunn?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/c9z9RlCh0Zo/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0OTAyNjQ5fA",
+          "tags": [],
+          "width": 2048,
+          "height": 1365
+        }
+      },
+      "commentary": "摄影《photo of beige and gray building during daytime》，关键词 architecture、#8cc0f3。今日看色彩：数数全画用了几种颜色，少不一定寡淡，多也不一定热闹。",
+      "cid": "img_unsplash:c9z9RlCh0Zo"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
