@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-18",
+  "theme": "今日看光影：想象光源方向，思考艺术家如何『用暗托亮』。",
+  "generated_at": "2026-11-18T07:41:04",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "401870",
+        "title": "Ryan, Right Field, Chicago, from the Old Judge series (N172) for Old Judge Cigarettes",
+        "artist": "Goodwin & Company",
+        "date": "1887",
+        "style": "古典艺术",
+        "description": "Albumen photograph",
+        "image_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP825347.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/web-large/DP825347.jpg",
+        "local_path": "daily/2026-11-18/met_Ryan_Right_Field_Chicago_from_the_Old_Judge_series_N172_for_Old_Judge_Cigarettes_57c75bf8.jpg",
+        "extra": {
+          "department": "Drawings and Prints",
+          "culture": "",
+          "period": "",
+          "medium": "Albumen photograph",
+          "dimensions": "sheet: 2 11/16 x 1 3/8 in. (6.9 x 3.5 cm)",
+          "creditLine": "The Jefferson R. Burdick Collection, Gift of Jefferson R. Burdick",
+          "tags": [
+            {
+              "term": "Men",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+            },
+            {
+              "term": "Portraits",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
+            },
+            {
+              "term": "Baseball",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300222760",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q5369"
+            },
+            {
+              "term": "Athletes",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300236025",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q2066131"
+            }
+          ]
+        }
+      },
+      "commentary": "《Ryan, Right Field, Chicago, from the Old Judge series (N172) for Old Judge Cigarettes》：Albumen photograph、188",
+      "cid": "img_met:401870"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "sf_1ZDA1YFw",
+        "title": "riped banana on pink surface",
+        "artist": "Mike Dorner",
+        "date": "2016-12-10",
+        "style": "摄影",
+        "description": "riped banana on pink surface",
+        "image_url": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0OTg3NjUzfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0OTg3NjUzfA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "minimal",
+          "color": "#f3c0c0",
+          "location": "Portland, OR",
+          "portfolio_url": "https://unsplash.com/@dorner",
+          "photo_page_url": "https://unsplash.com/photos/riped-banana-on-pink-surface-sf_1ZDA1YFw?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@dorner?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/sf_1ZDA1YFw/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk0OTg3NjUzfA",
+          "tags": [],
+          "width": 5827,
+          "height": 3602
+        }
+      },
+      "commentary": "摄影《riped banana on pink surface》，关键词 minimal、#f3c0c0。今日看光影：先猜光源在画面外的哪个方向，再看影子对不对得上。",
+      "cid": "img_unsplash:sf_1ZDA1YFw"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-17",
+        "title": "Milky Way versus Aurora",
+        "artist": "Guillaume Scheib",
+        "date": "2026-11-17",
+        "style": "天文",
+        "description": "Explanation: Are these two giant arches battling for control of the sky? No, but it sure looks like it! The arch on the left is the central band of our Milky Way Galaxy , an ancient system of stars, gas, and dust that predates our Earth and is very far away. The arch on the right, by contrast, is an",
+        "image_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/GalaxyVsAurora_Scheib_960.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+        "image_url_large": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/GalaxyVsAurora_Scheib_960.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+        "local_path": "daily/2026-11-18/nasa_2026-11-17_0c292471.jpg",
+        "extra": {
+          "apod_date": "2026-11-17",
+          "explanation_full": "Explanation: Are these two giant arches battling for control of the sky? No, but it sure looks like it! The arch on the left is the central band of our Milky Way Galaxy , an ancient system of stars, gas, and dust that predates our Earth and is very far away. The arch on the right, by contrast, is an auroral ribbon that is only hours old, composed of energized atoms and molecules , and is close by -- right in Earth's upper atmosphere . These chance-superposed titan s have our Sun in common, a stellar member of the Milky Way that ejects energetic particles which create aurora s. Far behind the middle of the auroral arch is the Big Dipper . Even farther in the distance is the Andromeda galaxy -- the bright spot near the top of the frame, just left of center. The featured image was taken about a month ago from Kvaløya in northern Norway . Tomorrow's picture: open space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-17-milky-way-versus-aurora/",
+          "credit": "Guillaume Scheib",
+          "alt": "A starry night sky is seen above water and some islands. In the night sky are two bright arches that are nearly vertical. On the left is the textured Milky Way and on the right is a  smoother ribbon of aurora. Please see the explanation for more detailed information."
+        }
+      },
+      "commentary": "2026-11-17 的每日天文图《Milky Way versus Aurora》。今日看光影：留意最暗的地方：暗不是没画，是用来把亮处托起来的。",
+      "cid": "img_nasa:2026-11-17"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "742764",
+        "title": "A Cure for Lying and a Bad Memory",
+        "artist": "Thomas Rowlandson",
+        "date": "July 9, 1807",
+        "style": "古典艺术",
+        "description": "Hand-colored etching",
+        "image_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP873837.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/web-large/DP873837.jpg",
+        "local_path": "daily/2026-11-18/met_A_Cure_for_Lying_and_a_Bad_Memory_bba00ea8.jpg",
+        "extra": {
+          "department": "Drawings and Prints",
+          "culture": "",
+          "period": "",
+          "medium": "Hand-colored etching",
+          "dimensions": "Sheet: 12 1/2 × 9 3/16 in. (31.8 × 23.3 cm)\r\nPlate: 11 × 8 1/2 in. (28 × 21.6 cm)",
+          "creditLine": "The Elisha Whittelsey Collection, The Elisha Whittelsey Fund, 1959",
+          "tags": [
+            {
+              "term": "Satire",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300055934",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q128758"
+            },
+            {
+              "term": "Men",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+            }
+          ]
+        }
+      },
+      "commentary": "《A Cure for Lying and a Bad Memory》：Hand-colored etching、July 9, 1807。今日看光影：找一处渐变最慢的过渡，那里藏着作者对材质的判断。",
+      "cid": "img_met:742764"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
