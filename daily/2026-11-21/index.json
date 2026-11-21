@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-21",
+  "theme": "今日看细节：找一处容易被忽略的角落，那里藏着作者的签名。",
+  "generated_at": "2026-11-21T07:22:34",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "LUBvSohu6D0",
+        "title": "rock formation beside body of water",
+        "artist": "Andrew Coelho",
+        "date": "2015-11-19",
+        "style": "摄影",
+        "description": "rock formation beside body of water",
+        "image_url": "https://images.unsplash.com/photo-1447957781261-96a39620d6d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1MjQ1NzQ4fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1447957781261-96a39620d6d4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1MjQ1NzQ4fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#0c260c",
+          "location": null,
+          "portfolio_url": "https://unsplash.com/@andrewcoelho",
+          "photo_page_url": "https://unsplash.com/photos/rock-formation-beside-body-of-water-LUBvSohu6D0?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@andrewcoelho?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/LUBvSohu6D0/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1MjQ1NzQ4fA",
+          "tags": [],
+          "width": 2000,
+          "height": 1500
+        }
+      },
+      "commentary": "摄影《rock formation beside body of water》，关键词 nature、#0c260c。今日看细节：挑一个你觉得「没必要画」的东西，想想它为什么还在。",
+      "cid": "img_unsplash:LUBvSohu6D0"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "y0i1lh-T0_w",
+        "title": "body of water on mountain",
+        "artist": "Ales Krivec",
+        "date": "2015-07-18",
+        "style": "摄影",
+        "description": "body of water on mountain",
+        "image_url": "https://images.unsplash.com/photo-1437209484568-e63b90a34f8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1MjQ1NzQ4fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1437209484568-e63b90a34f8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1MjQ1NzQ4fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#d9d9d9",
+          "location": "Slovenia",
+          "portfolio_url": "https://unsplash.com/@aleskrivec",
+          "photo_page_url": "https://unsplash.com/photos/body-of-water-on-mountain-y0i1lh-T0_w?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@aleskrivec?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/y0i1lh-T0_w/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1MjQ1NzQ4fA",
+          "tags": [],
+          "width": 7200,
+          "height": 4700
+        }
+      },
+      "commentary": "摄影《body of water on mountain》，关键词 nature、#d9d9d9。今日看细节：从四个角落各看十秒，作者常把最放松的笔放在那里。",
+      "cid": "img_unsplash:y0i1lh-T0_w"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-04",
+        "title": "The Not-So-Hidden Galaxy, IC 342",
+        "artist": "Artem Mironov",
+        "date": "2026-11-04",
+        "style": "天文",
+        "description": "Explanation: “I see” IC 342, the Hidden Galaxy! Today’s image peers through the plane of the Milky Way , through all its gas, dust and stars, to unveil this spiral galaxy . IC 342 (or Caldwell 5 ) is one of the brightest members of the IC 342/ Maffei group of galaxies. Located about 10 million light",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/ic342.png?w=1080&h=735&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/ic342.png?w=1080&h=735&fit=clip",
+        "local_path": "daily/2026-11-21/nasa_2026-11-04_862a0418.jpg",
+        "extra": {
+          "apod_date": "2026-11-04",
+          "explanation_full": "Explanation: “I see” IC 342, the Hidden Galaxy! Today’s image peers through the plane of the Milky Way , through all its gas, dust and stars, to unveil this spiral galaxy . IC 342 (or Caldwell 5 ) is one of the brightest members of the IC 342/ Maffei group of galaxies. Located about 10 million light years away, this group is quite close to the Local Group that includes our Milky Way. Inaccurate accounting of the crowded and dusty Milky Way foreground has led to misunderstandings in IC 342’s history, including the theory that the galaxy was ejected from the Local Group . IC 342 has its own dust intermittently blocking the glow of hydrogen gas , indicating the presence of bright, young stars. Magnetic field maps of IC 342 reveal that magnetic fields may contribute substantially to one of the biggest galactic puzzles: how do spiral arms form ? Tomorrow's picture: open space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-4-the-not-so-hidden-galaxy-ic-342/",
+          "credit": "Artem Mironov",
+          "alt": "The face of a spiral galaxy fills the image. The galaxy has a bright yellow-ish center. A handful of large arms spiral outward from the center. Bubbles of red glowing gas and tendrils of dark dust trace the spiral arms. Foreground stars and background galaxies are sprinkled across the image."
+        }
+      },
+      "commentary": "2026-11-04 的每日天文图《The Not-So-Hidden Galaxy, IC 342》。今日看细节：找一处重复出现的小形状，它多半不是巧合。",
+      "cid": "img_nasa:2026-11-04"
+    }
+  ],
+  "push_results": {
+    "email": true,
+    "wechat": true
+  }
+}
