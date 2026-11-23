@@ -6,11 +6,12 @@
 3. Met / NASA 下载原图归档；Unsplash 按 API Guidelines 只热链、不落盘
 4. 调用 LLM 生成每张作品的审美讲解
 5. 先写归档 index.json（推送失败也保留当天记录）
-6. 推送邮件 + 微信（图片一律使用图源官方直链）
+6. 成功→只发邮件图文；失败→只发微信文字告警（图片一律使用图源官方直链）
 7. 标记已推送，更新 INDEX.md
 
 推送图片不依赖 git commit / CDN；归档是历史记录，不是图片的投递通道。
-DRY-RUN 只跑 1-5 与 7，不发任何邮件或微信。
+微信只用于失败告警，不再重复推送当日内容（Server酱 通道本就只有纯文字）。
+DRY-RUN 只跑 1-5 与 7，不发任何邮件或微信（含失败告警）。
 """
 from __future__ import annotations
 
@@ -36,7 +37,7 @@ from src.models import Artwork, ensure_dir, today_str  # noqa: E402
 from src.fetchers import met_museum, unsplash, nasa_apod  # noqa: E402
 from src.ai_commentary import generate_batch  # noqa: E402
 from src.pushers.email_sender import send_email  # noqa: E402
-from src.pushers.wechat_sender import send as send_wechat, build_wechat_markdown  # noqa: E402
+from src.pushers.wechat_sender import send as send_wechat  # noqa: E402
 
 
 # ============ 配置加载 ============
@@ -251,6 +252,34 @@ def pick_artworks(
 
 # ============ 主流程 ============
 
+def _notify_failure(cfg: dict[str, Any], date_str: str, reason: str) -> bool:
+    """失败时通过微信发一条纯文字告警；dry-run 或未配微信通道则跳过。
+
+    成功时只发邮件图文，微信只承担告警职责，避免同一内容发两遍。
+    返回是否发送成功；告警本身失败只记日志，不再找第三个通道。
+    """
+    if cfg.get("debug", {}).get("dry_run", False):
+        print("[alert] DRY-RUN：跳过失败告警")
+        return False
+    if not cfg.get("wechat", {}).get("channel"):
+        print("[alert] 未配置微信通道，跳过失败告警")
+        return False
+    title = f"【审美日课·失败】{date_str}"
+    content = f"{reason}\n\n请到仓库 Actions 查看最近一次运行的日志。"
+    try:
+        ok = send_wechat(
+            channel=cfg["wechat"]["channel"],
+            config=cfg["wechat"],
+            title=title,
+            content=content,
+        )
+        print(f"[alert] 微信告警: {'OK' if ok else 'FAIL'}")
+        return bool(ok)
+    except Exception as exc:
+        print(f"[alert] 微信告警异常: {exc}")
+        return False
+
+
 def _repo_urls(base_url: str) -> tuple[str, str]:
     """从 raw.githubusercontent.com URL 推导历史归档页与项目主页"""
     prefix = "raw.githubusercontent.com/"
@@ -317,6 +346,7 @@ def run(config_path: str = "config.yaml") -> int:
     artworks = pick_artworks(cfg, cfg.get("schedule", {}).get("total_cards", 4), exclude_ids)
     if not artworks:
         print("[main] 没抓到任何作品，退出")
+        _notify_failure(cfg, date_str, "本次没有抓到任何可用作品，已跳过今日推送。")
         return 1
 
     # 2. 归档下载：Met / NASA 落盘，Unsplash 只热链
@@ -340,6 +370,7 @@ def run(config_path: str = "config.yaml") -> int:
             print(f"[main] {aw.source}:{aw.source_id} 下载失败，跳过")
     if not ready_artworks:
         print("[main] 所有图片都不可用")
+        _notify_failure(cfg, date_str, "所有图片都下载失败，已跳过今日推送。")
         return 1
 
     # 3. AI 生成讲解
@@ -367,13 +398,17 @@ def run(config_path: str = "config.yaml") -> int:
     if len(items) < min_cards:
         print(f"[main] ⚠️ 今日仅 {len(items)} 张可用作品（阈值 {min_cards}），图源可能有缺失")
         if not dry_run:
-            print("[main] 为避免推送残缺内容，跳过邮件/微信并以失败退出")
+            print("[main] 为避免推送残缺内容，跳过邮件并以失败退出")
             _update_index(output_dir, date_str, theme, len(items))
+            _notify_failure(
+                cfg, date_str,
+                f"今日仅 {len(items)} 张可用作品（阈值 {min_cards}），已跳过推送。",
+            )
             return 1
 
-    # 5. 推送（图片一律走图源官方直链，不依赖仓库 commit / CDN）
+    # 5. 推送：成功只发邮件图文；失败由微信发文字告警（见 _notify_failure）
     if dry_run:
-        print("\n[main] DRY-RUN：跳过邮件与微信推送")
+        print("\n[main] DRY-RUN：跳过邮件与微信推送（含失败告警）")
     else:
         archive_url, project_url = _repo_urls(cfg.get("repo", {}).get("base_url", ""))
         push_results: dict[str, bool] = {}
@@ -390,31 +425,15 @@ def run(config_path: str = "config.yaml") -> int:
             )
             push_results["email"] = bool(ok)
             print(f"[main] 邮件结果: {'OK' if ok else 'FAIL'}")
-
-        if cfg.get("wechat", {}).get("channel"):
-            print("\n[main] 推送微信")
-            title, md_content = build_wechat_markdown(
-                items, date_str=date_str, theme=theme,
-            )
-            plain_text = "\n\n".join(
-                f"[{it['artwork'].get('style','')}] {it['artwork'].get('title','')}\n{it['commentary']}"
-                for it in items
-            )
-            ok = send_wechat(
-                channel=cfg["wechat"]["channel"],
-                config=cfg["wechat"],
-                title=title,
-                content=plain_text,
-                markdown_for_wecom=md_content,
-            )
-            push_results["wechat"] = bool(ok)
-            print(f"[main] 微信结果: {'OK' if ok else 'FAIL'}")
+            if not ok:
+                print("::error::email 邮件推送失败，已发微信告警；当天归档已保留")
+                _notify_failure(cfg, date_str, "邮件推送失败，今日图集未送达。请查看 Actions 日志。")
+        else:
+            print("[main] 邮件通道未启用，今日不推送内容")
 
         # 让失败在 Actions Annotations 里可见，但不改退出码：
         # job 失败会跳过后面的 git commit，当天归档就丢了。
         failed = [name for name, ok in push_results.items() if not ok]
-        for name in failed:
-            print(f"::error::{name} 通道推送失败，详见上方日志；当天归档已保留")
         if failed:
             print(f"[main] ⚠️ 本次有推送失败：{', '.join(failed)}（详见 Annotations）")
 
