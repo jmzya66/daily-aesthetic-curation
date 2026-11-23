@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-23",
+  "theme": "今日看构图：注意画面元素的『视觉重量』与『留白节奏』。",
+  "generated_at": "2026-11-23T13:58:37",
+  "pushed": false,
+  "items": [
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "d0Sl3AH8Tlg",
+        "title": "black iPhone turned on",
+        "artist": "Tyler Lastovich",
+        "date": "2017-11-20",
+        "style": "摄影",
+        "description": "black iPhone turned on",
+        "image_url": "https://images.unsplash.com/photo-1511140973288-19bf21d7e771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQyMzE1fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1511140973288-19bf21d7e771?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQyMzE1fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "minimal",
+          "color": "#262626",
+          "location": "USA",
+          "portfolio_url": "https://unsplash.com/@lastly",
+          "photo_page_url": "https://unsplash.com/photos/black-iphone-turned-on-d0Sl3AH8Tlg?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@lastly?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/d0Sl3AH8Tlg/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQyMzE1fA",
+          "tags": [],
+          "width": 4000,
+          "height": 3000
+        }
+      },
+      "commentary": "摄影《black iPhone turned on》，关键词 minimal、#262626。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡。",
+      "cid": "img_unsplash:d0Sl3AH8Tlg"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "m2J105CzEAU",
+        "title": "Cheese plant leaf in clear glass vase",
+        "artist": "Sarah Dorweiler",
+        "date": "2016-08-13",
+        "style": "摄影",
+        "description": "Cheese plant leaf in clear glass vase",
+        "image_url": "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQyMzE1fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQyMzE1fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "minimal",
+          "color": "#f3f3f3",
+          "location": "Berlin",
+          "portfolio_url": "https://unsplash.com/@sarahdorweiler",
+          "photo_page_url": "https://unsplash.com/photos/cheese-plant-leaf-in-clear-glass-vase-m2J105CzEAU?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@sarahdorweiler?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/m2J105CzEAU/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQyMzE1fA",
+          "tags": [],
+          "width": 4272,
+          "height": 2848
+        }
+      },
+      "commentary": "摄影《Cheese plant leaf in clear glass vase》，关键词 minimal、#f3f3f3。今日看构图：找一条藏起来的对角线，很多安排都压在这条线上。",
+      "cid": "img_unsplash:m2J105CzEAU"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-22",
+        "title": "Swirls and Colors on Jupiter from Juno",
+        "artist": "NASA , Juno , SwRI , MSSS ; Processing & License : Matt Brealey , Seán Doran",
+        "date": "2026-11-22",
+        "style": "天文",
+        "description": "Explanation: What creates the colors in Jupiter's clouds? No one is sure. The thick atmosphere of Jupiter is mostly hydrogen and helium , elements which are colorless at the low temperatures of the Jovian cloud tops . Which trace molecules provide the colors remains a topic of research , although sm",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/JupiterSwirls_JunoBrealey_3709.jpg?w=1080&h=807&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/JupiterSwirls_JunoBrealey_3709.jpg?w=1080&h=807&fit=clip",
+        "local_path": "daily/2026-11-23/nasa_2026-11-22_efe3540f.jpg",
+        "extra": {
+          "apod_date": "2026-11-22",
+          "explanation_full": "Explanation: What creates the colors in Jupiter's clouds? No one is sure. The thick atmosphere of Jupiter is mostly hydrogen and helium , elements which are colorless at the low temperatures of the Jovian cloud tops . Which trace molecules provide the colors remains a topic of research , although small amounts of ammonium hydrosulfide are one leading candidate . What is clear from the featured color-enhanced image -- and many similar images -- is that lighter clouds are typically higher up than darker ones. Pictured, light clouds swirl around reddish regions toward the lower right, while they appear to cover over some darker domains on the upper right. The featured image was taken by the robotic Juno spacecraft in 2018 during its 14th low pass over Jupiter . Juno continues in its looping elliptical orbit, swooping near the huge planet every 33 days and exploring a slightly different sector each time around. Tomorrow's picture: emerging darkness",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-22-swirls-and-colors-on-jupiter-from-juno/",
+          "credit": "NASA , Juno , SwRI , MSSS ; Processing & License : Matt Brealey , Seán Doran",
+          "alt": "A busy field of colorful clouds is pictured showing much interesting structure including many cloud swirls.  Please see the explanation for more detailed information."
+        }
+      },
+      "commentary": "2026-11-22 的每日天文图《Swirls and Colors on Jupiter from Juno》。今日看构图：先别看主体，找画面里最重的那一块，看它把视线推向哪里。",
+      "cid": "img_nasa:2026-11-22"
+    }
+  ]
+}
