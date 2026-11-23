@@ -72,9 +72,13 @@ def download_image(
     dest_path = dest_dir / filename
 
     try:
-        # Unsplash 等可能要求 UA
+        # Met 图片 CDN 对 bot UA 返回 text/html 反热链，实测只有完整浏览器 UA 才给真 JPEG。
+        # 用真实 Chrome UA（去掉 bot 标识），Accept 仍限定 image/*。
         headers = {
-            "User-Agent": "Mozilla/5.0 (compatible; AestheticDailyBot/1.0)",
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            ),
             "Accept": "image/*",
         }
         resp = requests.get(url, headers=headers, timeout=timeout, stream=True)
