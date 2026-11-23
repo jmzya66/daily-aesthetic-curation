@@ -1,131 +1,108 @@
 {
   "date": "2026-11-23",
   "theme": "今日看构图：注意画面元素的『视觉重量』与『留白节奏』。",
-  "generated_at": "2026-11-23T14:22:11",
+  "generated_at": "2026-11-23T14:41:09",
   "pushed": false,
   "items": [
     {
       "artwork": {
-        "source": "nasa",
-        "source_id": "2026-11-07",
-        "title": "De Gerlache-Kocher Massif",
-        "artist": "Alejandro Sanz",
-        "date": "2026-11-07",
-        "style": "天文",
-        "description": "Explanation: De Gerlache-Kocher massif looms on the visible horizon in this close-up of the edge of the Moon. The mountainous formation rises about 4 kilometers above its surroundings and is located very close to the lunar south pole. Boasting permanently shadowed crater floors that likely contain d",
-        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/GerlacheKocherMassif_Sans.jpg?w=1080&h=736&fit=clip",
-        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/GerlacheKocherMassif_Sans.jpg?w=1080&h=736&fit=clip",
-        "local_path": "daily/2026-11-23/nasa_2026-11-07_e2e9b885.jpg",
-        "extra": {
-          "apod_date": "2026-11-07",
-          "explanation_full": "Explanation: De Gerlache-Kocher massif looms on the visible horizon in this close-up of the edge of the Moon. The mountainous formation rises about 4 kilometers above its surroundings and is located very close to the lunar south pole. Boasting permanently shadowed crater floors that likely contain deposits of water ice and peaks that receive almost continuous sunlight for solar power generation, the south polar region is considered a prime location for the first human settlement on the Moon. In fact , De Gerlache-Kocher massif itself has been considered as a potential landing site for future crewed Artemis missions to the Moon . The remarkable telescopic image of the massif at the lunar limb was captured on October 31. Then, a favorable libration angle or lunar wobble enhanced this oblique view across the Moon's south pole. Tomorrow's picture: meteoric",
-          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-7-de-gerlache-kocher-massif/",
-          "credit": "Alejandro Sanz",
-          "alt": "Mountains and craters at the lunar limb."
-        }
-      },
-      "commentary": "2026-11-07 的每日天文图《De Gerlache-Kocher Massif》。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡。",
-      "cid": "img_nasa:2026-11-07"
-    },
-    {
-      "artwork": {
         "source": "unsplash",
-        "source_id": "ucYWe5mzTMU",
-        "title": "bird's eye view of grassland beside mountain",
-        "artist": "Jeremy Cai",
-        "date": "2014-09-29",
+        "source_id": "sf_1ZDA1YFw",
+        "title": "riped banana on pink surface",
+        "artist": "Mike Dorner",
+        "date": "2016-12-10",
         "style": "摄影",
-        "description": "bird's eye view of grassland beside mountain",
-        "image_url": "https://images.unsplash.com/uploads/1412026095116d2b0c90e/3bf33993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQzNzI3fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/uploads/1412026095116d2b0c90e/3bf33993?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQzNzI3fA&ixlib=rb-4.1.0&q=85",
+        "description": "riped banana on pink surface",
+        "image_url": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQ0ODY3fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQ0ODY3fA&ixlib=rb-4.1.0&q=85",
         "local_path": "",
         "extra": {
           "delivery": "hotlink",
-          "query": "nature",
-          "color": "#f3f3f3",
-          "location": "Park City",
-          "portfolio_url": "https://unsplash.com/@j",
-          "photo_page_url": "https://unsplash.com/photos/birds-eye-view-of-grassland-beside-mountain-ucYWe5mzTMU?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@j?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/ucYWe5mzTMU/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQzNzI3fA",
+          "query": "minimal",
+          "color": "#f3c0c0",
+          "location": "Portland, OR",
+          "portfolio_url": "https://unsplash.com/@dorner",
+          "photo_page_url": "https://unsplash.com/photos/riped-banana-on-pink-surface-sf_1ZDA1YFw?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@dorner?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/sf_1ZDA1YFw/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NDQ0ODY3fA",
           "tags": [],
-          "width": 3872,
-          "height": 2592
+          "width": 5827,
+          "height": 3602
         }
       },
-      "commentary": "摄影《bird's eye view of grassland beside mountain》，关键词 nature、#f3f3f3。今日看构图：找一条藏起来的对角线，很多安排都压在这条线上。",
-      "cid": "img_unsplash:ucYWe5mzTMU"
+      "commentary": "摄影《riped banana on pink surface》，关键词 minimal、#f3c0c0。今日看构图：把画面横竖各切一刀，比一比四条边的重量是不是平衡。",
+      "cid": "img_unsplash:sf_1ZDA1YFw"
     },
     {
       "artwork": {
         "source": "met",
-        "source_id": "694278",
-        "title": "Fragment",
+        "source_id": "44382",
+        "title": "Model of Blue Dragon, Symbol of the East (Qinglong)",
         "artist": "Unknown",
-        "date": "ca. 1150–ca. 1250",
+        "date": "11th century",
         "style": "古典艺术",
-        "description": "Glass, ceramic",
-        "image_url": "https://images.metmuseum.org/CRDImages/md/web-large/28.99.149.jpg",
-        "image_url_large": "https://images.metmuseum.org/CRDImages/md/web-large/28.99.149.jpg",
-        "local_path": "daily/2026-11-23/met_Fragment_4b5950ef.jpg",
+        "description": "Porcelain with bluish-white glaze (Jingdezhen qingbai ware)",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/web-large/272401.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/as/web-large/272401.jpg",
+        "local_path": "daily/2026-11-23/met_Model_of_Blue_Dragon_Symbol_of_the_East_Qinglong__ef7c9364.jpg",
         "extra": {
-          "department": "Medieval Art",
-          "culture": "European or Middle Eastern",
-          "period": "",
-          "medium": "Glass, ceramic",
-          "dimensions": "L. 1 13/16 in. (4.6 cm)",
-          "creditLine": "Gift of Clarence H. Mackay, Archer M. Huntington, Stephen H. P. Pell and Bashford Dean, 1928",
+          "department": "Asian Art",
+          "culture": "China",
+          "period": "Northern Song dynasty (960–1127",
+          "medium": "Porcelain with bluish-white glaze (Jingdezhen qingbai ware)",
+          "dimensions": "H. 2 7/8 in. (7.3 cm); L. 6 5/8 in. (16.8 cm)",
+          "creditLine": "Charlotte C. and John C. Weber Collection, Gift of Charlotte C. and John C. Weber, 1994",
           "tags": []
         }
       },
-      "commentary": "《Fragment》：Glass, ceramic、European or Middle Eastern、ca. 1150–ca. 1250。今日看构图：先别看主体，找画面里最重的那一块，看它把视线推向哪里。",
-      "cid": "img_met:694278"
+      "commentary": "《Model of Blue Dragon, Symbol of the East (Qinglong)》：Porcelain with bluish-whit、China、Northern Song dynasty (",
+      "cid": "img_met:44382"
     },
     {
       "artwork": {
-        "source": "met",
-        "source_id": "370654",
-        "title": "Giovanni de' Medici",
-        "artist": "Anonymous, Italian, 16th century",
-        "date": "ca. 1550–1600",
-        "style": "古典艺术",
-        "description": "Engraving",
-        "image_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP163365.jpg",
-        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/web-large/DP163365.jpg",
-        "local_path": "daily/2026-11-23/met_Giovanni_de_Medici_4a8a64d4.jpg",
+        "source": "nasa",
+        "source_id": "2026-11-08",
+        "title": "Major Fireball Meteor",
+        "artist": "Ollie Taylor",
+        "date": "2026-11-08",
+        "style": "天文",
+        "description": "Explanation: The sky glows with soft pinkish colors of fading twilight in this serendipitous mountaintop vista. Taken in subfreezing temperatures, the thoughtfully composed photo shows snowy, rugged peaks seen from a mountain pass on 2017 November 14. Below lies the village of La Villa, Alta Badia i",
+        "image_url": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/meteor2017_Taylor_1200.jpg/jcr:content/renditions/cq5dam.thumbnail.48.48.png",
+        "image_url_large": "https://assets.science.nasa.gov/content/dam/science/cds/apod/apod/2026/november/meteor2017_Taylor_1200.jpg/jcr:content/renditions/cq5dam.thumbnail.48.48.png",
+        "local_path": "daily/2026-11-23/nasa_2026-11-08_9e048ea3.jpg",
         "extra": {
-          "department": "Drawings and Prints",
-          "culture": "",
-          "period": "",
-          "medium": "Engraving",
-          "dimensions": "sheet: 18 3/4 x 12 1/16 in. (47.7 x 30.6 cm) sheet trimmed to borderline",
-          "creditLine": "Harris Brisbane Dick Fund, 1953",
-          "tags": [
-            {
-              "term": "Soldiers",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300185678",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q4991371"
-            },
-            {
-              "term": "Men",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
-            },
-            {
-              "term": "Profiles",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300123319",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q4382010"
-            },
-            {
-              "term": "Women",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
-            }
-          ]
+          "apod_date": "2026-11-08",
+          "explanation_full": "Explanation: The sky glows with soft pinkish colors of fading twilight in this serendipitous mountaintop vista. Taken in subfreezing temperatures, the thoughtfully composed photo shows snowy, rugged peaks seen from a mountain pass on 2017 November 14. Below lies the village of La Villa, Alta Badia in Italy 's Dolomite Alps . Above the nestled village lights, the constellation Ursa Major hangs over the northern horizon. But most stunning is the intense fireball meteor. It was captured during the camera's exposure by chance as it flashed east to west across the northern horizon, under Ursa Major's familiar Big Dipper asterism . Sightings of this major fireball meteor were widely reported in European skies, making it one of the most reported fireball events ever for planet Earth's American Meteor Society and the International Meteor Organization . The meteor's measured track over Germany is consistent with its origin near the active radiant of November's Northern Taurid Meteor Shower , a shower associated with dust from Encke's comet . Tomorrow's picture: witch sky?",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-8-major-fireball-meteor/",
+          "credit": "Ollie Taylor",
+          "alt": "A mountainous landscape with snow and trees is seen  below a starry sky. A pink band is visible on the horizon.  Coming down from the sky is a bright meteor trail. Just above the meteor are the stars of the Big Dipper.  Please see the explanation for more detailed information."
         }
       },
-      "commentary": "《Giovanni de' Medici》：Engraving、ca. 1550–1600。今日看构图：眯起眼只看大轮廓，数数留白占了多大、又留给了谁。",
-      "cid": "img_met:370654"
+      "commentary": "2026-11-08 的每日天文图《Major Fireball Meteor》。今日看构图：先别看主体，找画面里最重的那一块，看它把视线推向哪里。",
+      "cid": "img_nasa:2026-11-08"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-12",
+        "title": "Moon, Venus and Spica Meet",
+        "artist": "Włodzimierz Bubak",
+        "date": "2026-11-12",
+        "style": "天文",
+        "description": "Explanation: Not all those who wander are lost. A night sky example is that planets wander, and in fact the very word \"planet\" comes from \"wandering star\" in Greek. As planets shift relative to fixed stars , they may appear from our perspective to get closer to other astronomical objects. Such meeti",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/conjunction-bubak.jpg?w=1080&h=1350&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/conjunction-bubak.jpg?w=1080&h=1350&fit=clip",
+        "local_path": "daily/2026-11-23/nasa_2026-11-12_b9ab8c42.jpg",
+        "extra": {
+          "apod_date": "2026-11-12",
+          "explanation_full": "Explanation: Not all those who wander are lost. A night sky example is that planets wander, and in fact the very word \"planet\" comes from \"wandering star\" in Greek. As planets shift relative to fixed stars , they may appear from our perspective to get closer to other astronomical objects. Such meetings are called conjunctions . They don't happen by chance, but follow the precise laws of celestial mechanics . This peaceful image , captured in Poland , shows the crescent Moon above the Tatra Mountains , and bright Venus close by, a little lower in the horizon. The bright star to the left of Venus is Spica in the constellation of Virgo , the Maiden. Spica is one of the brightest stars in the sky, only about 250 light-years away. It was found in 1890 that Spica is a binary star: two massive blue stars orbiting each other every 4 days. But earlier this year it was reported that Spica, the current companion of wandering Venus, is actually a triple system . Tomorrow's picture: what's next?",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-12-moon-venus-and-spica-meet/",
+          "credit": "Włodzimierz Bubak",
+          "alt": "A crescent moon and bright Venus appear beyond a mountain in a rural area at dusk."
+        }
+      },
+      "commentary": "2026-11-12 的每日天文图《Moon, Venus and Spica Meet》。今日看构图：眯起眼只看大轮廓，数数留白占了多大、又留给了谁。",
+      "cid": "img_nasa:2026-11-12"
     }
   ]
 }
