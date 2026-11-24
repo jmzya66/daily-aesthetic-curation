@@ -1,92 +1,114 @@
 {
   "date": "2026-11-24",
   "theme": "今日看色彩：留意色温冷暖的对比，以及你第一眼被什么颜色吸引。",
-  "generated_at": "2026-11-24T10:02:44",
-  "pushed": true,
+  "generated_at": "2026-11-24T13:10:32",
+  "pushed": false,
   "items": [
     {
       "artwork": {
-        "source": "unsplash",
-        "source_id": "BghGseQbAkA",
-        "title": "several green bonsai trees during daytime",
-        "artist": "Hugo Sousa",
-        "date": "2017-05-28",
-        "style": "摄影",
-        "description": "several green bonsai trees during daytime",
-        "image_url": "https://images.unsplash.com/photo-1495985812444-236d6a87bdd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1495985812444-236d6a87bdd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=85",
-        "local_path": "",
+        "source": "met",
+        "source_id": "709952",
+        "title": "Terracotta rim fragment of a kylix (drinking cup)",
+        "artist": "Antiphon Painter",
+        "date": "490–480 BCE",
+        "style": "古典艺术",
+        "description": "Terracotta",
+        "image_url": "https://images.metmuseum.org/CRDImages/gr/web-large/DVB04679_1_ff.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/gr/web-large/DVB04679_1_ff.jpg",
+        "local_path": "daily/2026-11-24/met_Terracotta_rim_fragment_of_a_kylix_drinking_cup__626792c0.jpg",
         "extra": {
-          "delivery": "hotlink",
-          "query": "architecture",
-          "color": "#d9d9d9",
-          "location": "London",
-          "portfolio_url": "https://unsplash.com/@hmiguelsousa",
-          "photo_page_url": "https://unsplash.com/photos/several-green-bonsai-trees-during-daytime-BghGseQbAkA?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@hmiguelsousa?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/BghGseQbAkA/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA",
-          "tags": [],
-          "width": 5247,
-          "height": 3498
+          "department": "Greek and Roman Art",
+          "culture": "Greek, Attic",
+          "period": "Late Archaic",
+          "medium": "Terracotta",
+          "dimensions": "",
+          "creditLine": "Gift of Dietrich von Bothmer, Distinguished Research Curator, Greek and Roman Art, 2011",
+          "tags": []
         }
       },
-      "commentary": "摄影《several green bonsai trees during daytime》，关键词 architecture、#d9d9d9。今日看色彩：分一分冷暖：暖色往往往前跑，冷色通常往后退。",
-      "cid": "img_unsplash:BghGseQbAkA"
+      "commentary": "《Terracotta rim fragment of a kylix (drinking cup)》：Terracotta、Greek, Attic、Late Archaic。今日看色彩：分一分冷暖：暖色往往往前跑，冷",
+      "cid": "img_met:709952"
     },
     {
       "artwork": {
         "source": "unsplash",
-        "source_id": "dcL8ESbsGis",
-        "title": "low angle photography of architectural building",
-        "artist": "Dan Schiumarini",
-        "date": "2017-10-27",
+        "source_id": "wFHqJCuGB1g",
+        "title": "gray and brown building under blue sky",
+        "artist": "Marius Badstuber",
+        "date": "2016-04-28",
         "style": "摄影",
-        "description": "low angle photography of architectural building",
-        "image_url": "https://images.unsplash.com/photo-1509130298739-651801c76e96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1509130298739-651801c76e96?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=85",
+        "description": "gray and brown building under blue sky",
+        "image_url": "https://images.unsplash.com/photo-1461838239441-4475121c0b7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTI1ODMwfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1461838239441-4475121c0b7d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTI1ODMwfA&ixlib=rb-4.1.0&q=85",
         "local_path": "",
         "extra": {
           "delivery": "hotlink",
           "query": "architecture",
-          "color": "#0c2626",
-          "location": "Switzerland",
-          "portfolio_url": "https://unsplash.com/@dan_schiumarini",
-          "photo_page_url": "https://unsplash.com/photos/low-angle-photography-of-architectural-building-dcL8ESbsGis?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@dan_schiumarini?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/dcL8ESbsGis/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA",
+          "color": "#c0d9f3",
+          "location": "Germany",
+          "portfolio_url": "https://unsplash.com/@marius_badstuber",
+          "photo_page_url": "https://unsplash.com/photos/gray-and-brown-building-under-blue-sky-wFHqJCuGB1g?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@marius_badstuber?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/wFHqJCuGB1g/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTI1ODMwfA",
           "tags": [],
-          "width": 4704,
-          "height": 3136
+          "width": 5184,
+          "height": 3456
         }
       },
-      "commentary": "摄影《low angle photography of architectural building》，关键词 architecture、#0c2626。今日看色彩：找画面里最不起眼的那块灰，它常是让颜色不吵架的关键。",
-      "cid": "img_unsplash:dcL8ESbsGis"
+      "commentary": "摄影《gray and brown building under blue sky》，关键词 architecture、#c0d9f3。今日看色彩：找画面里最不起眼的那块灰，它常是让颜色不吵架的关键。",
+      "cid": "img_unsplash:wFHqJCuGB1g"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "Sc5RKXLBjGg",
+        "title": "low angle photography of gray building at daytime",
+        "artist": "Anders Jildén",
+        "date": "2017-03-08",
+        "style": "摄影",
+        "description": "low angle photography of gray building at daytime",
+        "image_url": "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTI1ODMwfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTI1ODMwfA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#8c8c8c",
+          "location": "Stockholm, Sweden",
+          "portfolio_url": "https://unsplash.com/@andersjilden",
+          "photo_page_url": "https://unsplash.com/photos/low-angle-photography-of-gray-building-at-daytime-Sc5RKXLBjGg?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@andersjilden?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/Sc5RKXLBjGg/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTI1ODMwfA",
+          "tags": [],
+          "width": 2400,
+          "height": 1600
+        }
+      },
+      "commentary": "摄影《low angle photography of gray building at daytime》，关键词 architecture、#8c8c8c。今日看色彩：数数全画用了几种颜色，少不一定寡淡，多也不一定热闹",
+      "cid": "img_unsplash:Sc5RKXLBjGg"
     },
     {
       "artwork": {
         "source": "nasa",
-        "source_id": "2026-11-09",
-        "title": "Rigel and the Witch Head Nebula",
-        "artist": "Piotr Czerski",
-        "date": "2026-11-09",
+        "source_id": "2026-11-21",
+        "title": "Voyager's Neptune",
+        "artist": "Assembly/Processing - Rolf Olsen , Data - Voyager 2 , NASA Planetary Data System",
+        "date": "2026-11-21",
         "style": "天文",
-        "description": "Explanation: Does the blue nebula look like the head of a witch? The nebula is known popularly as the Witch Head Nebula because, it is said, the nebula's shape resembles a Halloween-style caricature of a witch's head. Exactly how, though, can be a topic of imaginative speculation . What is clear is ",
-        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/WitchHead_Czerski_3000.jpg?w=1080&h=716&fit=clip",
-        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/WitchHead_Czerski_3000.jpg?w=1080&h=716&fit=clip",
-        "local_path": "daily/2026-11-24/nasa_2026-11-09_d2e6d29b.jpg",
+        "description": "Explanation: Cruising through the outer solar system, the Voyager 2 spacecraft made its closest approach to Neptune on August 25, 1989, the only spacecraft to visit the most distant ice giant planet . Based on the images recorded during its close encounter and in the following days, this inspired co",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Neptune-South-Pole-Voyager-2_2327x1670.jpg?w=1080&h=775&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Neptune-South-Pole-Voyager-2_2327x1670.jpg?w=1080&h=775&fit=clip",
+        "local_path": "daily/2026-11-24/nasa_2026-11-21_9f81914d.jpg",
         "extra": {
-          "apod_date": "2026-11-09",
-          "explanation_full": "Explanation: Does the blue nebula look like the head of a witch? The nebula is known popularly as the Witch Head Nebula because, it is said, the nebula's shape resembles a Halloween-style caricature of a witch's head. Exactly how, though, can be a topic of imaginative speculation . What is clear is that IC 2118 is about 50 light-years across and made of gas and dust that points to -- because it has been partly eroded by -- the nearby star Rigel . One of the brighter stars in the constellation Orion, Rigel lies just below the center of the featured image . The blue color of the Witch Head Nebula and is caused not only by Rigel's intense blue starlight but also because the dust grains scatter blue light more efficiently than red. The same physical process causes Earth's daytime sky to appear blue , although the scatterers in planet Earth's atmosphere are molecules of nitrogen and oxygen . Tomorrow's picture: suddenly Saturn",
-          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-9-rigel-and-the-witch-head-nebula/",
-          "credit": "Piotr Czerski",
-          "alt": "A starfield filled with red glowing gas is seen surroinging a bright blue star near the center. To the upper right of the star is an unusually shaped blue-tinted nebula."
+          "apod_date": "2026-11-21",
+          "explanation_full": "Explanation: Cruising through the outer solar system, the Voyager 2 spacecraft made its closest approach to Neptune on August 25, 1989, the only spacecraft to visit the most distant ice giant planet . Based on the images recorded during its close encounter and in the following days, this inspired composited scene covers the dim outer planet, largest moon Triton , and faint system of rings. From just beyond Neptune's orbit, the interplanetary perspective looks back toward the Sun, capturing the planet and Triton as thin sunlit crescents . Cirrus clouds and a dark band circle Neptune's south polar region, with a cloudy vortex above the pole itself . Parts of the very faint ring system along with the three bright ring arcs were first imaged by Voyager during the fly-by, though the faintest segments are modeled in this composited picture. Spanning 7.5 degrees, the background starfield is composed from sky survey data centered on the constellation Camelopardalis, corresponding to the outbound Voyager's view of the magnificent Neptunian system . Still cruising in 2026, the Voyager 2 spacecraft is now in interstellar space . Tomorrow's picture: swirling",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-21-voyagers-neptune/",
+          "credit": "Assembly/Processing - Rolf Olsen , Data - Voyager 2 , NASA Planetary Data System",
+          "alt": "Composite Voyager image of Neptune in a crescent phase."
         }
       },
-      "commentary": "2026-11-09 的每日天文图《Rigel and the Witch Head Nebula》。今日看色彩：数数全画用了几种颜色，少不一定寡淡，多也不一定热闹。",
-      "cid": "img_nasa:2026-11-09"
+      "commentary": "2026-11-21 的每日天文图《Voyager's Neptune》。今日看色彩：先说出第一眼抓住你的颜色，再找它的补色躲在哪。",
+      "cid": "img_nasa:2026-11-21"
     }
-  ],
-  "push_results": {
-    "email": false
-  }
+  ]
 }
