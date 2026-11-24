@@ -298,8 +298,9 @@ def _repo_urls(base_url: str) -> tuple[str, str]:
 def _write_archive(
     path: Path, date_str: str, theme: str, items: list[dict], pushed: bool,
     push_results: dict[str, bool] | None = None,
+    alert_result: bool | None = None,
 ) -> None:
-    """原子写归档；pushed 用于当日幂等保护，push_results 记录各通道真实结果"""
+    """原子写归档；pushed 用于幂等，push_results / alert_result 记录真实结果"""
     archive = {
         "date": date_str,
         "theme": theme,
@@ -309,6 +310,8 @@ def _write_archive(
     }
     if push_results is not None:
         archive["push_results"] = push_results
+    if alert_result is not None:
+        archive["alert_result"] = alert_result
     tmp = path.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding="utf-8")
     tmp.replace(path)
@@ -327,6 +330,7 @@ def run(config_path: str = "config.yaml") -> int:
     output_dir = ROOT / cfg.get("repo", {}).get("output_dir", "daily")
     images_dir = ensure_dir(output_dir / date_str)
     archive_path = images_dir / "index.json"
+    alert_result: bool | None = None  # 微信告警真实结果，None=未触发告警
 
     # 当日幂等：正式模式下今天已推送过就跳过，避免手动重跑重复发信
     if archive_path.exists() and not dry_run:
@@ -346,7 +350,7 @@ def run(config_path: str = "config.yaml") -> int:
     artworks = pick_artworks(cfg, cfg.get("schedule", {}).get("total_cards", 4), exclude_ids)
     if not artworks:
         print("[main] 没抓到任何作品，退出")
-        _notify_failure(cfg, date_str, "本次没有抓到任何可用作品，已跳过今日推送。")
+        alert_result = _notify_failure(cfg, date_str, "本次没有抓到任何可用作品，已跳过今日推送。")
         return 1
 
     # 2. 归档下载：Met / NASA 落盘，Unsplash 只热链
@@ -370,7 +374,7 @@ def run(config_path: str = "config.yaml") -> int:
             print(f"[main] {aw.source}:{aw.source_id} 下载失败，跳过")
     if not ready_artworks:
         print("[main] 所有图片都不可用")
-        _notify_failure(cfg, date_str, "所有图片都下载失败，已跳过今日推送。")
+        alert_result = _notify_failure(cfg, date_str, "所有图片都下载失败，已跳过今日推送。")
         return 1
 
     # 3. AI 生成讲解
@@ -400,10 +404,12 @@ def run(config_path: str = "config.yaml") -> int:
         if not dry_run:
             print("[main] 为避免推送残缺内容，跳过邮件并以失败退出")
             _update_index(output_dir, date_str, theme, len(items))
-            _notify_failure(
+            alert_result = _notify_failure(
                 cfg, date_str,
                 f"今日仅 {len(items)} 张可用作品（阈值 {min_cards}），已跳过推送。",
             )
+            _write_archive(archive_path, date_str, theme, items, pushed=False,
+                           alert_result=alert_result)
             return 1
 
     # 5. 推送：成功只发邮件图文；失败由微信发文字告警（见 _notify_failure）
@@ -427,7 +433,7 @@ def run(config_path: str = "config.yaml") -> int:
             print(f"[main] 邮件结果: {'OK' if ok else 'FAIL'}")
             if not ok:
                 print("::error::email 邮件推送失败，已发微信告警；当天归档已保留")
-                _notify_failure(cfg, date_str, "邮件推送失败，今日图集未送达。请查看 Actions 日志。")
+                alert_result = _notify_failure(cfg, date_str, "邮件推送失败，今日图集未送达。请查看 Actions 日志。")
         else:
             print("[main] 邮件通道未启用，今日不推送内容")
 
@@ -438,7 +444,7 @@ def run(config_path: str = "config.yaml") -> int:
             print(f"[main] ⚠️ 本次有推送失败：{', '.join(failed)}（详见 Annotations）")
 
         _write_archive(archive_path, date_str, theme, items,
-                       pushed=True, push_results=push_results)
+                       pushed=True, push_results=push_results, alert_result=alert_result)
 
     # 6. 更新 INDEX.md（最近 7 天）
     _update_index(output_dir, date_str, theme, len(items))
