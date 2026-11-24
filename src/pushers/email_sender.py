@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import smtplib
 import ssl
+import time
 from email.message import EmailMessage
 from email.utils import formatdate, make_msgid
 from pathlib import Path
@@ -157,19 +158,39 @@ def send_email(
     port = int(smtp_config.get("smtp_port", 465))
     use_ssl = smtp_config.get("smtp_ssl", True)
 
-    try:
-        if use_ssl:
-            context = ssl.create_default_context()
-            with smtplib.SMTP_SSL(host, port, context=context, timeout=30) as server:
-                server.login(username, password)
-                server.send_message(msg)
-        else:
-            with smtplib.SMTP(host, port, timeout=30) as server:
-                server.starttls(context=ssl.create_default_context())
-                server.login(username, password)
-                server.send_message(msg)
-        print(f"[email] 发送成功 -> {len(to_addrs)} 个收件人（地址不写入公开日志）")
-        return True
-    except Exception as exc:
-        print(f"[email] 发送失败: {exc}")
-        return False
+    # 只重试连接层抖动（TLS 握手被断、连接重置、超时）；
+    # 认证失败 / 地址非法重试也不会成功，直接放弃，避免无谓等待与重复登录。
+    def _retryable(exc: Exception) -> bool:
+        # 注意：SMTPResponseException（含 535 认证失败 / 501 地址错）继承自 OSError，
+        # 必须先排除，否则会被宽泛的 OSError 误判成可重试。
+        if isinstance(exc, smtplib.SMTPResponseException):
+            return False
+        return isinstance(exc, (
+            ssl.SSLError, ConnectionError, TimeoutError, OSError,
+            smtplib.SMTPServerDisconnected, smtplib.SMTPConnectError,
+        ))
+
+    last_exc: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            if use_ssl:
+                context = ssl.create_default_context()
+                with smtplib.SMTP_SSL(host, port, context=context, timeout=30) as server:
+                    server.login(username, password)
+                    server.send_message(msg)
+            else:
+                with smtplib.SMTP(host, port, timeout=30) as server:
+                    server.starttls(context=ssl.create_default_context())
+                    server.login(username, password)
+                    server.send_message(msg)
+            print(f"[email] 发送成功 -> {len(to_addrs)} 个收件人（地址不写入公开日志）")
+            return True
+        except Exception as exc:
+            last_exc = exc
+            if not _retryable(exc) or attempt == 3:
+                break
+            wait = 2 ** attempt  # 2s / 4s
+            print(f"[email] 连接层错误，{wait}s 后重试（{attempt}/3）: {type(exc).__name__}")
+            time.sleep(wait)
+    print(f"[email] 发送失败: {last_exc}")
+    return False
