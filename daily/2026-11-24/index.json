@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-24",
+  "theme": "今日看色彩：留意色温冷暖的对比，以及你第一眼被什么颜色吸引。",
+  "generated_at": "2026-11-24T10:02:44",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "BghGseQbAkA",
+        "title": "several green bonsai trees during daytime",
+        "artist": "Hugo Sousa",
+        "date": "2017-05-28",
+        "style": "摄影",
+        "description": "several green bonsai trees during daytime",
+        "image_url": "https://images.unsplash.com/photo-1495985812444-236d6a87bdd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1495985812444-236d6a87bdd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#d9d9d9",
+          "location": "London",
+          "portfolio_url": "https://unsplash.com/@hmiguelsousa",
+          "photo_page_url": "https://unsplash.com/photos/several-green-bonsai-trees-during-daytime-BghGseQbAkA?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@hmiguelsousa?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/BghGseQbAkA/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA",
+          "tags": [],
+          "width": 5247,
+          "height": 3498
+        }
+      },
+      "commentary": "摄影《several green bonsai trees during daytime》，关键词 architecture、#d9d9d9。今日看色彩：分一分冷暖：暖色往往往前跑，冷色通常往后退。",
+      "cid": "img_unsplash:BghGseQbAkA"
+    },
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "dcL8ESbsGis",
+        "title": "low angle photography of architectural building",
+        "artist": "Dan Schiumarini",
+        "date": "2017-10-27",
+        "style": "摄影",
+        "description": "low angle photography of architectural building",
+        "image_url": "https://images.unsplash.com/photo-1509130298739-651801c76e96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1509130298739-651801c76e96?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "architecture",
+          "color": "#0c2626",
+          "location": "Switzerland",
+          "portfolio_url": "https://unsplash.com/@dan_schiumarini",
+          "photo_page_url": "https://unsplash.com/photos/low-angle-photography-of-architectural-building-dcL8ESbsGis?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@dan_schiumarini?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/dcL8ESbsGis/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTE0NTU1fA",
+          "tags": [],
+          "width": 4704,
+          "height": 3136
+        }
+      },
+      "commentary": "摄影《low angle photography of architectural building》，关键词 architecture、#0c2626。今日看色彩：找画面里最不起眼的那块灰，它常是让颜色不吵架的关键。",
+      "cid": "img_unsplash:dcL8ESbsGis"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-09",
+        "title": "Rigel and the Witch Head Nebula",
+        "artist": "Piotr Czerski",
+        "date": "2026-11-09",
+        "style": "天文",
+        "description": "Explanation: Does the blue nebula look like the head of a witch? The nebula is known popularly as the Witch Head Nebula because, it is said, the nebula's shape resembles a Halloween-style caricature of a witch's head. Exactly how, though, can be a topic of imaginative speculation . What is clear is ",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/WitchHead_Czerski_3000.jpg?w=1080&h=716&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/WitchHead_Czerski_3000.jpg?w=1080&h=716&fit=clip",
+        "local_path": "daily/2026-11-24/nasa_2026-11-09_d2e6d29b.jpg",
+        "extra": {
+          "apod_date": "2026-11-09",
+          "explanation_full": "Explanation: Does the blue nebula look like the head of a witch? The nebula is known popularly as the Witch Head Nebula because, it is said, the nebula's shape resembles a Halloween-style caricature of a witch's head. Exactly how, though, can be a topic of imaginative speculation . What is clear is that IC 2118 is about 50 light-years across and made of gas and dust that points to -- because it has been partly eroded by -- the nearby star Rigel . One of the brighter stars in the constellation Orion, Rigel lies just below the center of the featured image . The blue color of the Witch Head Nebula and is caused not only by Rigel's intense blue starlight but also because the dust grains scatter blue light more efficiently than red. The same physical process causes Earth's daytime sky to appear blue , although the scatterers in planet Earth's atmosphere are molecules of nitrogen and oxygen . Tomorrow's picture: suddenly Saturn",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-9-rigel-and-the-witch-head-nebula/",
+          "credit": "Piotr Czerski",
+          "alt": "A starfield filled with red glowing gas is seen surroinging a bright blue star near the center. To the upper right of the star is an unusually shaped blue-tinted nebula."
+        }
+      },
+      "commentary": "2026-11-09 的每日天文图《Rigel and the Witch Head Nebula》。今日看色彩：数数全画用了几种颜色，少不一定寡淡，多也不一定热闹。",
+      "cid": "img_nasa:2026-11-09"
+    }
+  ],
+  "push_results": {
+    "email": false
+  }
+}
