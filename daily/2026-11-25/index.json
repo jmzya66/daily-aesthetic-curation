@@ -1,137 +1,114 @@
 {
   "date": "2026-11-25",
   "theme": "今日看光影：想象光源方向，思考艺术家如何『用暗托亮』。",
-  "generated_at": "2026-11-25T08:46:50",
+  "generated_at": "2026-11-25T13:53:40",
   "pushed": true,
   "items": [
     {
       "artwork": {
-        "source": "met",
-        "source_id": "246422",
-        "title": "Statuette of a youth",
-        "artist": "Unknown",
-        "date": "late 6th century BCE",
-        "style": "古典艺术",
-        "description": "Bronze",
-        "image_url": "https://images.metmuseum.org/CRDImages/gr/web-large/DP20299.jpg",
-        "image_url_large": "https://images.metmuseum.org/CRDImages/gr/web-large/DP20299.jpg",
-        "local_path": "daily/2026-11-25/met_Statuette_of_a_youth_06969268.jpg",
+        "source": "unsplash",
+        "source_id": "FIKD9t5_5zQ",
+        "title": "white clouds during daytime",
+        "artist": "Dominik Schröder",
+        "date": "2015-04-13",
+        "style": "摄影",
+        "description": "white clouds during daytime",
+        "image_url": "https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NjE0ODE5fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NjE0ODE5fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
         "extra": {
-          "department": "Greek and Roman Art",
-          "culture": "Etruscan",
-          "period": "Archaic",
-          "medium": "Bronze",
-          "dimensions": "H.: 4 1/8 in. (10.5 cm)",
-          "creditLine": "Purchase, 1896",
-          "tags": [
-            {
-              "term": "Male Nudes",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300189568",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q40446"
-            }
-          ]
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#d9d9d9",
+          "location": "Zurich",
+          "portfolio_url": "https://unsplash.com/@wirhabenzeit",
+          "photo_page_url": "https://unsplash.com/photos/white-clouds-during-daytime-FIKD9t5_5zQ?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@wirhabenzeit?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/FIKD9t5_5zQ/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NjE0ODE5fA",
+          "tags": [],
+          "width": 5464,
+          "height": 3643
         }
       },
-      "commentary": "《Statuette of a youth》：Bronze、Etruscan、Archaic。今日看光影：比一比最亮与最暗的差距，反差越大，情绪通常越紧。",
-      "cid": "img_met:246422"
-    },
-    {
-      "artwork": {
-        "source": "nasa",
-        "source_id": "2026-11-24",
-        "title": "Galaxies Battle in the NGC 7771 Group",
-        "artist": "Roberto Marinoni",
-        "date": "2026-11-24",
-        "style": "天文",
-        "description": "Explanation: After this galaxy battle, only one galaxy will remain. Already visible in the featured picture are rings and faint star swirls from previous gravitational encounters . Known collectively as the NGC 7771 Group , these galaxies lie almost 200 million light-years away toward the high-flyin",
-        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/NGC7771group_Marinoni_1179.jpg?w=1080&h=1303&fit=clip",
-        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/NGC7771group_Marinoni_1179.jpg?w=1080&h=1303&fit=clip",
-        "local_path": "daily/2026-11-25/nasa_2026-11-24_e7028fee.jpg",
-        "extra": {
-          "apod_date": "2026-11-24",
-          "explanation_full": "Explanation: After this galaxy battle, only one galaxy will remain. Already visible in the featured picture are rings and faint star swirls from previous gravitational encounters . Known collectively as the NGC 7771 Group , these galaxies lie almost 200 million light-years away toward the high-flying constellation Pegasus . The largest galaxy, barred spiral NGC 7771 on the lower right, is itself about 75,000 light-years across, and the galaxy on the upper left is spiral NGC 7769 , which is almost as large. As these and other smaller galaxies make repeated close passages, they will all likely merge into one very large galaxy. Playing out over billions of years, the merger process is understood to be a normal part of the evolution of galaxies . Studying galaxy clashes like this helps humanity to better understand the possible merger between our own Milky Way and Andromeda galaxies. Tomorrow's picture: open space",
-          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-24-galaxies-battle-in-the-ngc-7771-group/",
-          "credit": "Roberto Marinoni",
-          "alt": "See Explanation.  Clicking on the picture will download the highest resolution version available."
-        }
-      },
-      "commentary": "2026-11-24 的每日天文图《Galaxies Battle in the NGC 7771 Group》。今日看光影：先猜光源在画面外的哪个方向，再看影子对不对得上。",
-      "cid": "img_nasa:2026-11-24"
+      "commentary": "摄影《white clouds during daytime》，关键词 nature、#d9d9d9。今日看光影：先猜光源在画面外的哪个方向，再看影子对不对得上。",
+      "cid": "img_unsplash:FIKD9t5_5zQ"
     },
     {
       "artwork": {
         "source": "unsplash",
-        "source_id": "CBh4D3l0EwM",
-        "title": "green leafed plant in closeup shot",
-        "artist": "Emre",
-        "date": "2017-05-22",
+        "source_id": "78A265wPiO4",
+        "title": "landscape photography of mountain hit by sun rays",
+        "artist": "Urban Vintage",
+        "date": "2016-07-25",
         "style": "摄影",
-        "description": "green leafed plant in closeup shot",
-        "image_url": "https://images.unsplash.com/photo-1495476479092-6ece1898a101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTk2NDA0fA&ixlib=rb-4.1.0&q=80&w=1080",
-        "image_url_large": "https://images.unsplash.com/photo-1495476479092-6ece1898a101?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTk2NDA0fA&ixlib=rb-4.1.0&q=85",
+        "description": "landscape photography of mountain hit by sun rays",
+        "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NjE0ODE5fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NjE0ODE5fA&ixlib=rb-4.1.0&q=85",
         "local_path": "",
         "extra": {
           "delivery": "hotlink",
-          "query": "minimal",
-          "color": "#0c2626",
-          "location": "Ankara, Turkey",
-          "portfolio_url": "https://unsplash.com/@reo",
-          "photo_page_url": "https://unsplash.com/photos/green-leafed-plant-in-closeup-shot-CBh4D3l0EwM?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "photographer_url": "https://unsplash.com/@reo?utm_source=daily_aesthetic_curation&utm_medium=referral",
-          "download_location": "https://api.unsplash.com/photos/CBh4D3l0EwM/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NTk2NDA0fA",
+          "query": "nature",
+          "color": "#8c8c73",
+          "location": "Bucharest, Romania",
+          "portfolio_url": "https://unsplash.com/@urban_vintage",
+          "photo_page_url": "https://unsplash.com/photos/landscape-photography-of-mountain-hit-by-sun-rays-78A265wPiO4?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@urban_vintage?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/78A265wPiO4/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1NjE0ODE5fA",
           "tags": [],
-          "width": 4896,
-          "height": 3264
+          "width": 3506,
+          "height": 2329
         }
       },
-      "commentary": "摄影《green leafed plant in closeup shot》，关键词 minimal、#0c2626。今日看光影：留意最暗的地方：暗不是没画，是用来把亮处托起来的。",
-      "cid": "img_unsplash:CBh4D3l0EwM"
+      "commentary": "摄影《landscape photography of mountain hit by sun rays》，关键词 nature、#8c8c73。今日看光影：留意最暗的地方：暗不是没画，是用来把亮处托起来的。",
+      "cid": "img_unsplash:78A265wPiO4"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-15",
+        "title": "Leonid Meteors Through Orion",
+        "artist": "Luo Hongyang",
+        "date": "2026-11-15",
+        "style": "天文",
+        "description": "Explanation: Where will the next meteor appear? Even during a meteor shower, it is practically impossible to know. Therefore, a good way to enjoy a meteor shower is to find a place where you can sit comfortably and monitor a great expanse of dark sky. And it may be satisfying to share this experienc",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Leonids2022_Hongyang_2880.jpg?w=1080&h=1350&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Leonids2022_Hongyang_2880.jpg?w=1080&h=1350&fit=clip",
+        "local_path": "daily/2026-11-25/nasa_2026-11-15_42670442.jpg",
+        "extra": {
+          "apod_date": "2026-11-15",
+          "explanation_full": "Explanation: Where will the next meteor appear? Even during a meteor shower, it is practically impossible to know. Therefore, a good way to enjoy a meteor shower is to find a place where you can sit comfortably and monitor a great expanse of dark sky. And it may be satisfying to share this experience with a friend. The meteor shower depicted was the 2022 Leonids and the view is from Hainan , China looking out over the South China Sea . Meteor streaks captured over a few hours were isolated and added to a foreground image recorded earlier. Leonid meteor streaks trace back to the constellation of Leo and were here seen streaking across the constellation of Orion. The bright red planet Mars appears near the top of the image. The Leonids peak in mid-November every year and so will peak again this week. Bonding over their love of astronomy, the two pictured meteor enthusiasts, shown celebrating their common birthday this month, were later married. Tomorrow's picture: open space",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-15-leonid-meteors-through-orion/",
+          "credit": "Luo Hongyang",
+          "alt": "A composite showing many meteors trails streaking across a sky featuring the familiar constellation of Orion. In the foreground two people sit in adjoining chairs facing away from the camera, one holding a wand with a glowing star at the end. Please see the explanation for more detailed information."
+        }
+      },
+      "commentary": "2026-11-15 的每日天文图《Leonid Meteors Through Orion》：Explanation: Where will th。今日看光影：找一处渐变最慢的过渡，那里藏着作者对材质的判断。",
+      "cid": "img_nasa:2026-11-15"
     },
     {
       "artwork": {
         "source": "met",
-        "source_id": "401855",
-        "title": "Nicholson, Pitcher, Chicago, from the Old Judge series (N172) for Old Judge Cigarettes",
-        "artist": "Goodwin & Company",
-        "date": "1888",
+        "source_id": "3296",
+        "title": "Dish",
+        "artist": "Hobbs, Brockunier and Company",
+        "date": "1860–80",
         "style": "古典艺术",
-        "description": "Albumen photograph",
-        "image_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP825091.jpg",
-        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/web-large/DP825091.jpg",
-        "local_path": "daily/2026-11-25/met_Nicholson_Pitcher_Chicago_from_the_Old_Judge_series_N172_for_Old_Judge_Cigarette_c5fb793c.jpg",
+        "description": "Lead glass, blown and cut",
+        "image_url": "https://images.metmuseum.org/CRDImages/ad/web-large/236711.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/ad/web-large/236711.jpg",
+        "local_path": "daily/2026-11-25/met_Dish_7a98fad9.jpg",
         "extra": {
-          "department": "Drawings and Prints",
-          "culture": "",
+          "department": "The American Wing",
+          "culture": "American",
           "period": "",
-          "medium": "Albumen photograph",
-          "dimensions": "sheet: 2 11/16 x 1 3/8 in. (6.9 x 3.5 cm)",
-          "creditLine": "The Jefferson R. Burdick Collection, Gift of Jefferson R. Burdick",
-          "tags": [
-            {
-              "term": "Men",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
-            },
-            {
-              "term": "Portraits",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300015637",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q134307"
-            },
-            {
-              "term": "Baseball",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300222760",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q5369"
-            },
-            {
-              "term": "Athletes",
-              "AAT_URL": "http://vocab.getty.edu/page/aat/300236025",
-              "Wikidata_URL": "https://www.wikidata.org/wiki/Q2066131"
-            }
-          ]
+          "medium": "Lead glass, blown and cut",
+          "dimensions": "2 7/8 x 9 3/4 x 7 5/16 in. (7.3 x 24.8 x 18.6 cm)",
+          "creditLine": "Friends of the American Wing Fund, 1985",
+          "tags": []
         }
       },
-      "commentary": "《Nicholson, Pitcher, Chicago, from the Old Judge series (N172) for Old Judge Cigarettes》：Albumen photograph、18",
-      "cid": "img_met:401855"
+      "commentary": "《Dish》：Lead glass, blown and cut、American、1860–80。今日看光影：比一比最亮与最暗的差距，反差越大，情绪通常越紧。",
+      "cid": "img_met:3296"
     }
   ],
   "push_results": {
