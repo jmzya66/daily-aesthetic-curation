@@ -4,7 +4,7 @@
 
 每天早上 8:17（北京时间）系统从三个免费高质量图源抽取 3-5 张不同风格的作品（古典艺术 / 摄影 / 天文），配一段中文观察笔记，通过**邮件**推送图文到手机。微信只在出问题时发一条纯文字告警，不重复推当日内容。
 
-**讲解默认不接 LLM**：`ai_commentary.py` 用「当日审美维度 + 作品元数据」离线拼装观察笔记（一句可验证的事实 + 一个可操作的观察动作），零依赖、每张不同。7 个维度共 28 条引导句在 `OBSERVATION_LINES` 里维护；同一天的卡片按轮转分配不同句子（每维度 4 条，超过 4 张才循环）。只有显式配置 `LLM_API_KEY` 才改走原来的 OpenAI 兼容接口。
+**讲解默认不接 LLM**：`ai_commentary.py` 用「当日审美维度 + 作品元数据」离线拼装观察笔记（一句可验证的事实 + 一个可操作的观察动作），零依赖、每张不同。7 个维度共 28 条通用引导句在 `OBSERVATION_LINES` 里维护，NASA / Unsplash 另在 `SOURCE_OBSERVATION_LINES` 里有各维度专属句（避免把"笔触/署名角落"套到天文与摄影上）。同一批卡片按轮转分配不同句子，起点由「主题 + ISO 周数」决定，同一星期几跨周也会换句。只有显式配置 `LLM_API_KEY` 才改走原来的 OpenAI 兼容接口。
 
 图片一律使用图源官方直链：Unsplash 按 API Guidelines 只热链、不转存，Met / NASA 为公共领域作品，且统一取**展示级小图**（NASA 直链 `w` 缩到 1080、Met 用 `web-large`），避免单张几十 MB 拖慢邮件并撑大仓库。仓库 `daily/` 目录只用于历史回溯，不参与图片投递，因此邮件送达不依赖 commit 或 CDN 缓存。
 
@@ -191,12 +191,13 @@ schedule:
 - **展示级副本**：NASA 直链的 `w/h` 参数等比缩到 1080（实测同一张 27 MB → 1.6 MB），Met 用 `primaryImageSmall`（实测 229 KB → 31 KB）；`download_image()` 另有 15 MB 上限兜底。归档存的是可回看的展示级副本，不是原图。
 - **跨天去重**：默认避开最近 7 天已推过的作品，可用环境变量 `DEDUP_DAYS` 覆盖（设 `0` 关闭）。若某图源候选全在历史里，本次允许重复，**不会因此少发**。
 - **孤儿清理**：同一天多次运行只保留最后一次归档引用的图片。
+- **dry-run 不覆盖历史**：dry-run 抓图后保留当天已有的 `pushed` / `push_results` / `alert_result`，不会把"今天推送成功"刷成"未推送"。
 
 图源现状：Met Museum 的 `/search` 端点已返回 410，项目改用 `/objects` 全量 ID 池抽样 + 并发请求详情；NASA 用免 key 的 `science.nasa.gov` feed，且只取 `hdurl`（feed 的 `url` 字段是 HTML 页面，不是图片）。
 
 ### 调整观察笔记
 
-离线讲解的语料在 `src/ai_commentary.py` 的 `OBSERVATION_LINES`：按构图 / 色彩 / 光影 / 质感 / 情绪 / 细节 / 历史 7 个维度各存 4 条可操作的观察动作，改这里就能换每日提示。`generate_batch()` 会让同一批卡片轮转拿到不同句子，起点由当日主题决定。`_fact_sentence()` 负责从各图源元数据拼事实句。
+离线讲解的语料在 `src/ai_commentary.py`：通用池 `OBSERVATION_LINES` 按构图 / 色彩 / 光影 / 质感 / 情绪 / 细节 / 历史 7 维度各 4 条；`SOURCE_OBSERVATION_LINES` 为 NASA / Unsplash 的质感、细节、历史维度提供专属句。`generate_batch()` 让同批卡片轮转拿不同句，起点 = hash(主题 + ISO 周数)，跨周会变。`_fact_sentence()` 从各图源元数据拼事实句（NASA 复用 APOD 说明首句、Unsplash 复用 tags）。
 
 `SYSTEM_PROMPT` / `USER_PROMPT_TEMPLATE` 只在启用 LLM 分支（配置 `LLM_API_KEY`）时生效。
 
@@ -247,7 +248,7 @@ python src/main.py
 
 打开 `Actions` → 选中失败的那次运行 → 查看日志。常见问题：
 
-- Secrets 没配齐：检查 `Settings` → `Secrets`
+- Secrets 没配齐：检查 `Settings` → `Secrets`；收件地址格式非法会在配置阶段被忽略并打印告警
 - API key 无效：到对应平台重置 key
 - SMTP 认证失败：QQ 邮箱要用**授权码**不是密码
 - 张数不足导致失败退出：日志里会有 `⚠️` 与图源缺席提示，对照 `[met]` / `[nasa]` / `[unsplash]` 的告警定位；常见原因是 Met 的 `/objects` 抽样没命中、或 NASA 图片下载被拒
