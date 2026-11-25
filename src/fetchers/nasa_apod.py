@@ -50,6 +50,15 @@ def _downscale_url(url: str, max_width: int = 1080) -> str:
         w, h = int(params["w"]), int(params["h"])
     except (KeyError, TypeError, ValueError):
         return url
+    # w/h 为 0 或负数时比例换算会得到 0 高度（此前 w=0 被当成「已够小」原样放过），
+    # 这里只改 w、去掉 h，交给 CDN 按比例返回。
+    if w <= 0 or h <= 0:
+        params["w"] = str(max_width)
+        params.pop("h", None)
+        order = [k for k in order if k != "h"]
+        return base + "?" + "&".join(
+            f"{k}={params[k]}" if params[k] else k for k in order
+        )
     if w <= max_width:
         return url
     params["w"] = str(max_width)
