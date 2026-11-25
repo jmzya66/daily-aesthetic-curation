@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import html
 import re
+from datetime import datetime
 from typing import Any
 
 import requests
@@ -62,6 +63,52 @@ OBSERVATION_LINES: dict[str, list[str]] = {
 }
 
 
+# 按图源细化的引导句：仅覆盖最易「套错语境」的维度；
+# 未覆盖的维度沿用 OBSERVATION_LINES 通用池。
+SOURCE_OBSERVATION_LINES: dict[str, dict[str, list[str]]] = {
+    "nasa": {
+        "质感": [
+            "这张是望远镜或相机记录的画面，留意它把不可见的光变成了什么质感。",
+            "找一处边缘：是锐利的星点，还是慢慢散开的星云，成像方式完全不同。",
+            "想象光走过很长的距离才到这里，画面里的颗粒感其实是时间的痕迹。",
+            "留意亮部与暗部的层次，天文影像常用假色把数据翻译成眼睛能看的东西。",
+        ],
+        "细节": [
+            "从画面一角开始看，最暗的角落往往藏着最多的星点。",
+            "找一处重复出现的结构，比如旋臂或星团，它多半不是随机的。",
+            "看看有没有标注方向的线索，宇宙图里的「上下」其实是人为定的。",
+            "挑一个不起眼的亮点想想它离我们有多远，尺度感会改变你看图的方式。",
+        ],
+        "历史": [
+            "记住这张图的拍摄或发布日期，想想那时人类刚发现了什么。",
+            "这是哪台望远镜或哪次任务拍的？工具决定了它能看见什么。",
+            "想想这片天区在几百年前被人画成什么样子，再对比今天。",
+            "天文学图常是「数据+艺术加工」的合力，哪些是真实、哪些是渲染？",
+        ],
+    },
+    "unsplash": {
+        "质感": [
+            "放大看颗粒与噪点：感光元件如何记录这张照片，本身就是一种质感。",
+            "找一处边缘：是刻意虚化还是干脆利落，摄影师在控制你往哪看。",
+            "想象伸手摸上去，照片里的光泽是真实的反射还是后期调出来的。",
+            "留意光落在不同材质上的样子，摄影比绘画更依赖现场真实的光。",
+        ],
+        "细节": [
+            "从四个角落各看十秒，摄影师常把最松弛的瞬间放在主体之外。",
+            "找一处重复出现的形状，街拍里这种巧合往往等了很久。",
+            "看看画面里有没有人的痕迹，哪怕只是一道影子。",
+            "挑一个你觉得「拍到了也没用」的东西，想想它为什么被留下。",
+        ],
+        "历史": [
+            "看看照片里的年代线索：衣服、建筑、招牌都在透露拍摄时间。",
+            "想想这张照片已经在网上被看了多少次，摄影作品的生命在传播里。",
+            "摄影师按下快门的那一秒之前与之后，画面外发生了什么？",
+            "对比同类题材的经典照片，这张的取景有什么不一样的选择。",
+        ],
+    },
+}
+
+
 def _clean_text(text: str, limit: int = 120) -> str:
     """去掉 HTML 标签与多余空白（APOD 的 explanation 含 HTML）"""
     plain = html.unescape(re.sub(r"<[^>]+>", " ", text or ""))
@@ -84,9 +131,11 @@ def _pick_line(
     单张调用（variant=None）按 source:source_id 稳定取一条，保证同一作品复现一致；
     批量调用传 variant 时按 (start + variant) 轮转，保证同一天几张卡片不撞句子。
     """
-    pool = OBSERVATION_LINES.get(dim) or OBSERVATION_LINES["构图"]
+    source = artwork.get("source", "")
+    by_source = SOURCE_OBSERVATION_LINES.get(source, {})
+    pool = by_source.get(dim) or OBSERVATION_LINES.get(dim) or OBSERVATION_LINES["构图"]
     if variant is None:
-        seed = f"{artwork.get('source', '')}:{artwork.get('source_id', '')}"
+        seed = f"{source}:{artwork.get('source_id', '')}"
         idx = int(hashlib.sha1(seed.encode("utf-8")).hexdigest()[:8], 16) % len(pool)
     else:
         idx = (start + variant) % len(pool)
@@ -107,11 +156,18 @@ def _fact_sentence(artwork: dict[str, Any]) -> str:
     if source == "unsplash":
         bits = [b for b in [extra.get("query", ""), extra.get("color", ""),
                             extra.get("location", "")] if b]
+        tags = extra.get("tags") or []
+        if isinstance(tags, list):
+            bits += [str(t) for t in tags[:2] if t]
         head = "、".join(str(b) for b in bits[:2]) or "摄影"
         return f"摄影《{title}》，关键词 {head}。"
     if source == "nasa":
         d = artwork.get("date", "")
-        return f"{d} 的每日天文图《{title}》。" if d else f"天文图《{title}》。"
+        # 复用 APOD feed 已存的 explanation 首句，事实句不再只有日期+标题
+        detail = _clean_text(extra.get("explanation_full") or artwork.get("description", ""), 26)
+        head = f"：{detail}" if detail else ""
+        base = f"{d} 的每日天文图《{title}》" if d else f"天文图《{title}》"
+        return base + head + "。"
     return f"{artwork.get('style', '')}作品《{title}》。"
 
 
@@ -222,18 +278,26 @@ def generate_batch(
     base_url: str = "https://api.deepseek.com/v1",
     model: str = "deepseek-chat",
     theme: str = "",
+    date_str: str = "",
 ) -> list[str]:
     """批量生成讲解，按输入顺序返回。
 
     默认走离线规则化讲解；只有显式配置 api_key 才调用 LLM。
-    离线时同一批次按轮转分配不同引导句，起点由当日主题决定：同一天可复现、
-    不同天会变化；池子用尽后（当前每维度 4 条，超过 4 张卡片）才循环。
+    离线时同一批次按轮转分配不同引导句：起点 = hash(主题 + ISO 周数)。
+    主题按 weekday 固定，叠加周数后同一星期几跨周不再取同一句。
+    date_str 缺失时退化为「同星期几跨周相同」的旧行为，不抛异常。
     """
     if api_key:
         return [generate_commentary(a, api_key, base_url, model) for a in artworks]
     dim = _dimension(theme)
-    pool = OBSERVATION_LINES.get(dim) or OBSERVATION_LINES["构图"]
-    start = int(hashlib.sha1((theme or dim).encode("utf-8")).hexdigest()[:8], 16) % len(pool)
+    iso_week = ""
+    if date_str:
+        try:
+            iso_week = str(datetime.strptime(date_str, "%Y-%m-%d").isocalendar()[1])
+        except ValueError:
+            iso_week = ""
+    seed = f"{theme or dim}|W{iso_week}"
+    start = int(hashlib.sha1(seed.encode("utf-8")).hexdigest()[:8], 16) % 4
     return [
         build_offline_commentary(a, theme, variant=i, start=start)
         for i, a in enumerate(artworks)

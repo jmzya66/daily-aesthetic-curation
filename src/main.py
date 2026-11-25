@@ -91,12 +91,27 @@ def load_config(path: str | Path = "config.yaml") -> dict[str, Any]:
             cur = cur.setdefault(p, {})
         cur[parts[-1]] = val
 
-    # EMAIL_TO 是逗号分隔的字符串，转 list
+    # EMAIL_TO 是逗号分隔的字符串，转 list；非法地址在配置层拦截，
+    # 避免带着坏地址一路跑到 SMTP 才报 501。
     email_cfg = cfg.get("email")
-    if isinstance(email_cfg, dict) and isinstance(email_cfg.get("to_addrs"), str):
-        email_cfg["to_addrs"] = [
-            x.strip() for x in email_cfg["to_addrs"].split(",") if x.strip()
-        ]
+    if isinstance(email_cfg, dict):
+        if isinstance(email_cfg.get("to_addrs"), str):
+            email_cfg["to_addrs"] = [
+                x.strip() for x in email_cfg["to_addrs"].split(",") if x.strip()
+            ]
+        addrs = email_cfg.get("to_addrs")
+        if isinstance(addrs, list):
+            import re as _re
+            valid, invalid = [], []
+            for a in addrs:
+                if isinstance(a, str) and _re.fullmatch(r"[^\s@,;]+@[^\s@,;]+\.[^\s@,;]+", a.strip()):
+                    valid.append(a.strip())
+                else:
+                    invalid.append(a)
+            if invalid:
+                print(f"[config] ⚠️ 忽略 {len(invalid)} 个非法收件地址（含空格/中文标点/字段名等）")
+            if valid:
+                email_cfg["to_addrs"] = valid
 
     # DRY_RUN 字符串转 bool
     debug_cfg = cfg.get("debug")
@@ -386,6 +401,7 @@ def run(config_path: str = "config.yaml") -> int:
         base_url=llm_cfg.get("base_url", "https://api.deepseek.com/v1"),
         model=llm_cfg.get("model", "deepseek-chat"),
         theme=theme,
+        date_str=date_str,
     )
     items = []
     for aw, comm in zip(ready_artworks, commentaries):
@@ -393,7 +409,21 @@ def run(config_path: str = "config.yaml") -> int:
         print(f"  · [{aw.source}] {aw.title[:30]}... 已生成")
 
     # 4. 先落归档：推送失败也不会丢当天记录
+    # dry-run 只验证流程，不应覆盖当天真实的 pushed / push_results / alert_result。
+    dry_preserved = None
+    if dry_run and archive_path.exists():
+        try:
+            prev_arc = json.loads(archive_path.read_text(encoding="utf-8"))
+            dry_preserved = {
+                k: prev_arc[k] for k in ("pushed", "push_results", "alert_result")
+                if k in prev_arc
+            }
+        except Exception as exc:
+            print(f"[main] 读取既有归档失败，dry-run 将写全新标记: {exc}")
     _write_archive(archive_path, date_str, theme, items, pushed=False)
+    if dry_preserved:
+        _write_archive(archive_path, date_str, theme, items, **dry_preserved)
+        print(f"[main] dry-run 已保留当天原有推送标记 {list(dry_preserved)}")
     print(f"[main] 归档已写入 {archive_path}")
     _clean_orphan_images(images_dir, items)
 
