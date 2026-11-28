@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-28",
+  "theme": "今日看细节：找一处容易被忽略的角落，那里藏着作者的签名。",
+  "generated_at": "2026-11-28T07:59:42",
+  "pushed": true,
+  "items": [
+    {
+      "artwork": {
+        "source": "unsplash",
+        "source_id": "IicyiaPYGGI",
+        "title": "orange flowers",
+        "artist": "enrico bet",
+        "date": "2016-06-05",
+        "style": "摄影",
+        "description": "orange flowers",
+        "image_url": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1ODUyNzc1fA&ixlib=rb-4.1.0&q=80&w=1080",
+        "image_url_large": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1ODUyNzc1fA&ixlib=rb-4.1.0&q=85",
+        "local_path": "",
+        "extra": {
+          "delivery": "hotlink",
+          "query": "nature",
+          "color": "#f3f3f3",
+          "location": "Italy",
+          "portfolio_url": "https://unsplash.com/@henry_be",
+          "photo_page_url": "https://unsplash.com/photos/orange-flowers-IicyiaPYGGI?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "photographer_url": "https://unsplash.com/@henry_be?utm_source=daily_aesthetic_curation&utm_medium=referral",
+          "download_location": "https://api.unsplash.com/photos/IicyiaPYGGI/download?ixid=M3wxMTI2NDM4fDB8MXxyYW5kb218fHx8fHx8fHwxNzk1ODUyNzc1fA",
+          "tags": [],
+          "width": 4928,
+          "height": 3264
+        }
+      },
+      "commentary": "摄影《orange flowers》，关键词 nature、#f3f3f3。今日看细节：从四个角落各看十秒，摄影师常把最松弛的瞬间放在主体之外。",
+      "cid": "img_unsplash:IicyiaPYGGI"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "681449",
+        "title": "Frontispiece, from \"Balli di Sfessania\"",
+        "artist": "Jacques Callot",
+        "date": "ca. 1622",
+        "style": "古典艺术",
+        "description": "Etching",
+        "image_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP846869.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/dp/web-large/DP846869.jpg",
+        "local_path": "daily/2026-11-28/met_Frontispiece_from_Balli_di_Sfessania__29bab091.jpg",
+        "extra": {
+          "department": "Drawings and Prints",
+          "culture": "",
+          "period": "",
+          "medium": "Etching",
+          "dimensions": "Sheet: 2 15/16 × 3 3/4 in. (7.5 × 9.6 cm)",
+          "creditLine": "Bequest of Edwin De T. Bechtel, 1957",
+          "tags": [
+            {
+              "term": "Musical Instruments",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300041620",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q34379"
+            },
+            {
+              "term": "Satire",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300055934",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q128758"
+            }
+          ]
+        }
+      },
+      "commentary": "《Frontispiece, from \"Balli di Sfessania\"》：Etching、ca. 1622。今日看细节：找一处重复出现的小形状，它多半不是巧合。",
+      "cid": "img_met:681449"
+    },
+    {
+      "artwork": {
+        "source": "met",
+        "source_id": "44801",
+        "title": "Female musician with lute",
+        "artist": "Unknown",
+        "date": "late 7th century",
+        "style": "古典艺术",
+        "description": "Earthenware with pigment",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/web-large/DP337805.jpg",
+        "image_url_large": "https://images.metmuseum.org/CRDImages/as/web-large/DP337805.jpg",
+        "local_path": "daily/2026-11-28/met_Female_musician_with_lute_71202987.jpg",
+        "extra": {
+          "department": "Asian Art",
+          "culture": "China",
+          "period": "Tang dynasty (618–907)",
+          "medium": "Earthenware with pigment",
+          "dimensions": "H. 5 3/4 in. (14.6 cm); W. 3 1/2 in. (8.9 cm); D. 3 1/8 in. (7.9 cm)",
+          "creditLine": "Rogers Fund, 1923",
+          "tags": [
+            {
+              "term": "Musical Instruments",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300041620",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q34379"
+            },
+            {
+              "term": "Women",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+            },
+            {
+              "term": "Musicians",
+              "AAT_URL": "http://vocab.getty.edu/page/aat/300025666",
+              "Wikidata_URL": "https://www.wikidata.org/wiki/Q639669"
+            }
+          ]
+        }
+      },
+      "commentary": "《Female musician with lute》：Earthenware with pigment、China、Tang dynasty (618–907)。今日看细节：找署名、水印或日期这类小字，它们放在哪儿也是",
+      "cid": "img_met:44801"
+    },
+    {
+      "artwork": {
+        "source": "nasa",
+        "source_id": "2026-11-13",
+        "title": "NGC 206 and the Star Clouds of Andromeda",
+        "artist": "David Cruz",
+        "date": "2026-11-13",
+        "style": "天文",
+        "description": "Explanation: The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions. Also known as M31, the spiral galaxy is a mere 2.5 million light-years away. NGC 206 is found at the center of th",
+        "image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg?w=1080&h=765&fit=clip",
+        "image_url_large": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/Andromeda_closeupCruz4096.jpg?w=1080&h=765&fit=clip",
+        "local_path": "daily/2026-11-28/nasa_2026-11-13_b7eba3a2.jpg",
+        "extra": {
+          "apod_date": "2026-11-13",
+          "explanation_full": "Explanation: The large stellar association cataloged as NGC 206 is nestled within the dusty arms of the neighboring Andromeda galaxy along with the galaxy's pinkish star-forming regions. Also known as M31, the spiral galaxy is a mere 2.5 million light-years away. NGC 206 is found at the center of this sharp and detailed close-up of the southwestern extent of Andromeda's disk. The bright, blue stars of NGC 206 indicate its youth. In fact, its youngest massive stars are less than 10 million years old. Much larger than the open or galactic clusters of young stars in the disk of our Milky Way galaxy, NGC 206 spans about 4,000 light-years. That's comparable in size to the giant stellar nurseries NGC 604 in nearby spiral M33 and the Tarantula Nebula in the Large Magellanic Cloud. Tomorrow's picture: pixels on the Moon",
+          "permalink": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/",
+          "credit": "David Cruz",
+          "alt": "Close up of NGC 206 in the Andromeda galaxy."
+        }
+      },
+      "commentary": "2026-11-13 的每日天文图《NGC 206 and the Star Clouds of Andromeda》：Explanation: The large ste。今日看细节：挑一个不起眼的亮点想想它离我们有多",
+      "cid": "img_nasa:2026-11-13"
+    }
+  ],
+  "push_results": {
+    "email": true
+  }
+}
